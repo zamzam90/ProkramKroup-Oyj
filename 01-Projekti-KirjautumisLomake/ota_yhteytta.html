@@ -11,7 +11,7 @@
   <body>
     <div class="page">
     <form class="form" action="kiitos.html" method="post" onsubmit="return tarkasta(this)" onreset="return tyhjenna(this)">
-      <h1>Kirjautumislomake</h1>
+      <h1 id="header1"=>Kirjautumislomake</h1>
       <table>
         <tr>
           <td>Nimi:</td>
@@ -37,6 +37,15 @@
             <input type="checkbox" name="box" value="check2">Ammattimaisesti tehty<br/>
             <input type="checkbox" name="box" value="check3">Ostan sinulta!<br/>
         </p>
+        <form>
+          <label for="dropdown">Mikä on lempi aiheesi Keudassa</label><br>
+          <select name="dropdown" id="dropdown">
+            <option value="empty"></option>
+            <option value="programming">Ohjelmointi</option>
+            <option value="it">Teknisessä tukipalvelussa toimiminen</option>
+            <option value="cyber">Kyberturvallisuus</option>
+          </select>
+        </form>
       <table>
         <tr>
           <td colspan = "2">Kerro miten kehittäisit sivujani</td>
@@ -46,7 +55,7 @@
         </tr>
       </table>
   <p>
-    <input type="submit" name="submit" value="Lähetä">
+    <input id="submit" type="submit" name="submit" value="Lähetä">
   </p>
     </form>
   </div>

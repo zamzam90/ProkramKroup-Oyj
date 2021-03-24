@@ -1,2 +1,39 @@
-/* tyylit tänne */
-joo
+/* Tämä on kesken, odottaa että pääsen testaamaan html kanssa :) */
+/*Ei löytynytkään ilmaisia ja samoja fontteja googlesta, joten ne oli pakko vaihtaa*/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+  background-color: black;
+  margin: 0 auto;
+}
+
+#form {
+  width: 500px;
+  height: 700px;
+  background-color: lightgrey;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #007399;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif, bold;
+  font-size: 12;
+}
+
+.header1 {
+  color: black;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 22;
+  text-align: center;
+}
+
+#smallheader {
+  font-family: arial, bold;
+  font-size: 14;
+}
+
+footer {
+  color: #007399;
+  text-align: center;
+  background-color: black;
+}
