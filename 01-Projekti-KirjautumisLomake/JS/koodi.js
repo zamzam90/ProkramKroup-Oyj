@@ -17,5 +17,5 @@ var dropdowni = document.getElementById("dropdown").value;
 var kommenttikenttä = document.getElementById("feedback").value;
 //funktio joka tarkastaa lomakkeen:
 function checkLoginForm(form) {
-  /* magic here */
+  /* magic here :D */
 }
