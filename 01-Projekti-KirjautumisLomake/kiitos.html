@@ -12,6 +12,16 @@
     <div class="keskita">
     <form class="form" action="kiitos.html" method="post" onsubmit="return tarkasta(this)" onreset="return tyhjenna(this)">
       <h1>Kirjautumislomake</h1>
+      <table>
+        <tr>
+          <td>Nimi: </td>
+          <td class="oikea"><input type="text" name="name" value=""></td>
+        </tr>
+        <tr>
+          <td>Salasana:</td>
+          <td class="oikea"><input type="text" name="password" value=""></td>
+        </tr>
+      </table>
       <p>Millainen koneenkäyttäjä olet?</p>
         <p>
           <input type="radio" name="radio" value="radio1" />
@@ -23,24 +33,16 @@
         </p>
         <p>Mitä mieltä olet sivuistamme tähän asti</p>
           <p>
-            <input type="checkbox" name="boksi" value="check1">Todella hienot<br/>
-            <input type="checkbox" name="boksi" value="check2">Ammattimaisesti tehty<br/>
-            <input type="checkbox" name="boksi" value="check3">Ostan sinulta!<br/>
+            <input type="checkbox" name="box" value="check1">Todella hienot<br/>
+            <input type="checkbox" name="box" value="check2">Ammattimaisesti tehty<br/>
+            <input type="checkbox" name="box" value="check3">Ostan sinulta!<br/>
         </p>
       <table>
-        <tr>
-          <td>Nimi: </td>
-          <td class="oikea"><input type="text" name="name" value=""></td>
-        </tr>
-        <tr>
-          <td>Salasana:</td>
-          <td class="oikea"><input type="text" name="password" value=""></td>
-        </tr>
         <tr>
           <td colspan = "2">Kerro miten kehittäisit sivujani</td>
         </tr>
         <tr>
-          <td colspan="2" class="feedback"><textarea name="palaute" rows="8" cols="50"></textarea></td>
+          <td colspan="2" class="feedback"><textarea name="palaute" rows="10" cols="60"></textarea></td>
         </tr>
       </table>
   <p>
