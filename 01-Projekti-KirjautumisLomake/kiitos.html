@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="malli.css">
+    <script src="malli.js">
+
+    </script>
+  </head>
+  <body>
+    <div class="keskita">
+    <form class="" action="kiitos.html" method="post" onsubmit="return tarkasta(this)" onreset="return tyhjenna(this)">
+      <h1>Tietojenkeruulomake</h1>
+      <table>
+        <tr>
+          <td>Anna etunimi: </td>
+          <td class="oikea"><input type="text" name="enimi" value=""></td>
+        </tr>
+        <tr>
+          <td>Anna sukunimi:</td>
+          <td class="oikea"><input type="text" name="snimi" value=""></td>
+        </tr>
+        <tr>
+          <td>Anna sähköpostisi:</td>
+          <td class="oikea"><input type="text" name="email" value=""></td>
+        </tr>
+        <tr>
+          <td colspan = "2">Palautteesi kotisivuistani:</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="oikea"><textarea name="palaute" rows="8" cols="50"></textarea></td>
+        </tr>
+      </table>
+<p>Valitse näistä toinen: </p>
+  <p>
+    <input type="radio" name="mainos" value="mainos" />
+    Haluan saada mainospostia.<br />
+    <input type="radio" name="mainos" value="eimainos" />
+    En halua mainospostia.
+  </p>
+  <p>
+    Mistä pidät koulussa eniten? </p><p>
+      <input type="checkbox" name="boksi" value="ruoka">Ruoasta<br/>
+      <input type="checkbox" name="boksi" value="ammatti">Ammattiaineista<br/>
+      <input type="checkbox" name="boksi" value="yto">YTO-aineista<br/>
+      <input type="checkbox" name="boksi" value="vapaa">Vapaa-ajasta<br/>
+  </p>
+  <p>
+    <input type="submit" name="submit" value="Tarkasta lomake">
+    <input type="reset" name="reset" value="Tyhjennä lomake">
+  </p>
+    </form>
+  </div>
+  </body>
+</html>
