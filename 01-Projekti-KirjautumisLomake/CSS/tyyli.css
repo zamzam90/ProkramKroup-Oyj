@@ -8,17 +8,18 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 40%;
 }
+
 
 .form {
   width: 600px;
-  height: 700px;
+  height: 800px;
   background-color: lightgrey;
   display: inline-block;
   border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px 10px #007399;
+  padding: 10px 15px 10px 150px;
+  box-shadow: 5px 5px 10px #007399;
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   font-size: 12;
@@ -44,6 +45,17 @@ td {
 width: 40px;
 }
 
+#user {
+  border: 2px solid black;
+}
+
+#password {
+  border: 2px solid black;
+}
+
+#feedback {
+  border: 2px solid black;
+}
 
 #submit {
   background-color: #007399;
