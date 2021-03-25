@@ -11,13 +11,14 @@ body {
   width: 30%;
 }
 
+
 .form {
   width: 600px;
   height: 700px;
   background-color: lightgrey;
   display: inline-block;
   border: 1px solid;
-  padding: 10px;
+  padding: 10px 15px 10px 150px;
   box-shadow: 5px 10px 10px #007399;
   text-align: left;
   font-family: 'Open Sans', sans-serif;
@@ -44,6 +45,17 @@ td {
 width: 40px;
 }
 
+#user {
+  border: 2px solid black;
+}
+
+#password {
+  border: 2px solid black;
+}
+
+#feedback {
+  border: 2px solid black;
+}
 
 #submit {
   background-color: #007399;
