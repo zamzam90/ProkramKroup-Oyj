@@ -1,6 +1,5 @@
 /*Ei löytynytkään ilmaisia ja samoja fontteja googlesta joita meinattiin suunnittelussa, joten ne oli pakko vaihtaa*/
 
-
 body {
   background-color: black;
   margin: 0 auto;
@@ -14,7 +13,7 @@ body {
 
 .form {
   width: 600px;
-  height: 800px;
+  height: 700px;
   background-color: lightgrey;
   display: inline-block;
   border: 1px solid;
@@ -45,8 +44,12 @@ td {
 width: 40px;
 }
 
+
 #submit {
   background-color: #007399;
+  border: 1px solid black;
+  width: 90px;
+  height: 50px;
 }
 
 footer {
