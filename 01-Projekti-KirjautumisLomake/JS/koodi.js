@@ -1,7 +1,7 @@
 //Kirjautumislomake
 console.info("koodi.js loaded..");
 //funktio joka tarkastaa lomakkeen:
-function tarkasta() {
+function checkLoginForm() {
 //alustetaan muuttujia..
 //nimi & salasana:
 var userName = document.getElementById("user").value;
@@ -21,6 +21,8 @@ var dropdowni = document.getElementById("dropdown").value;
 var kommenttikenttä = document.getElementById("feedback").value;
 //
 if (userName < 4) {
-  alert("test");
+  alert("nimi alle 4 kirjainta");
+} else {
+  alert("nimi yli 4 kirjainta");
 }
 }
