@@ -3,6 +3,7 @@ console.info("koodi.js loaded.."); //for debugging
 function checkLoginForm(form) {
   //alustetaan muuttujia, haetaan niihin tiedot lomakkeesta:
   var userName = form.name.value;
+  var password = form.password.value;
   //tarkistetaan nimen pituus:
   if (userName.length < 3) {
     console.log("Nimen pituus: " + userName.length); //for debugging
@@ -10,7 +11,7 @@ function checkLoginForm(form) {
     return false;
   }
   //tarkistetaan salasanan pituus (pitää olla yli 15 merkkiä), mitä pidempi sen parempi :D
-  if (passWord.length < 15) {
+  if (password.length < 15) {
     alert("Liian lyhyt salasana!");
     return false;
   }
