@@ -1,11 +1,11 @@
 //Kirjautumislomake
-console.info("koodi.js loaded..");
+console.info("koodi.js loaded..");//for debugging
 //funktio joka tarkastaa lomakkeen:
 function checkLoginForm() {
 //alustetaan muuttujia..
 //nimi & salasana:
 var userName = document.getElementById("user").value;
-console.log(userName);
+console.log(userName);//for debugging..
 var password = document.getElementById("password").value;
 //radionapit:
 var radioNappi1 = document.getElementById("radio1").value;
