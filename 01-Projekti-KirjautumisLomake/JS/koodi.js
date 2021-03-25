@@ -20,7 +20,7 @@ var dropdowni = document.getElementById("dropdown").value;
 //kommenttikenttä:
 var kommenttikenttä = document.getElementById("feedback").value;
 //
-if (userName < 4) {
+if (userName.length < 4) {
   alert("nimi alle 4 kirjainta");
 } else {
   alert("nimi yli 4 kirjainta");
