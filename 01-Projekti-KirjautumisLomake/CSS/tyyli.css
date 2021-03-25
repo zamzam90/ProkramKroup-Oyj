@@ -1,23 +1,30 @@
 /* Tämä on kesken, odottaa että pääsen testaamaan html kanssa :) */
-/*Ei löytynytkään ilmaisia ja samoja fontteja googlesta, joten ne oli pakko vaihtaa*/
+/*Ei löytynytkään ilmaisia ja samoja fontteja googlesta joita meinattiin suunnittelussa, joten ne oli pakko vaihtaa*/
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 body {
-  background-color: black;
+  /*background-color: black;*/
   margin: 0 auto;
+  padding: 10px;
+  margin: 5px;
 }
 
 #form {
-  width: 500px;
-  height: 700px;
+  width: 400px;
+  height: 600px;
   background-color: lightgrey;
+  display: inline-block;
   border: 1px solid;
+  border-radius: 10%;
   padding: 10px;
   box-shadow: 5px 10px 8px #007399;
   text-align: left;
   font-family: 'Open Sans', sans-serif, bold;
   font-size: 12;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
 }
 
 .header1 {
@@ -30,6 +37,14 @@ body {
 #smallheader {
   font-family: arial, bold;
   font-size: 14;
+}
+
+td {
+width: 40px;
+}
+
+.submit {
+  color: #007399;
 }
 
 footer {

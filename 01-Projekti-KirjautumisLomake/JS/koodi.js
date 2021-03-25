@@ -1,4 +1,5 @@
 //Kirjautumislomake
+console.log("testing..");
 //alustetaan muuttujia..
 //nimi & salasana:
 var userName = document.getElementById("user").value;
