@@ -1,5 +1,5 @@
 //Kirjautumislomake
-console.log("testing..");
+console.info("koodi.js loaded..");
 //alustetaan muuttujia..
 //nimi & salasana:
 var userName = document.getElementById("user").value;
