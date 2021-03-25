@@ -1,8 +1,11 @@
 //Kirjautumislomake
 console.info("koodi.js loaded..");
+//funktio joka tarkastaa lomakkeen:
+function tarkasta() {
 //alustetaan muuttujia..
 //nimi & salasana:
 var userName = document.getElementById("user").value;
+console.log(userName);
 var password = document.getElementById("password").value;
 //radionapit:
 var radioNappi1 = document.getElementById("radio1").value;
@@ -16,9 +19,8 @@ var zekkiNappi3 = document.getElementById("check3").value;
 var dropdowni = document.getElementById("dropdown").value;
 //kommenttikenttä:
 var kommenttikenttä = document.getElementById("feedback").value;
-//funktio joka tarkastaa lomakkeen:
-function checkLoginForm(form) {
-  if (userName < 4) {
-    alert("test");
-  }
+//
+if (userName < 4) {
+  alert("test");
+}
 }
