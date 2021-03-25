@@ -1,14 +1,15 @@
-/* Tämä on kesken, odottaa että pääsen testaamaan html kanssa :) */
 /*Ei löytynytkään ilmaisia ja samoja fontteja googlesta joita meinattiin suunnittelussa, joten ne oli pakko vaihtaa*/
-/*@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-*/
+
 
 body {
   background-color: black;
   margin: 0 auto;
-  padding: 10px;
-  margin: 5px;
+  /*padding: 10px;
+  margin: 5px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 .form {
@@ -20,7 +21,7 @@ body {
   padding: 10px;
   box-shadow: 5px 10px 10px #007399;
   text-align: left;
-  font-family: 'Open Sans', sans-serif, bold;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12;
   margin-right: auto;
   margin-left: auto;
@@ -35,7 +36,8 @@ body {
 }
 
 .smallheader {
-  font-family: arial, bold;
+  font-family: arial;
+  font-weight: bold;
   font-size: 14;
 }
 
@@ -51,4 +53,5 @@ footer {
   color: #007399;
   text-align: center;
   background-color: black;
+  font-family: arial;
 }

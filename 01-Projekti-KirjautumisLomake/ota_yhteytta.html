@@ -15,12 +15,12 @@
     <form class="form" id="form" action="kiitos.html" method="post" onsubmit="return checkLoginForm(this);">
       <h1 id="header1"=>Kirjautumislomake</h1>
       <table>
-          <td>Nimi:</td>
+          <td class="smallheader">Nimi:</td>
           <td class="user"><input type="text" id="user" name="name" value=""></td>
-          <td>Salasana:</td>
+          <td class="smallheader">Salasana:</td>
           <td class="password"><input type="text" id="password" name="password" value=""></td>
       </table>
-      <p>Millainen koneenkäyttäjä olet?</p>
+      <p class="smallheader">Millainen koneenkäyttäjä olet?</p>
         <p>
           <input type="radio" id="radio1" name="radio" value="radio1" />
           himopelaaja.<br />
@@ -29,14 +29,14 @@
           <input type="radio" id="radio3" name="radio" value="radio3" />
           en käytä konetta.<br />
         </p>
-        <p>Mitä mieltä olet sivuistamme tähän asti</p>
+        <p class="smallheader">Mitä mieltä olet sivuistamme tähän asti</p>
           <p>
             <input type="checkbox" id="check1" name="box" value="check1">Todella hienot<br/>
             <input type="checkbox" id="check2" name="box" value="check2">Ammattimaisesti tehty<br/>
             <input type="checkbox" id="check3" name="box" value="check3">Ostan sinulta!<br/>
         </p>
         <form>
-          <label for="dropdown">Mikä on lempi aiheesi Keudassa</label><br>
+          <label class="smallheader" for="dropdown">Mikä on lempi aiheesi Keudassa</label><br>
           <select name="dropdown" id="dropdown">
             <option value="empty"></option>
             <option value="programming">Ohjelmointi</option>
@@ -46,7 +46,7 @@
         </form>
       <table>
         <tr>
-          <td colspan = "2">Kerro miten kehittäisit sivujani</td>
+          <td class="smallheader" colspan = "2">Kerro miten kehittäisit sivujani</td>
         </tr>
         <tr>
           <td colspan="2" class="feedback"><textarea id="feedback" name="palaute" rows="10" cols="60"></textarea></td>
