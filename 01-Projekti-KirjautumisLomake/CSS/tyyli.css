@@ -3,14 +3,11 @@
 body {
   background-color: black;
   margin: 0 auto;
-  /*padding: 10px;
-  margin: 5px;*/
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
 }
-
 
 .form {
   width: 600px;
@@ -43,6 +40,7 @@ body {
 
 td {
 width: 40px;
+/*margin-left: 20px;*/
 }
 
 #user {
@@ -69,4 +67,8 @@ footer {
   text-align: center;
   background-color: black;
   font-family: arial;
+}
+
+#header2 {
+  color: #007399;
 }
