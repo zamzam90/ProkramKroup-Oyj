@@ -64,7 +64,12 @@
     <footer class="footer">
       <br>
       <br>
-      <p id="pvm">ProkramKroup Oyj / xx.xx 2021</p>
+      <p id="pvm"></p>
+      <script>
+      //kirjoitetaan footeriin pvm:
+      var dt = new Date();
+      document.getElementById("pvm").innerHTML = "ProkramKroup Oyj &copy; " + (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear());
+      </script>
       <br>
       <br>
   </footer>
