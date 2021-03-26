@@ -40,7 +40,6 @@ body {
 
 td {
 width: 40px;
-/*margin-left: 20px;*/
 }
 
 #user {
@@ -69,6 +68,7 @@ footer {
   font-family: arial;
 }
 
+/*kiitos.html:lle*/
 #header2 {
   color: #007399;
   text-align: center;
