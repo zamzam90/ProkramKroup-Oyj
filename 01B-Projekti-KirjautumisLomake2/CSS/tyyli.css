@@ -50,20 +50,20 @@ body {
   color: lightGray;
 }
 #nimi {
-  border: 1px solid gray;
+  border: 2px solid #535467;
 }
 #email {
-  border: 1px solid gray;
+  border: 2px solid #535467;
 }
 #ika {
-  border: 1px solid gray;
+  border: 2px solid #535467;
 }
 #ddpotsikko {
   color: lightGray;
   padding: 35px 0px 15px;
 }
 #pudotus {
-  border: 1px solid gray;
+  border: 2px solid #535467;
 }
 #rryhma1 {
   color: lightGray;
