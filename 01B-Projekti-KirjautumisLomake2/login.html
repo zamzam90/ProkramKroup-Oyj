@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Kirjautumislomake</title>
-  </head>
-  <body>
-    <h1>Kikkeliskokkelis!</h1>
-    <p>TEstingGG...</p>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="CSS/tyyli.css">
+  <script src="JS/koodi.js"></script>
+  <title>Kirjautumislomake</title>
+</head>
+
+<body>
+  <section>
+    <h1 id="otsikko">Otsikko tähän..</h1>
+    <p id="kuvaus">joQ kuvaus tähän..kuvaus joku tähän, tähän joku kuvaus.</p>
+    <form class="" id="kyselylomake">
+      <table>
+        <tr>
+          <th id="nimisyotto">Nimi: </th>
+          <th id="emailsyotto">Sähköpostiosoite: </th>
+          <th id="ikasyotot">Ikä: </th>
+        </tr>
+        <tr>
+          <td><input id="nimi" type="text" name="" value="" placeholder="Syötä nimesi"></td>
+          <td><input id="email" type="text" name="" value="" placeholder="Syötä emailosoitteesi"></td>
+          <td><input id="ika" type="text" name="" value="" placeholder="Syötä ikäsi"></td>
+        </tr>
+        <tr>
+          <th>Dropdownii</th>
+          <td colspan="2">
+            <select class="" id="pudotus" name="">
+              <option value="">??</option>
+              <option value="">Mitä</option>
+              <option value="">Tänne</option>
+              <option value="">Laitetaan??</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="3">Radio Ryhmä 1</th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="radior1" value="">Mitä</td>
+          <td><input type="radio" name="radior1" value="">Näihin</td>
+          <td><input type="radio" name="radior1" value="">Laitetaan</td>
+        </tr>
+        <tr>
+          <th colspan="3">Radio ryhmä 2</th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="radior2" value="">Mitä</td>
+          <td><input type="radio" name="radior2" value="">Näihin</td>
+          <td><input type="radio" name="radior2" value="">Laitetaan</td>
+        </tr>
+        <tr>
+          <th colspan="3">zekkiboksit</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" value="">Mitä</td>
+          <td><input type="checkbox" name="" value="">Näihin</td>
+          <td><input type="checkbox" name="" value="">Laitetaan</td>
+        </tr>
+        <tr>
+          <td colspan="3"> <textarea name="name" rows="8" cols="60" placeholder="Kirjoita lisäkommentit tähän?"></textarea> </td>
+        </tr>
+        <tr>
+          <td><button type="submit" id="laheta" name="button">Lähetä</button></td>
+        </tr>
+      </table>
+    </form>
+  </section>
+</body>
+
 </html>
