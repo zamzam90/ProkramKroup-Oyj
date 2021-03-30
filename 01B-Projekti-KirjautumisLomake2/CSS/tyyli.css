@@ -8,7 +8,7 @@ body {
 }
 #kyselylomake {
   width: 600px;
-  height: 800px;
+  height: auto;
   background-color: #26273b;
   display: inline-block;
   border: 1px solid;
