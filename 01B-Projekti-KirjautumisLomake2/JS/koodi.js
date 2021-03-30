@@ -22,32 +22,25 @@ function emailIsValid (email) {
 if(emailIsValid(sahkoposti)) { //
  }
  else {
-  alert("Anna oikea sähköpostiosoitteesi");
+  alert("Anna oikea sähköpostiosoitteesi!");
   lomake.email.focus();
-  return (false);
+  return false;
 }
 
 //Ikä-kentän numero tarkastus
-//iän on oltava numero
-/*if (isNaN(x))
-  {
-    alert("Iän on oltava numeroita!");
-    return false;
-  }
-  //ehto 1, alle 12v ei onnistu
-  else if (x < 12) {
-    alert("Olet liian nuori vastaamaan!");
-    return false;
-  }
-  //ehto 2, yli 100v ei onnistu
-  else (x > 100) {
-    alert("Olet jo liian vanha vastaamaan tähän, lepoa vaan!");
-    return false;
-  }
-  else if () {
-    return true;
+//iän on oltava numero, määritetään se isNaN:Lla
 
-  }*/
-
-
-  }
+if (isNaN(x)) {
+  alert("Iän on oltava numeroita!");
+  return false;
+}
+else if (x<12) {
+  alert("Olet alaikäinen tähän lomakkeeseen ja sivustolle!");
+  return false;
+}
+else if (x>100) {
+  alert("Olet jo aika iäkäs, otahan lepoa vaan!");
+  return false;
+}
+return true;
+}
