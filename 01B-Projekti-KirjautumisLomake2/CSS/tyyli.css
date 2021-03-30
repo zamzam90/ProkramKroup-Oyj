@@ -15,7 +15,7 @@ body {
   border-radius: 8px;
   padding: 10px 15px 10px 150px;
   text-align: left;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 12;
   margin-right: auto;
   margin-left: auto;
@@ -23,14 +23,14 @@ body {
 }
 #otsikko {
   color: white;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 22;
   text-align: left;
   margin-left: 10%;
 }
 #kuvaus {
   color: gray;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 18;
   text-align: left;
   margin-left: 10%;
@@ -82,7 +82,8 @@ width: 40px;
   border: 3px solid gray;
   border-radius: 8px;
   color: #1cbfff;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
   width: 90px;
   height: 50px;
 }
@@ -90,5 +91,5 @@ footer {
   color: gray;
   text-align: center;
   background-color: black;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
