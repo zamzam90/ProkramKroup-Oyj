@@ -60,12 +60,14 @@ body {
 }
 #ddpotsikko {
   color: lightGray;
+  padding: 35px 0px 15px;
 }
 #pudotus {
   border: 3px solid gray;
 }
 #rryhma1 {
   color: lightGray;
+  padding: 15px 0px 15px;
 }
 #radio1 {
   color: gray;
@@ -78,6 +80,7 @@ body {
 }
 #rryhma2 {
   color: lightGray;
+  padding: 15px 0px 15px;
 }
 #radio4 {
   color: gray;
@@ -90,6 +93,7 @@ body {
 }
 #zekkiboxit {
   color: lightGray;
+  padding: 15px 0px 15px;
 }
 #check1 {
   color: gray;
@@ -101,7 +105,10 @@ body {
   color: gray;
 }
 td {
-width: 40px;
+  width: 40px;
+}
+#kommenttikentta {
+  padding: 15px 0px 15px;
 }
 #laheta {
   background-color: #141526;
