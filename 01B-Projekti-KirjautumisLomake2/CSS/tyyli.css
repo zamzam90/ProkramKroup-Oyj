@@ -1,1 +1,62 @@
-
+body {
+  background-color: #141526;
+  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#kyselylomake {
+  width: 600px;
+  height: 800px;
+  background-color: #26273b;
+  display: inline-block;
+  border: 1px solid;
+  padding: 10px 15px 10px 150px;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+#otsikko {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22;
+  text-align: left;
+  margin-left: 10%;
+}
+#kuvaus {
+  color: #9190a1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18;
+  text-align: left;
+  margin-left: 10%;
+}
+#nimisyotto {
+  color: white;
+}
+#emailsyotto {
+  color: white;
+}
+#ikasyotot {
+  color: white;
+}
+td {
+width: 40px;
+}
+#laheta {
+  background-color: #141526;
+  border: 3px solid gray;
+  border-radius: 8px;
+  color: #1cbfff;
+  width: 90px;
+  height: 50px;
+}
+footer {
+  color: #9190a1;
+  text-align: center;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+}
