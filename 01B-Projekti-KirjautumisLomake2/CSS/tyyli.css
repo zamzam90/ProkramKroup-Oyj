@@ -22,7 +22,7 @@ body {
   margin-top: 50px;
 }
 #otsikko {
-  color: white;
+  color: lightGray;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 22;
   text-align: left;
@@ -36,19 +36,31 @@ body {
   margin-left: 10%;
 }
 #nimisyotto {
-  color: white;
+  color: lightGray;
 }
 #emailsyotto {
-  color: white;
+  color: lightGray;
 }
 #ikasyotot {
-  color: white;
+  color: lightGray;
+}
+#nimi {
+  border: 3px solid gray;
+}
+#email {
+  border: 3px solid gray;
+}
+#ika {
+  border: 3px solid gray;
 }
 #ddpotsikko {
-  color: white;
+  color: lightGray;
+}
+#pudotus {
+  border: 3px solid gray;
 }
 #rryhma1 {
-  color: white;
+  color: lightGray;
 }
 #radio1 {
   color: gray;
@@ -60,7 +72,7 @@ body {
   color: gray;
 }
 #rryhma2 {
-  color: white;
+  color: lightGray;
 }
 #radio4 {
   color: gray;
@@ -72,7 +84,7 @@ body {
   color: gray;
 }
 #zekkiboxit {
-  color: white
+  color: lightGray;
 }
 td {
 width: 40px;
