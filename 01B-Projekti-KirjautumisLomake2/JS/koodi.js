@@ -1,12 +1,11 @@
 //01B - Kirjautumislomake2 koodit
-//alert("kukkuu");
+//alert("kukkuu"); - toimii!
 function kyselylomake() {
 
 //Haetaan tiedot muuttujiin lomakkeesta
 var annaNimi = document.getElementById('nimi').value;
 var sahkoposti = document.getElementById('email').value;
 var x = document.getElementById('ika').value;
-var
 
 console.log(annaNimi.length);
 //Käyttäjänimen pituuden tarkistus
@@ -35,7 +34,11 @@ if (isNaN(x))
     alert("Iän on oltava numeroita!");
     return false;
   }
+  else (x < 12) {
+    alert("Olet liian nuori vastaamaan!");
+  }
+  else (x > 100) {
+    alert("Olet jo liian vanha vastaamaan tähän, lepoa vaan!");
+  }
 
-//Kommenttikentän ulkopuolelle kommentointi
-
-}
+  }
