@@ -20,6 +20,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 #otsikko {
   color: lightGray;
@@ -102,5 +103,5 @@ width: 40px;
 footer {
     background-color: black; border: 0; padding: 15px; margin: 0;
     text-align: center;
-    font-family: 'Noto Sans JP', sans-serif; color: gray;
+    font-family: 'Noto Sans JP', sans-serif; color: lightGray;
 }
