@@ -1,1 +1,41 @@
-//Tähän tulee koodit
+//01B - Kirjautumislomake2 koodit
+//alert("kukkuu");
+function kyselylomake() {
+
+//Haetaan tiedot muuttujiin lomakkeesta
+var annaNimi = document.getElementById('nimi').value;
+var sahkoposti = document.getElementById('email').value;
+var x = document.getElementById('ika').value;
+var
+
+console.log(annaNimi.length);
+//Käyttäjänimen pituuden tarkistus
+if (annaNimi.length < 3) {
+  alert("Antamasi nimi on liian lyhyt!");
+  return false;
+}
+
+//Söhköpostin tarkastus
+
+function emailIsValid (email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) }
+
+if(emailIsValid(sahkoposti)) { //
+ }
+ else {
+  alert("Anna oikea sähköpostiosoitteesi");
+  lomake.email.focus();
+  return (false);
+}
+
+//Ikä-kentän numero tarkastus
+
+if (isNaN(x))
+  {
+    alert("Iän on oltava numeroita!");
+    return false;
+  }
+
+//Kommenttikentän ulkopuolelle kommentointi
+
+}
