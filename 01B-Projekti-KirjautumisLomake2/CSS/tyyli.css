@@ -34,7 +34,7 @@ body {
   margin-left: 15%;
 }
 #kuvaus {
-  color: gray;
+  color: #9193a8;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18;
   text-align: left;
@@ -70,39 +70,39 @@ body {
   padding: 15px 0px 15px;
 }
 #radio1 {
-  color: gray;
+  color: #9193a8;
 }
 #radio2 {
-  color: gray;
+  color: #9193a8;
 }
 #radio3 {
-  color: gray;
+  color: #9193a8;
 }
 #rryhma2 {
   color: lightGray;
   padding: 15px 0px 15px;
 }
 #radio4 {
-  color: gray;
+  color: #9193a8;
 }
 #radio5 {
-  color: gray;
+  color: #9193a8;
 }
 #radio6 {
-  color: gray;
+  color: #9193a8;
 }
 #zekkiboxit {
   color: lightGray;
   padding: 15px 0px 15px;
 }
 #check1 {
-  color: gray;
+  color: #9193a8;
 }
 #check2 {
-  color: gray;
+  color: #9193a8;
 }
 #check3 {
-  color: gray;
+  color: #9193a8;
 }
 td {
   width: 40px;
@@ -112,7 +112,7 @@ td {
 }
 #laheta {
   background-color: #141526;
-  border: 3px solid gray;
+  border: 3px solid #535467;
   border-radius: 8px;
   color: #1cbfff;
   font-size: 16px;
