@@ -28,17 +28,26 @@ if(emailIsValid(sahkoposti)) { //
 }
 
 //Ikä-kentän numero tarkastus
-
-if (isNaN(x))
+//iän on oltava numero
+/*if (isNaN(x))
   {
     alert("Iän on oltava numeroita!");
     return false;
   }
-  else (x < 12) {
+  //ehto 1, alle 12v ei onnistu
+  else if (x < 12) {
     alert("Olet liian nuori vastaamaan!");
+    return false;
   }
+  //ehto 2, yli 100v ei onnistu
   else (x > 100) {
     alert("Olet jo liian vanha vastaamaan tähän, lepoa vaan!");
+    return false;
   }
+  else if () {
+    return true;
+
+  }*/
+
 
   }
