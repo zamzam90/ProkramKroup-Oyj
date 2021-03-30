@@ -1,5 +1,5 @@
 body {
-  background-image: url("../background-image.png");
+  background-image: url("../background-image2.png");
   background-repeat: repeat;
   background-color: #141526;
   max-width: 100%;
@@ -13,9 +13,7 @@ body {
 #headeri {
   color: #d7d8df;
   font-family: 'Noto Sans JP', sans-serif;
-  background-color: #26273b;
-  margin-left: 65px;
-  margin-right: 65px;
+  margin-top: 35px;
 }
 #kyselylomake {
   width: 600px;
