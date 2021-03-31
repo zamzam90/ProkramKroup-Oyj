@@ -122,6 +122,9 @@ td {
 #kommenttikentta {
   padding: 15px 0px 15px;
 }
+textarea {
+  resize: none;
+}
 #laheta {
   background-color: #141526;
   border: 3px solid #535467;
