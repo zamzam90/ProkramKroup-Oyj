@@ -1,4 +1,7 @@
 body {
+  background-image: url("../background-image2.png");
+  background-repeat: repeat;
+  background-color: #141526
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -6,13 +9,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-#bgVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
 }
 #headeri {
   color: #d7d8df;
