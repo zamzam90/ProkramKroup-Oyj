@@ -6,14 +6,13 @@ function kyselylomake(form) {
 var annaNimi = document.getElementById('nimi').value;
 var sahkoposti = document.getElementById('email').value;
 var x = document.getElementById('ika').value;
-//var raaadiot = document.getElementById('radior1');
-//var kayttojarjestelma = false;
-//var radionappulat = document.getElementById('radior2');
-//var atk = false;
-//var tsekkibox = document.getElementsByName('tsekbox');
-//var taitotaso = false;
-//var dropdownia = document.getElementById('dropdown');
-//var kommentti = document.getElementById('name').value;
+var raaadiot = document.getElementsByName('radior1');
+var kayttojarjestelma = false;
+var radionappulat = document.getElementsByName('radior2');
+var atk = false;
+var tsekkibox = document.getElementsByName('tsekbox');
+var taitotaso = false;
+var kommentti = document.getElementById('kommenttikentta').value;
 
 
 console.log(annaNimi.length);
@@ -52,7 +51,7 @@ else if (x>100) {
   alert("Olet jo aika iäkäs, otahan lepoa vaan!");
   return false;
 }
-  return true;
+//return true; tulis muuten, mutta kaavakkeen tarkistusta jatketaan niin siksi se ei tule nyt
 
 
 
@@ -61,11 +60,11 @@ var dropdownlist = document.getElementById('pudotus');
 var henkinenIka = dropdownlist.options[dropdownlist.selectedIndex].value;
 if (henkinenIka == "empty") {
   alert("Valitse henkinen ikäsi.");
-  return false;
+return false;
 }
 
 //ekoille radiobuttoneille haku, että on jotain valittuna
-/*for (var x = 0; x < raaadiot.length; x++) {
+for (var x = 0; x < raaadiot.length; x++) {
   if (raaadiot[x].checked == true) {
     kayttojarjestelma = true;
   }
@@ -74,7 +73,7 @@ if (kayttojarjestelma == false) {
   alert("Valitse mitä käyttöjärjestelmää käytät.");
   return false;
 }
-/*
+
 //tokille radiobuttoneille haku, että on jotain valittuna
 for (var x = 0; x < radionappulat.length; x++) {
   if (radionappulat[x].checked == true) {
@@ -85,7 +84,7 @@ if (atk == false) {
   alert("Valitse käyttämäsi ATK.");
   return false;
 }
-/*
+
 //checkboxeille haku, että on valittuna
 for (var y = 0; y < tsekkibox.length; y++) {
   if (tsekkibox[y].checked == true) {
@@ -96,10 +95,9 @@ if (taitotaso == false) {
   alert("Valitse CS:GO taitotasosi!");
   return false;
 }
-//Kommenttikentän tsekkaus
+//Kommenttikentän tekstin tsekkaus
 if (kommentti.length < 10) {
   alert("Anna kommentteihin vähintää 10 merkkiä!")
   return false;
 }
-}*/
- }
+}
