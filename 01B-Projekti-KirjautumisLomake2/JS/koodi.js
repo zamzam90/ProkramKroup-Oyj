@@ -1,12 +1,11 @@
 //01B - Kirjautumislomake2 koodit
 //alert("kukkuu"); - toimii!
-function kyselylomake() {
+function kyselylomake(form) {
 
 //Haetaan tiedot muuttujiin lomakkeesta
 var annaNimi = document.getElementById('nimi').value;
 var sahkoposti = document.getElementById('email').value;
 var x = document.getElementById('ika').value;
-//var henkinenIka = dropdownlist.options[dropdownlist.selectedIndex].value;
 //var raaadiot = document.getElementById('radior1');
 //var kayttojarjestelma = false;
 //var radionappulat = document.getElementById('radior2');
@@ -36,11 +35,15 @@ function emailIsValid (email) {
 }
 //Ikä-kentän numero tarkastus
 //iän on oltava numero, määritetään se isNaN:Lla, muutoin perus else if:t
-
-if (isNaN(x)) {
+if (x === "") {
+  alert("Anna ikäsi!");
+  return false;
+}
+else if (isNaN(x)) {
   alert("Iän on oltava numeroita!");
   return false;
 }
+
 else if (x<12) {
   alert("Olet alaikäinen tähän lomakkeeseen ja sivustolle!");
   return false;
@@ -52,15 +55,17 @@ else if (x>100) {
   return true;
 
 
-/*
+
 //tarkistus että dropdown valikosta on valittu jotain:
+var dropdownlist = document.getElementById('pudotus');
+var henkinenIka = dropdownlist.options[dropdownlist.selectedIndex].value;
 if (henkinenIka == "empty") {
   alert("Valitse henkinen ikäsi.");
   return false;
 }
 
 //ekoille radiobuttoneille haku, että on jotain valittuna
-for (var x = 0; x < raaadiot.length; x++) {
+/*for (var x = 0; x < raaadiot.length; x++) {
   if (raaadiot[x].checked == true) {
     kayttojarjestelma = true;
   }
@@ -69,7 +74,7 @@ if (kayttojarjestelma == false) {
   alert("Valitse mitä käyttöjärjestelmää käytät.");
   return false;
 }
-
+/*
 //tokille radiobuttoneille haku, että on jotain valittuna
 for (var x = 0; x < radionappulat.length; x++) {
   if (radionappulat[x].checked == true) {
@@ -80,7 +85,7 @@ if (atk == false) {
   alert("Valitse käyttämäsi ATK.");
   return false;
 }
-
+/*
 //checkboxeille haku, että on valittuna
 for (var y = 0; y < tsekkibox.length; y++) {
   if (tsekkibox[y].checked == true) {
