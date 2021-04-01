@@ -126,6 +126,7 @@ textarea {
   resize: none;
 }
 #laheta {
+  margin-bottom: 50px;
   background-color: #141526;
   border: 3px solid #535467;
   border-radius: 8px;
