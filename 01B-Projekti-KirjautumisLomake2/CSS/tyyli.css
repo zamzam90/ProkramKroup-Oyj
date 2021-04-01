@@ -29,7 +29,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 #otsikko {
   color: #d7d8df;
@@ -137,6 +137,7 @@ textarea {
 }
 footer {
   background-color: black; border: 0; padding: 30px; margin: 0;
+  height: 150px;
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif; color: #d7d8df;
 }
