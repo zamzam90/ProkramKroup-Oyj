@@ -9,10 +9,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 #headeri {
   color: #d7d8df;
-  font-family: 'Noto Sans JP', sans-serif;
   margin-top: 50px;
 }
 #kyselylomake {
@@ -24,7 +24,6 @@ body {
   border-radius: 12px;
   padding: 10px 15px 10px 150px;
   text-align: left;
-  font-family: 'Noto Sans JP', sans-serif;
   font-size: 12;
   margin-right: auto;
   margin-left: auto;
@@ -33,14 +32,12 @@ body {
 }
 #otsikko {
   color: #d7d8df;
-  font-family: 'Noto Sans JP', sans-serif;
   font-size: 22;
   text-align: left;
   margin-left: 15%;
 }
 #kuvaus {
   color: #9193a8;
-  font-family: 'Noto Sans JP', sans-serif;
   font-size: 18;
   text-align: left;
   margin-left: ;
@@ -140,5 +137,5 @@ footer {
   background-color: black; border: 0; padding: 30px; margin: 0;
   height: 150px;
   text-align: center;
-  font-family: 'Noto Sans JP', sans-serif; color: #d7d8df;
+  color: #d7d8df;
 }
