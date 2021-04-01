@@ -14,7 +14,7 @@
     <h1>ProkramKroup Oyj tekniikkasivusto & foorumi</h1>
   </header>
   <section>
-    <form class="" action="" method="post" id="kyselylomake" onsubmit="return kyselylomake();">
+    <form class="" action="" method="post" id="kyselylomake" onsubmit="return kyselylomake(this);">
       <h1 id="otsikko">Rekisteröidy käyttäjäksi.</h1>
       <p id="kuvaus">Täytä alla olevat tiedot niin pääset osaksi tosi siistiä tekniikkasivustoa!</p>
       <table>
@@ -32,10 +32,10 @@
           <th id="ddpotsikko">Henkinen ikä?</th>
           <td colspan="2">
             <select class="" id="pudotus" name="">
-              <option value="">--valitse--</option>
-              <option value="">Vauva</option>
-              <option value="">Teini</option>
-              <option value="">Eläkeläinen</option>
+              <option name="opt" value="">--valitse--</option>
+              <option name="opt" value="">Vauva</option>
+              <option name="opt" value="">Teini</option>
+              <option name="opt" value="">Eläkeläinen</option>
             </select>
           </td>
         </tr>
