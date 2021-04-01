@@ -10,7 +10,7 @@ var raaadiot = document.getElementsByName('radior1');
 var kayttojarjestelma = false;
 var radionappulat = document.getElementsByName('radior2');
 var atk = false;
-var tsekkibox = document.getElementsByName('tsekbox');
+var tsekkibox = document.getElementsByName('zekbox');
 var taitotaso = false;
 var kommentti = document.getElementById('kommenttikentta').value;
 
@@ -54,7 +54,6 @@ else if (x>100) {
 //return true; tulis muuten, mutta kaavakkeen tarkistusta jatketaan niin siksi se ei tule nyt
 
 
-
 //tarkistus että dropdown valikosta on valittu jotain:
 var dropdownlist = document.getElementById('pudotus');
 var henkinenIka = dropdownlist.options[dropdownlist.selectedIndex].value;
@@ -96,8 +95,8 @@ if (taitotaso == false) {
   return false;
 }
 //Kommenttikentän tekstin tsekkaus
-if (kommentti.length < 10) {
-  alert("Anna kommentteihin vähintää 10 merkkiä!")
+if (kommentti.length < 5) {
+  alert("Kirjoita kommentteihin vähintään 5 merkkiä!");
   return false;
 }
 }
