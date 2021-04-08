@@ -1,4 +1,4 @@
-/* asetetaan pituus 100% */
+/* asetetaan sivunpituus 100% */
 html,
 body {
   /* height: 100%; */
@@ -15,16 +15,8 @@ body {
   margin: 2px;
   font: 16px Sans-Serif;
 }
-
 * {
   box-sizing: border-box;
-}
-
-body > p {
-  color: maroon;
-  font-family: "New Tegomin", serif;
-  text-align: center;
-  flex: 1 0 auto;
 }
 #otsikko {
   flex: 0 0 auto;
@@ -35,16 +27,24 @@ body > p {
   color: maroon;
   font-family: "Dancing Script", cursive;
 }
+#content {
+  color: maroon;
+  font-family: "New Tegomin", serif;
+  text-align: center;
+  flex: 0 0 auto;
+}
+#pelilaatikko {
+  flex: 1 0 auto;
+}
 /* TODO: nappien muotoilu.. */
 #peli {
   text-align: center;
-  flex: 1 0 auto;
 }
-
+/* TODO: ihmetellään sittenku js kirjottaa htmlään viestit.
 #viesti {
   text-align: center;
-  flex: 1 0 auto;
-}
+}*/
+/* pakotetaan footer alas */
 footer {
   flex-shrink: 0;
 }
