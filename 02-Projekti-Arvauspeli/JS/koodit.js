@@ -22,7 +22,7 @@ window.onload= function alusta()
     }
     alustus+= '<br>';
   }
-  document.getElementById('tt').innerHTML = alustus;
+  document.getElementById('peli').innerHTML = alustus;
 
 }
 function arvaa(arpa)
