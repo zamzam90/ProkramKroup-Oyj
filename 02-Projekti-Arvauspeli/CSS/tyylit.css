@@ -106,6 +106,7 @@ body::-webkit-scrollbar {
   text-align: center;
   padding: 2vh 0 2vh;
   font-family: "New Tegomin", serif;
+  font-size: large;
 }
 /* pakotetaan footer alas */
 footer {
