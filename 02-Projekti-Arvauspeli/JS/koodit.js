@@ -46,7 +46,7 @@ function arvaa(arpa)
       document.getElementById("viesti").innerHTML = 'Valitsit liian suuren numeron';
     }
     else if (arvaus == arvattava){
-      document.getElementById("viesti").innerHTML = 'Oikein, käytit ' + kerrat + ' arvauskertaa';
+      document.getElementById("viesti").innerHTML = 'Oikein! Käytit ' + kerrat + ' arvauskertaa';
     }
     else {
       document.getElementById("viesti").innerHTML= 'Käytit kaikki arvauskertasi';
