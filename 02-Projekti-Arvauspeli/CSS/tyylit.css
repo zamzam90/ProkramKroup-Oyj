@@ -75,7 +75,6 @@ body::-webkit-scrollbar {
   border-bottom: thin solid black;
   flex: 1 0 auto;
 }
-/* TODO: nappien muotoilu.. */
 #peli {
   text-align: center;
 }
