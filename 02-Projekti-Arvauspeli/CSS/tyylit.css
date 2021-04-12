@@ -83,6 +83,11 @@ body::-webkit-scrollbar {
   text-align: center;
   border-radius: 8px;
 }
+#pelilaatikko > button:hover {
+  color: black;
+  background-color: green;
+  text-decoration: underline;
+}
 #peli {
   text-align: center;
 }
