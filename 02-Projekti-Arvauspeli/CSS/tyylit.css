@@ -87,6 +87,7 @@ body::-webkit-scrollbar {
   color: black;
   background-color: green;
   text-decoration: underline;
+  box-shadow: 0 0 5px limegreen;
 }
 #peli {
   text-align: center;
@@ -101,8 +102,10 @@ body::-webkit-scrollbar {
 #peli > button:hover {
   color: black;
   background-color: whitesmoke;
+  font-weight: bold;
 }
 #viesti {
+  color: #99ddff;
   text-align: center;
   padding: 2vh 0 2vh;
   font-family: "New Tegomin", serif;
