@@ -32,7 +32,7 @@ function arvaa(arpa)
   {
     if(arvaus < arvattava)
     {
-      alert('Valitsit liian pienen numeron');
+      document.getElementById("viesti").innerHTML = 'Valitsit liian pienen numeron';
       var x = '';
       for(var luvut = 1; luvut < arvaus; luvut++)
       {
