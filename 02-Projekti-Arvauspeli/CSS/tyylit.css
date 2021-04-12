@@ -63,6 +63,7 @@ body::-webkit-scrollbar {
   flex: 0 0 auto;
 }
 #pelilaatikko {
+  text-align: center;
   background-color: #004466;
   padding-top: 8vh;
   padding-bottom: 2vh;
@@ -74,6 +75,13 @@ body::-webkit-scrollbar {
   border-right: thin solid black;
   border-bottom: thin solid black;
   flex: 1 0 auto;
+}
+#pelilaatikko > button {
+  color: antiquewhite;
+  background-color: #005580;
+  padding: 7px 12px;
+  text-align: center;
+  border-radius: 8px;
 }
 #peli {
   text-align: center;
