@@ -43,13 +43,13 @@ function arvaa(arpa)
     }
     else if(arvaus > arvattava)
     {
-      alert('Valitsit liian suuren numeron');
+      document.getElementById("viesti").innerHTML = 'Valitsit liian suuren numeron';
     }
     else if (arvaus == arvattava){
-      alert('Oikein, kÃ¤ytit ' + kerrat + ' kertaa');
+      document.getElementById("viesti").innerHTML = 'Oikein, käytit ' + kerrat + ' kertaa';
     }
     else {
-      alert('KÃ¤ytit kaikki kertasi');
+      document.getElementById("viesti").innerHTML= 'käytit kaikki kertasi';
     }
   }
 
