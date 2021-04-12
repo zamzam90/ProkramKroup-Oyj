@@ -46,10 +46,10 @@ function arvaa(arpa)
       document.getElementById("viesti").innerHTML = 'Valitsit liian suuren numeron';
     }
     else if (arvaus == arvattava){
-      document.getElementById("viesti").innerHTML = 'Oikein, käytit ' + kerrat + ' kertaa';
+      document.getElementById("viesti").innerHTML = 'Oikein, käytit ' + kerrat + ' arvauskertaa';
     }
     else {
-      document.getElementById("viesti").innerHTML= 'käytit kaikki kertasi';
+      document.getElementById("viesti").innerHTML= 'Käytit kaikki arvauskertasi';
     }
   }
 
