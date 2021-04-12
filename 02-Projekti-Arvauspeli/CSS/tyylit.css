@@ -64,7 +64,7 @@ body::-webkit-scrollbar {
 }
 #pelilaatikko {
   background-color: #004466;
-  padding-top: 12vh;
+  padding-top: 8vh;
   width: 65%;
   margin-left: auto;
   margin-right: auto;
@@ -76,10 +76,18 @@ body::-webkit-scrollbar {
 }
 /* TODO: nappien muotoilu.. */
 #peli {
-  color: #b3e6ff;
+  text-align: center;
+}
+#peli > button {
+  color: antiquewhite;
+  background-color: #005580;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
+  border-radius: 2px;
+}
+#peli > button:hover {
+  color: black;
+  background-color: whitesmoke;
 }
 /* TODO: ihmetellään sittenku js kirjottaa htmlään viestit.
 #viesti {
