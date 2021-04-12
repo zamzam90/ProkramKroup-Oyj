@@ -10,7 +10,7 @@ body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   /* scrollbar piilossa mutta toiminnassa */
-  background-color: black;
+  background-color: #002233;
   background-image: url(../raindrops.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 #otsikko {
   background-color: #004466;
   font-size: x-large;
-  width: 70%;
+  width: 65%;
   margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
   font-family: "New Tegomin", serif;
   text-align: center;
   padding: 10px;
-  width: 70%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
   border-left: thin solid black;
@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
 #pelilaatikko {
   background-color: #004466;
   padding-top: 12vh;
-  width: 70%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 0 0 5px 5px;
@@ -76,7 +76,10 @@ body::-webkit-scrollbar {
 }
 /* TODO: nappien muotoilu.. */
 #peli {
+  color: #b3e6ff;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
 }
 /* TODO: ihmetellään sittenku js kirjottaa htmlään viestit.
 #viesti {
