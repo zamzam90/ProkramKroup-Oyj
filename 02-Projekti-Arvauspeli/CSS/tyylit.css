@@ -65,6 +65,7 @@ body::-webkit-scrollbar {
 #pelilaatikko {
   background-color: #004466;
   padding-top: 8vh;
+  padding-bottom: 2vh;
   width: 65%;
   margin-left: auto;
   margin-right: auto;
