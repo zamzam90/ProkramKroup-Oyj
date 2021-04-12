@@ -89,10 +89,11 @@ body::-webkit-scrollbar {
   color: black;
   background-color: whitesmoke;
 }
-/* TODO: ihmetellään sittenku js kirjottaa htmlään viestit.
 #viesti {
   text-align: center;
-}*/
+  padding: 2vh 0 2vh;
+  font-family: "New Tegomin", serif;
+}
 /* pakotetaan footer alas */
 footer {
   flex-shrink: 0;
