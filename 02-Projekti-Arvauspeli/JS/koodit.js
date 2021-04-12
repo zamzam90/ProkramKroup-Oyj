@@ -28,18 +28,11 @@ function arvaa(arpa)
 {
   kerrat++;
   var arvaus = arpa.value;
-  if(kerrat <= 3)
+  if(kerrat < 4)
   {
     if(arvaus < arvattava)
     {
       document.getElementById("viesti").innerHTML = 'Valitsit liian pienen numeron';
-      var x = '';
-      for(var luvut = 1; luvut < arvaus; luvut++)
-      {
-        x = document.getElementsByName('' + luvut+ '');
-        console.log(x);
-        x.style.nayta = "none";
-      }
     }
     else if(arvaus > arvattava)
     {
@@ -48,9 +41,7 @@ function arvaa(arpa)
     else if (arvaus == arvattava){
       document.getElementById("viesti").innerHTML = 'Oikein! Käytit ' + kerrat + ' arvauskertaa';
     }
-    else {
+    }else /*(arvaus != arvattava && kerrat == 3)*/ {
       document.getElementById("viesti").innerHTML= 'Käytit kaikki arvauskertasi';
-    }
   }
-
 }
