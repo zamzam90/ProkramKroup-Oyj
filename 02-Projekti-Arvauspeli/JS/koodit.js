@@ -5,7 +5,6 @@ window.onload= function alusta()
 {
   var alustus = '';
 
-  alert(arvattava);
   for(var i = 1; i <=10; i++)
   {
     for(var j = 0; j < 3; j++)
