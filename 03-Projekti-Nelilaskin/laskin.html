@@ -10,11 +10,216 @@
     <link rel="stylesheet" href="CSS/tyyli.css">
     <script src="JS/koodi.js"></script>
   </head>
+    <div id="content">
+      <table id="laskin">
+      <tbody>
+        <td id="näyttö" </td>
+          <tr>
+            <td>
+              <button
+                type="button"
+                value="7"
+                onclick="return lisää(this.value)"
+                id="seven"
+                class="number"
+              >
+                7
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                value="8"
+                onclick="return lisää(this.value)"
+                id="eight"
+                class="number"
+              >
+                8
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                value="9"
+                onclick="return lisää(this.value)"
+                id="nine"
+                class="number"
+              >
+                9
+              </button>
+            </td>
+            <td>
+              <button
+               type="button"
+               value="/"
+               onclick="return lisää(this.value)"
+               id="divide"
+               class="operator"
+             >
+              /
+            </button>
+          </td>
+          <tr>
+          </tr>
+            <td>
+              <button
+                type="button"
+                value="4"
+                onclick="return lisää(this.value)"
+                id="four"
+                class="number"
+              >
+                4
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                value="5"
+                onclick="return lisää(this.value)"
+                id="five"
+                class="number"
+              >
+                5
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                value="6"
+                onclick="return lisää(this.value)"
+                id="six"
+                class="number"
+              >
+                6
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                value="*"
+                onclick="return lisää(this.value)"
+                id="multiply"
+                class="operator"
+              >
+                *
+              </button>
+            </td>
+            <tr>
+            </tr>
+              <td>
+                <button
+                  type="button"
+                  value="1"
+                  onclick="return lisää(this.value)"
+                  id="one"
+                  class="number"
+                >
+                  1
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  value="2"
+                  onclick="return lisää(this.value)"
+                  id="two"
+                  class="number"
+                >
+                  2
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  value="3"
+                  onclick="return lisää(this.value)"
+                  id="three"
+                  class="number"
+                >
+                  3
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  value="+"
+                  onclick="return lisää(this.value)"
+                  id="plus"
+                  class="operator"
+                >
+                  +
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  value="."
+                  onclick="return lisää(this.value)"
+                  id="dot"
+                  class="operator"
+                >
+                  .
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  value="0"
+                  onclick="return lisää(this.value)"
+                  id="zero"
+                  class="number"
+                >
+                  0
+                </button>
+              </td>
+              <td>
+                <button
+                type="button"
+                value="="
+                onclick="return kalkuloi();"
+                id="equals"
+                class="operator"
+              >
+                =
+               </button>
+             </td>
+             <td>
+              <button
+                type="button"
+                value="-"
+                onclick="return lisää(this.value)"
+                id="minus"
+                class="operator"
+              >
+                -
+             </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <button
+               type="button"
+               value="ac"
+               id="reset"
+               class="operator"
+               onclick="return alusta();"
+            >
+             clear
+           </button>
+         </td>
+         <tr>
+         </tr>
+        </tbody>
+      </table>
+    </div>
   <body>
     <footer>
       <br>
       <br>
-      <p>ProkramKroup Oyj &copy; - 2031</p>
+      <p>ProkramKroup Oyj &copy; - 3031</p>
       <br>
       <br>
     </footer>
