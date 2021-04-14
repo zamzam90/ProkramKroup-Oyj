@@ -14,19 +14,20 @@ body {
   padding-bottom: 2.5rem;
 }
 #laskin {
-background-color: black;
-margin-left: auto;
-margin-right: auto;
-padding-top: 8vh;
-width: 150px
-height: 300px:
+ background-color: #242424;
+ margin-left: auto;
+ margin-right: auto;
+ padding-top: 8vh;
+ width: 200px
+ height: 500px:
+ border-radius: 25px;
 }
 #näyttö {
-color: lightGray;
-text-align: right;
-font-size: 2em;
-margin-left: auto;
-margin-right: auto;
+ color: #f6fee8;
+ text-align: right;
+ font-size: 2em;
+ margin-left: auto;
+ margin-right: auto;
 }
 .number {
   height: 60px;
@@ -35,27 +36,34 @@ margin-right: auto;
   font-size: 2em;
   font-weight: ;
   border-radius: 50%;
-  border-color: gray;
-  background-color: black;
-  color: lightGray;
+  border: 3px solid #3f3f3f;
+  background-color: #242424;
+  color: #f6fee8;
   text-align: center;
-
-
+}
+#equals {
+  background-color: #ff7555;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  font-size: 2em;
+  font-weight: ;
+  border-radius: 50%;
+  border: 3px solid #ff7555;
+  color: #f6fee8;
+  text-align: center;
 }
 .operator {
-    height: 60px;
-    line-height: 60px;
-    width: 60px;
-    font-size: 2em;
-    font-weight: ;
-    border-radius: 50%;
-    border-color: gray;
-    background-color: gray;
-    color: lightGray;
-    text-align: center;
-}
-#one {
-
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  font-size: 2em;
+  font-weight: ;
+  border-radius: 50%;
+  border: 3px solid #3f3f3f;
+  background-color: #3f3f3f;
+  color: #f6fee8;
+  text-align: center;
 }
 footer {
   background-color: lightGray; border: 0; padding: 30px; margin: 0; opacity:0.4;
