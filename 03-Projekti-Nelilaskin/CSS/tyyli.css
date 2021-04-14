@@ -15,7 +15,6 @@ body {
 }
 #laskin {
 background-color: black;
-color: lightGray;
 margin-left: auto;
 margin-right: auto;
 padding-top: 8vh;
@@ -23,6 +22,39 @@ width: 150px
 height: 300px:
 }
 #näyttö {
+color: lightGray;
+text-align: right;
+font-size: 2em;
+margin-left: auto;
+margin-right: auto;
+}
+.number {
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  font-size: 2em;
+  font-weight: ;
+  border-radius: 50%;
+  border-color: gray;
+  background-color: black;
+  color: lightGray;
+  text-align: center;
+
+
+}
+.operator {
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    font-size: 2em;
+    font-weight: ;
+    border-radius: 50%;
+    border-color: gray;
+    background-color: gray;
+    color: lightGray;
+    text-align: center;
+}
+#one {
 
 }
 footer {
