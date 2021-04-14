@@ -13,6 +13,18 @@ body {
 #content-wrap {
   padding-bottom: 2.5rem;
 }
+#laskin {
+background-color: black;
+color: lightGray;
+margin-left: auto;
+margin-right: auto;
+padding-top: 8vh;
+width: 150px
+height: 300px:
+}
+#näyttö {
+
+}
 footer {
   background-color: lightGray; border: 0; padding: 30px; margin: 0; opacity:0.4;
   position: absolute;
