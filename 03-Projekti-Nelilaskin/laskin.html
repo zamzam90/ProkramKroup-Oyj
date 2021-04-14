@@ -3,28 +3,33 @@
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Yksinkertainen nelilaskin netissa">
-    <meta name="keywords" content="laskin, nelilaskin, online laskin, laskin netissa">
+    <meta name="keywords" content="laskin, nelilaskin, online laskin, peruslaskin, laskin netissa">
     <link rel="shortcut icon" href="favicon.ico">
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <title>Nelilaskin</title>
     <link rel="stylesheet" href="CSS/tyyli.css">
     <script src="JS/koodi.js"></script>
   </head>
-    <div id="content">
-      <table id="laskin">
-      <tbody>
-        <td id="näyttö"> </td>
-          <tr>
-            <td>
-              <button
-                type="button"
-                value="7"
-                onclick="return lisää(this.value)"
-                id="seven"
-                class="number"
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+       <table id="laskin">
+        <tbody>
+         <td id="näyttö"></td>
+         <tr>
+         </td>
+          <td>
+            <button
+              type="button"
+              value="7"
+              onclick="return lisää(this.value)"
+              id="seven"
+              class="number"
               >
                 7
-              </button>
+            </button>
             </td>
             <td>
               <button
@@ -215,13 +220,9 @@
         </tbody>
       </table>
     </div>
-  <body>
-    <footer>
-      <br>
-      <br>
-      <p>ProkramKroup Oyj &copy; - 3031</p>
-      <br>
-      <br>
-    </footer>
+  <footer id="footer">
+    <p>ProkramKroup Oyj &copy; - 2021</p>
+  </footer>
+  </div>
   </body>
 </html>
