@@ -35,6 +35,10 @@ function poista() {
       }
     }
   }
+  // näyttö pysyy "päällä" vaikka tuloste olisi tyhjä
+  if (tulos == "") {
+    return false;
+  }
   //merkkijonosta leikataan substr:lla, joka leikkaa nollasta, eli alusta,
   //viimeisimmän operaation kohdalle = eli poistaa esim 20+30:sta +30 lopusta
   tulos = tulos.substr(0, index);
