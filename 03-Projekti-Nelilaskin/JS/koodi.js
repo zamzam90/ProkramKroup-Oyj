@@ -15,6 +15,7 @@ function lisää(luvut) {
 //lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
 function laske() {
   tulos = eval(tulos);
+  tulos = tulos.toString();
   console.log("Tulos: " + tulos);
   document.getElementById("näyttö").innerHTML = tulos;
 }
