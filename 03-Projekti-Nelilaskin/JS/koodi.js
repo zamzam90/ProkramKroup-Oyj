@@ -3,7 +3,8 @@
 var tulos = "",
   luvut = "",
   operaattorit = ["+", "-", "*", "/", "%"],
-  tyhjätty = "Suorita lasku..";
+  index = 0,
+  tyhjätty = "0";
 //Lisäys-funktio (lisää luvun / operaattorin) lisätään luku tulosmuuttujaan
 function lisää(luvut) {
   tulos += luvut;
@@ -17,9 +18,23 @@ function laske() {
   console.log("Tulos: " + tulos);
   document.getElementById("näyttö").innerHTML = tulos;
 }
-/* ToDo..
+
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin)
-*/
+function poista() {
+  //Loopin avulla käydään läpi numerot mitä annettu
+  for (var y = 0; y < tulos.length; y++) {
+    for (var x = 0; x < operaattorit.length; x++) {
+      if (tulos[y] == operaattorit[x]) {
+        index = y;
+      }
+    }
+  }
+  //merkkijonosta leikataan substr:lla, joka leikkaa nollasta, eli alusta,
+  //viimeisimmän operaation kohdalle = eli poistaa esim 20+30:sta +30 lopusta
+  tulos = tulos.substr(0, index);
+  document.getElementById("näyttö").innerHTML = tulos;
+}
+
 //Alustus-funktio (tyhjentää "näytön")
 function tyhjennä() {
   console.log("Näyttö tyhjennetty."); //for debugging..
