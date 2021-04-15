@@ -21,6 +21,8 @@ body {
 }
 #laskin {
   background-color: #242424;
+  border: 20px solid #242424;
+  border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 8vh;
