@@ -26,7 +26,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 300px;
-  padding-top: 4vh;
+  padding-top: 1px;
+}
+#model {
+  color: #ff7555;
+  text-align: right;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  max-width: 250px;
 }
 #näyttö {
   color: #f6fee8;
