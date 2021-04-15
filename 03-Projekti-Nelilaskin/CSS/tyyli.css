@@ -47,6 +47,7 @@ body {
   background-color: #242424;
   color: #f6fee8;
   text-align: center;
+  cursor: pointer;
 }
 #equals {
   background-color: #ff7555;
@@ -59,6 +60,7 @@ body {
   border: 3px solid #ff7555;
   color: #f6fee8;
   text-align: center;
+  cursor: pointer;
 }
 .clear {
   background-color: #242424;
@@ -71,6 +73,7 @@ body {
   border: 3px solid #ff7555;
   color: #f6fee8;
   text-align: center;
+  cursor: pointer;
 }
 .operator {
   height: 60px;
@@ -84,6 +87,7 @@ body {
   background-color: #3f3f3f;
   color: #f6fee8;
   text-align: center;
+  cursor: pointer;
 }
 footer {
   background-color: lightGray; border: 0; padding: 30px; margin: 0; opacity:0.4;
