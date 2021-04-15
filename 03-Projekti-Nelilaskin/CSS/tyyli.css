@@ -48,6 +48,9 @@ body {
   color: #f6fee8;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #equals {
   background-color: #ff7555;
@@ -61,6 +64,9 @@ body {
   color: #f6fee8;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .clear {
   background-color: #242424;
@@ -74,6 +80,9 @@ body {
   color: #f6fee8;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .operator {
   height: 60px;
@@ -88,6 +97,9 @@ body {
   color: #f6fee8;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer {
   background-color: lightGray; border: 0; padding: 30px; margin: 0; opacity:0.4;
