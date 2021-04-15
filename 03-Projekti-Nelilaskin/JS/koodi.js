@@ -5,21 +5,26 @@ var tulos = "",
   operaattorit = ["+", "-", "*", "/", "%"],
   index = 0,
   tyhjätty = "0";
-//Lisäys-funktio (lisää luvun / operaattorin) lisätään luku tulosmuuttujaan
+//Lisäys-funktio, lisää luvun / operaattorin tulosmuuttujaan
 function lisää(luvut) {
   tulos += luvut;
-  console.log("Luku / Operaattori " + luvut + " lisätty laskuun"); //for debugging..
-  console.log(tulos);
+  //console.log("Luku / Operaattori " + luvut + " lisätty laskuun"); //for debugging..
+  //console.log(tulos);
   document.getElementById("näyttö").innerHTML = tulos;
 }
-//lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
+//lasku-funktio (tässä lasketaan lisätyt luvut tulos muuttujassa eval funktion avulla)
 function laske() {
-  tulos = eval(tulos);
-  tulos = tulos.toString();
-  console.log("Tulos: " + tulos);
-  document.getElementById("näyttö").innerHTML = tulos;
+  /* Estetään undefined jos painetaan ensimmäisenä = nappia */
+  if (tulos == "") {
+    //console.log("hello");//for debugging..
+    return false;
+  } else {
+    tulos = eval(tulos);
+    tulos = tulos.toString();
+    //console.log("Tulos: " + tulos);
+    document.getElementById("näyttö").innerHTML = tulos;
+  }
 }
-
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin)
 function poista() {
   //Loopin avulla käydään läpi numerot mitä annettu
@@ -38,7 +43,7 @@ function poista() {
 
 //Alustus-funktio (tyhjentää "näytön")
 function tyhjennä() {
-  console.log("Näyttö tyhjennetty."); //for debugging..
+  //console.log("Näyttö tyhjennetty."); //for debugging..
   tulos = "";
   document.getElementById("näyttö").innerHTML = tyhjätty;
 }
