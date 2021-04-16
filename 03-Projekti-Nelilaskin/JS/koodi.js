@@ -44,9 +44,7 @@ function poista() {
     return false;
   }
   //jos antaa numeroita vain aluksi ja painaa c - niin pysyy "näyttö päällä"
-  else if (luvut == "") {
-  return true;
-  }
+  
   //merkkijonosta leikataan substr:lla, joka leikkaa nollasta, eli alusta,
   //viimeisimmän operaation kohdalle = eli poistaa esim 20+30:sta +30 lopusta
   tulos = tulos.substr(0, index);
