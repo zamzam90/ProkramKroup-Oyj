@@ -43,8 +43,8 @@ function poista() {
   if (tulos == "") {
     return false;
   }
-  //jos antaa numeroita vain aluksi ja painaa c - niin pysyy "näyttö päällä"
-  
+  //TODO: pieni bugi c-näppäimessä
+
   //merkkijonosta leikataan substr:lla, joka leikkaa nollasta, eli alusta,
   //viimeisimmän operaation kohdalle = eli poistaa esim 20+30:sta +30 lopusta
   tulos = tulos.substr(0, index);
