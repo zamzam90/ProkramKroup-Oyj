@@ -7,10 +7,14 @@ var tulos = "",
   tyhjätty = "0";
 //Lisäys-funktio, lisää luvun / operaattorin tulosmuuttujaan
 function lisää(luvut) {
-  tulos += luvut;
-  //console.log("Luku / Operaattori " + luvut + " lisätty laskuun"); //for debugging..
-  //console.log(tulos);
-  document.getElementById("näyttö").innerHTML = tulos;
+  if (tulos.length == 10) {
+    return false;
+  } else {
+    tulos += luvut;
+    //console.log("Luku / Operaattori " + luvut + " lisätty laskuun"); //for debugging..
+    //console.log(tulos);
+    document.getElementById("näyttö").innerHTML = tulos;
+  }
 }
 //lasku-funktio (tässä lasketaan lisätyt luvut tulos muuttujassa eval funktion avulla)
 function laske() {
