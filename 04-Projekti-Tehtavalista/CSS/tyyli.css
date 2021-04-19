@@ -1,1 +1,93 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
 
+body {
+  background: url("../taustakuva4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header > h1 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  text-shadow: 3px 3px 5px white;
+  text-align: center;
+  color: black;
+}
+
+#header {
+  background-color: #333399;
+  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 65%;
+  margin-top: 2%;
+  padding-bottom: 2px;
+  border: solid black;
+  border-radius: 25px;
+  flex: 0 0 auto;
+
+}
+
+#page-container {
+  background-color: #333399;
+  opacity: 0.9;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Coming Soon', cursive;
+  font-size: 24px;
+
+  padding: 10px;
+  width: 55%;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black;
+
+
+}
+
+#inputfield {
+  font-family: 'Coming Soon', cursive;
+  font-size: 18px;
+
+}
+
+#instructions {
+  font-family: 'Coming Soon', cursive;
+  font-size: 18px;
+}
+
+
+#input {
+  font-family: 'Coming Soon', cursive;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+#button {
+  font-family: 'Coming Soon', cursive;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+
+footer > p  {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ffccb3, border: 1, padding: 20px, margin: 0;
+  opacity: 0.3;
+  padding: 10px 0 10px 0;
+  width: 45%;
+  display: table-row;
+  height: 0;
+
+
+}
