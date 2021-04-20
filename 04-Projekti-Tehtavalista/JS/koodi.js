@@ -17,27 +17,6 @@ function createListElement() {
   li.appendChild(document.createTextNode(input.value)); //laitetaan syöttökentän arvo(=teksti) li elementin tekstiksi
   ul.appendChild(li); //lisätään li elementti ul:ään
   input.value = ""; //tyhjennetään syöttökenttä
-
-  //Valmiin tehtävän värjäys alkaa
-  //Koska tämä on funktion sisällä, koskee vain pääfunktiolla tehtyjä li elementtejä(tehtäviä)
-  function crossOut() {
-    li.classList.toggle("done"); //vaihdetaan li elementin classin done:ksi
-  }
-
-  li.addEventListener("click", crossOut); //kun li elementtiä klikataan, se merkitään tehdyksi crossOut() funktiolla
-  //värjäys päättyy
-
-  //Poista napin lisäys alkaa
-  var dBtn = document.createElement("button"); //luodaan poisto nappi
-  dBtn.appendChild(document.createTextNode("X")); //lisätään nappiin teksti "X"
-  li.appendChild(dBtn); //lisätään nappi li elementtiin
-  dBtn.addEventListener("click", deleteListItem); //kun X:ää painetaan, li elementti poistetaan
-  //Poista napin lisäys päättyy
-
-  //Poisto funktio
-  function deleteListItem() {
-    li.classList.add("delete"); //vaihtaa li elementin classin delete:ksi
-  }
 }
 
 //Funktiot ja eventlistenerit jotka kutsuvat pääfunktiota,
