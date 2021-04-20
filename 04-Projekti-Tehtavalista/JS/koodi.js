@@ -29,7 +29,7 @@ function createListElement() {
 
   //Poista napin lisäys alkaa
   var dBtn = document.createElement("button"); //luodaan poisto nappi
-  dBtn.appendChild(document.createTextNode("X")); //lisätään nappiin teksti "X"
+  dBtn.appendChild(document.createTextNode("🗑")); //lisätään nappiin teksti "X"
   li.appendChild(dBtn); //lisätään nappi li elementtiin
   dBtn.addEventListener("click", deleteListItem); //kun X:ää painetaan, li elementti poistetaan
   //Poista napin lisäys päättyy
