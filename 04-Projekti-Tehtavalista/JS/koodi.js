@@ -1,5 +1,5 @@
 //Alustetaan muuttujia ja haetaan niihin arvot,
-//Haetaan htmlstä syöttökenttä tehtävälle
+//Haetaan htmlstä syöttökentän arvo tehtävälle
 var input = document.getElementById("input");
 //Haetaan htmlstä "lisää tehtävä" painike
 var enterButton = document.getElementById("button");
@@ -40,7 +40,7 @@ function createListElement() {
   }
 }
 
-//Funktiot ja eventlistenerit jotka kutsuvat pääfunktiota,
+//Funktiot jotka kutsuvat pääfunktiota, ja eventlistenerit,
 //Funktio joka kutsuu pääfunktiota napin klikkauksen jälkeen
 function addListAfterClick() {
   if (inputLength() > 0) {
@@ -56,7 +56,7 @@ function addListAfterKeypress(event) {
     createListElement();
   }
 }
-//jos nappia painetaan
+//event listener jos nappia painetaan
 enterButton.addEventListener("click", addListAfterClick);
-//jos syöttökentässä painetaan enter näppäintä
+//event listener jos syöttökentässä painetaan enter näppäintä
 input.addEventListener("keypress", addListAfterKeypress);
