@@ -63,7 +63,12 @@ enterButton.addEventListener("click", addListAfterClick);
 //event listener jos syöttökentässä painetaan enter näppäintä
 input.addEventListener("keypress", addListAfterKeypress);
 
-//Tulostus nappi
-function printFunction() {
-  window.print();
+//Funktio joka poistaa kaikki tehtävät
+function deleteAll() {
+  console.log("tehtävien määrä:");
+  console.log(item.length);
+  for (var x = 0; x < item.length; x++) {
+    item[x].classList.add("delete");
+    console.log("poistetaan " + [x]);
+  }
 }
