@@ -5,6 +5,8 @@ var input = document.getElementById("input");
 var enterButton = document.getElementById("button");
 //Haetaan documentin ensimmäinen ul elementti, johon li elementit(tehtävät) lisätään
 var ul = document.querySelector("ul");
+//haetaan documentin li elementit
+var item = document.getElementsByTagName("li");
 
 //Tehdään funktio joka laskee inputtiin syötetyn merkkijonon pituuden
 function inputLength() {
@@ -60,3 +62,8 @@ function addListAfterKeypress(event) {
 enterButton.addEventListener("click", addListAfterClick);
 //event listener jos syöttökentässä painetaan enter näppäintä
 input.addEventListener("keypress", addListAfterKeypress);
+
+//Tulostus nappi
+function printFunction() {
+  window.print();
+}
