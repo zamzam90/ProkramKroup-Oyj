@@ -65,8 +65,7 @@ input.addEventListener("keypress", addListAfterKeypress);
 
 //Funktio joka poistaa kaikki tehtävät
 function deleteAll() {
-  console.log("tehtävien määrä:");
-  console.log(item.length);
+  console.log("tehtävien määrä: " + item.length);
   for (var x = 0; x < item.length; x++) {
     item[x].classList.add("delete");
     console.log("poistetaan " + [x]);
