@@ -59,12 +59,12 @@ body {
   font-size: 18px;
 }
 
-
 #input {
   font-family: 'Coming Soon', cursive;
   font-size: 18px;
   border-radius: 10px;
   width: 50%;
+  height: 40px;
   border: 1px solid red;
 }
 
@@ -96,17 +96,23 @@ ul {
 	padding-left: 20px;
 }
 
-
 li {
-  width: 650px;
-	height: 10px;
+  width: 450px;
+	height: 15px;
 	padding: 20px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 	color: black;
   background-color: #ffb3b3;
-	border: solid red;
+	border: thin solid red;
 	border-radius: 25px;
   list-style: none;
+  font-size: 18px;
+  display: table;
+  margin: 0 auto;
+}
+
+li:hover {
+  background-color: #e6e6e6;
 }
 
 /* x-nappula */
@@ -114,9 +120,13 @@ li > button {
   color: black;
 	border: thin solid black;
 	float: right;
-
 }
 
+#clear {
+  font-family: 'Coming Soon', cursive;
+  font-size: 12px;
+  border-radius: 10px;
+}
 
 footer  {
   font-family: 'Love Ya Like A Sister', cursive;
