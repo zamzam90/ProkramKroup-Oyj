@@ -24,7 +24,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  width: 65%;
+  width: 55%;
   margin-top: 2%;
   padding-bottom: 2px;
   border: solid black;
@@ -67,6 +67,7 @@ body {
   width: 50%;
   height: 40px;
   border: 1px solid red;
+  padding-left: 15px;
 }
 
 /*kun ostos hoidettu, vaihtuu väri*/
@@ -121,6 +122,7 @@ li > button {
   color: black;
 	border: thin solid black;
 	float: right;
+  border-radius: 50px;
 }
 
 #clear {
@@ -142,5 +144,12 @@ footer  {
   /*display: table-row;*/
   /*height: 200px;*/
   margin-top: 100px;
+}
 
+@media only screen and (max-width: 425px) {
+#page-container {
+  width: 95%;
+  margin-left: 0;
+  margin-right: 0;
+  }
 }
