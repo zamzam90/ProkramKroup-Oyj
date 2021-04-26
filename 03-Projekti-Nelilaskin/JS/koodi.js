@@ -36,18 +36,25 @@ function poista() {
     for (var x = 0; x < operaattorit.length; x++) {
       if (tulos[y] == operaattorit[x]) {
         index = y;
+        console.log("0 indeksi: " + index);
       }
     }
   }
-  // näyttö pysyy "päällä" vaikka tuloste olisi tyhjä
-  if (tulos == "") {
-    return false;
-  }
-  //TODO: pieni bugi c-näppäimessä
-
+  //jos ei ole operaattioria poistetaan tuloksen viimeinen luku
+  var miinusYks = tulos.substring(0, tulos.length - 1);
+  tulos = miinusYks;
+  //console.log("tulos: " + tulos);
   //merkkijonosta leikataan substr:lla, joka leikkaa nollasta, eli alusta,
   //viimeisimmän operaation kohdalle = eli poistaa esim 20+30:sta +30 lopusta
+  console.log("2 indeksi: " + index);
   tulos = tulos.substr(0, index);
+  // näyttö pysyy "päällä" vaikka tuloste olisi tyhjä
+  if (tulos == "") {
+    console.log("1 indeksi: " + index);
+    tulos = "0";
+    document.getElementById("näyttö").innerHTML = tulos;
+    return false;
+  }
   document.getElementById("näyttö").innerHTML = tulos;
 }
 
