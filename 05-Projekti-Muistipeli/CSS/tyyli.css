@@ -1,1 +1,87 @@
 /* html muotoilu */
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  background: url("../taustakuva1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'New Tegomin', serif;
+}
+
+nav {
+  flex: 0 0 auto;
+  position: -webkit-sticky; /* Safari vörkkii */
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+
+  margin-bottom: 10px;
+  font-family: 'New Tegomin', serif;
+  z-index: 1; /* sticky toimii tän avulla*/
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #333;*/
+}
+
+nav li {
+  float: left;
+}
+
+/*linkit navin sisällä*/
+nav li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10%;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #5b4eb1;
+  color: black;
+}
+
+.content {
+  background-color: #483D8B;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 75%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black;
+  text-align: center;
+  font-family: 'New Tegomin', serif;
+  font-size: 20px;
+}
+
+
+footer {
+  font-size: 20px;
+  text-align: center;
+
+}
