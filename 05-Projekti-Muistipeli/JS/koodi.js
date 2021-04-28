@@ -101,18 +101,19 @@ gameCards4x4 = [
   ["kortti-5.png", "kortti-6.png", "kortti-7.png", "kortti-8.png"],
 ];
 
-// das spielen!
+// Das spielen!
 function main() {
   selectedGameSize();
-  console.log(selectedGameMode);
+  console.log(selectedGameMode + "peli valittu.");
   cardDeckSelected();
+  console.log("kortit:");
   console.log(selectedCardDeck);
-  /*   shuffleCards();
-  console.log(shuffledCardDeck); */
+  /* console.log(shuffledCardDeck); */
   createGame();
+  console.log("peli luotu.");
 }
 
-//funktio joka hakee pelin valinnan valikosta
+//Funktio joka hakee pelin valinnan pudotusvalikosta.
 function selectedGameSize() {
   dropDownMenu = document.getElementById("putous");
   //   console.log(dropDownMenu); //for testing..
@@ -121,9 +122,9 @@ function selectedGameSize() {
   return selectedGameMode;
 }
 
-//funktio joka työntää kortit korttipakkaan
+//Funktio joka syöttää valitun määrän kortteja pelipakkaan.
 function cardDeckSelected() {
-  /* tunnistä mikä peli valittu 4x4/4x6/6x6 ja valitse oikea määrä kortteja pakkaan */
+  /* tunnista mikä peli on valittu (4x4/4x6/6x6) ja valitse oikea määrä kortteja pakkaan */
   if (selectedGameMode == "tyhja") {
     selectedCardDeck = [];
     return alert("valitse pelin koko!");
@@ -131,31 +132,34 @@ function cardDeckSelected() {
   if (selectedGameSize() == "pieni") {
     selectedGameMode = "pieni";
     selectedCardDeck = gameCards4x4;
-    // korttien sekoitus
-    return alert("pieni peli valittu!");
+    //shuffleCards();
+    return /* alert("pieni peli valittu!") */;
   }
   if (selectedGameSize() == "keski") {
     selectedGameMode = "keski";
     selectedCardDeck = gameCards4x6;
-    // korttien sekoitus
-    return alert("keski peli valittu!");
+    //shuffleCards();
+    return /* alert("keski peli valittu!") */;
   }
   if (selectedGameSize() == "suuri") {
     selectedGameMode = "suuri";
     selectedCardDeck = gameCards6x6;
-    // korttien sekoitus
-    return alert("suuri peli valittu!");
+    //shuffleCards();
+    return /* alert("suuri peli valittu!") */;
   }
 }
 
-//funktio joka sekoittaa valitun korttipakan
-function shuffleCards() {
-  // korttien sekoitus tähän...
-  // kortit --> shuffledCardDeck
-  // return shuffledCardDeck
-}
+//Funktio joka sekoittaa valitun korttipakan.
+/* function shuffleCards() {
+  korttien sekoitusta tähän...
+  var shuffledCardDeck = selectedCardDeck;
+  sekoitus taikaa tähän
+  selectedCardDeck = shuffledCardDeck;
+  return selectedCardDeck;
+  return selectedCardDeck sekoitettuna
+} */
 
-//funktio joka tekee pelitaulukon
+//Funktio joka luo pelitaulukon.
 function createGame() {
   /* luodaan valitun koon mukainen taulukko? lista? juttu? johon kortit sekoitettuna laitettu
     kahdella for loopilla tehrää taulukko korteille.. */
