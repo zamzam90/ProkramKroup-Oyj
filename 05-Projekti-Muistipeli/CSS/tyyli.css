@@ -1,5 +1,6 @@
 /* html muotoilu */
-html, body {
+html,
+body {
   height: 100vh;
   margin: 0;
 }
@@ -22,7 +23,7 @@ body {
   margin-right: auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'New Tegomin', serif;
+  font-family: "New Tegomin", serif;
 }
 
 nav {
@@ -32,7 +33,7 @@ nav {
   top: 0;
   background-color: #ffffff;
   margin-bottom: 10px;
-  font-family: 'New Tegomin', serif;
+  font-family: "New Tegomin", serif;
   z-index: 1; /* sticky toimii tän avulla*/
 }
 
@@ -64,7 +65,7 @@ nav li a:hover:not(.active) {
 }
 
 .content {
-  background-color: #483D8B;
+  background-color: #483d8b;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -74,19 +75,19 @@ nav li a:hover:not(.active) {
   margin-right: auto;
   border: solid black;
   text-align: center;
-  font-family: 'New Tegomin', serif;
+  font-family: "New Tegomin", serif;
   font-size: 20px;
   color: white;
 }
 
 #putous {
-  font-family: 'New Tegomin', serif;
+  font-family: "New Tegomin", serif;
   font-size: 16px;
   border: thin solid black;
 }
 
 #aloita {
-  font-family: 'New Tegomin', serif;
+  font-family: "New Tegomin", serif;
   font-size: 16px;
   background-color: white;
   border: thin solid black;
@@ -94,6 +95,10 @@ nav li a:hover:not(.active) {
 
 table {
   margin-top: 10px;
+}
+
+td > * {
+  margin-left: 0.5em;
 }
 
 img {
@@ -105,5 +110,4 @@ footer {
   font-size: 20px;
   text-align: center;
   color: white;
-
 }
