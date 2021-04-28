@@ -31,7 +31,6 @@ nav {
   position: sticky;
   top: 0;
   background-color: #ffffff;
-
   margin-bottom: 10px;
   font-family: 'New Tegomin', serif;
   z-index: 1; /* sticky toimii tän avulla*/
@@ -77,11 +76,26 @@ nav li a:hover:not(.active) {
   text-align: center;
   font-family: 'New Tegomin', serif;
   font-size: 20px;
+  color: white;
 }
 
+#putous {
+  font-family: 'New Tegomin', serif;
+  font-size: 16px;
+  border: thin solid black;
+}
+
+#aloita {
+  font-family: 'New Tegomin', serif;
+  font-size: 16px;
+  background-color: white;
+  border: thin solid black;
+  
+}
 
 footer {
   font-size: 20px;
   text-align: center;
+  color: white;
 
 }
