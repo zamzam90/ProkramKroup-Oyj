@@ -159,7 +159,7 @@ function shuffleCards() {
 function createGame() {
   /* luodaan valitun koon mukainen taulukko? lista? juttu? johon kortit sekoitettuna laitettu
     kahdella for loopilla tehrää taulukko korteille.. */
-  var output = '<table align="center" border="1">';
+  var output = '<table align="center">';
   for (var x = 0; x < selectedCardDeck.length; x++) {
     output += "<tr>";
     for (var y = 0; y < selectedCardDeck[x].length; y++) {
