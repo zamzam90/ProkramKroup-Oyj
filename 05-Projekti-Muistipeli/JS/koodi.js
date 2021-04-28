@@ -1,5 +1,12 @@
 //Muistipeli
 
+/* TODO:
+    -lisätä eventlistenerit korteille..
+    -koodata sekoitus funktio..
+    -tehdä napsautuksien seuraaminen..
+    -tehdä ajanotto..
+*/
+
 /* Alustetaan muuttujia.. */
 var gameArea,
   gameCards6x6 = [],
