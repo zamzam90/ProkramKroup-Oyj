@@ -8,7 +8,6 @@ var gameArea,
   dropDownMenu,
   selectedGameMode,
   selectedCardDeck = [];
-
 /* ..ja haetaan niihin tietoja */
 gameArea = document.getElementById("pelikentta");
 gameCards6x6 = [
@@ -110,7 +109,7 @@ function main() {
   console.log(selectedCardDeck);
   /*   shuffleCards();
   console.log(shuffledCardDeck); */
-  //   createGame();
+  createGame();
 }
 
 //funktio joka hakee pelin valinnan valikosta
@@ -158,5 +157,17 @@ function shuffleCards() {
 
 //funktio joka tekee pelitaulukon
 function createGame() {
-  //   luodaan valitun koon mukainen taulukko? lista? juttu? johon kortit sekoitettuna laitettu
+  /* luodaan valitun koon mukainen taulukko? lista? juttu? johon kortit sekoitettuna laitettu
+    kahdella for loopilla tehrää taulukko korteille.. */
+  var output = '<table align="center" border="1">';
+  for (var x = 0; x < selectedCardDeck.length; x++) {
+    output += "<tr>";
+    for (var y = 0; y < selectedCardDeck[x].length; y++) {
+      output += "<td><img src=" + selectedCardDeck[x][y] + "></td>";
+    }
+    output += "</tr>";
+  }
+  output += "</table>";
+  //kirjoitettaan se htmlään
+  document.getElementById("pelikentta").innerHTML = output;
 }
