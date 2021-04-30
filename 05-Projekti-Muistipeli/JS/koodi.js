@@ -162,13 +162,22 @@ function shuffleCards() {
 //Funktio joka luo pelitaulukon.
 function createGame() {
   /* luodaan valitun koon mukainen lista johon kortit sekoitettuna laitettu */
-  var output = "<ol>";
+  var output = "";
   for (var x = 0; x < selectedCardDeck.length; x++) {
-    output += "<li>";
-    output += "<img class='kortti' src=" + selectedCardDeck[x] + "></img>";
-    output += "</li>";
+    output += "<div class='card'>";
+    output += "<img src=" + selectedCardDeck[x] + "></img>";
+    output += "</div>";
   }
-  output += "</ol>";
   //kirjoitettaan se htmlään
   document.getElementById("pelikentta").innerHTML = output;
+
+  let card = document.getElementsByClassName("card");
+  // loop to add event listeners to each card
+  for (var i = 0; i < card.length; i++) {
+    card[i].addEventListener("click", test);
+  }
+}
+
+function test() {
+  alert("testing");
 }

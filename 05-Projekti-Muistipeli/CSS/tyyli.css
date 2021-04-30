@@ -100,16 +100,20 @@ nav li a:hover:not(.active) {
   border: thin solid black;
 }
 
-#pelikentta li {
+#pelikentta div {
   padding: 0;
   float: left;
   margin: 10px;
   list-style: none;
 }
 
+.hidden {
+  background-color: black;
+}
+
 img {
-  max-height: 100px;
   max-width: 60px;
+  max-height: 100px;
 }
 
 footer {
