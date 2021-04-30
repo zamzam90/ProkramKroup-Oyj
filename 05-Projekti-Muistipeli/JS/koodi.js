@@ -2,7 +2,6 @@
 
 /* TODO:
     -lisätä eventlistenerit korteille..
-    -koodata sekoitus funktio..
     -tehdä napsautuksien seuraaminen..
     -tehdä ajanotto..
 */
@@ -105,8 +104,6 @@ function main() {
   selectedGameSize();
   console.log(selectedGameMode + "peli valittu.");
   cardDeckSelected();
-  console.log("kortit:");
-  console.log(selectedCardDeck);
   createGame();
   console.log("peli luotu.");
 }
@@ -168,7 +165,7 @@ function createGame() {
   var output = "<ol>";
   for (var x = 0; x < selectedCardDeck.length; x++) {
     output += "<li>";
-    output += "<img src=" + selectedCardDeck[x] + "></img>";
+    output += "<img class='kortti' src=" + selectedCardDeck[x] + "></img>";
     output += "</li>";
   }
   output += "</ol>";
