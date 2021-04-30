@@ -18,94 +18,86 @@ var gameArea,
 /* ..ja haetaan niihin tietoja */
 gameArea = document.getElementById("pelikentta");
 gameCards6x6 = [
-  [
-    "kortti-1.png",
-    "kortti-2.png",
-    "kortti-3.png",
-    "kortti-4.png",
-    "kortti-5.png",
-    "kortti-6.png",
-  ],
-  [
-    "kortti-7.png",
-    "kortti-8.png",
-    "kortti-9.png",
-    "kortti-10.png",
-    "kortti-11.png",
-    "kortti-12.png",
-  ],
-  [
-    "kortti-13.png",
-    "kortti-14.png",
-    "kortti-15.png",
-    "kortti-16.png",
-    "kortti-17.png",
-    "kortti-18.png",
-  ],
-  [
-    "kortti-1.png",
-    "kortti-2.png",
-    "kortti-3.png",
-    "kortti-4.png",
-    "kortti-5.png",
-    "kortti-6.png",
-  ],
-  [
-    "kortti-7.png",
-    "kortti-8.png",
-    "kortti-9.png",
-    "kortti-10.png",
-    "kortti-11.png",
-    "kortti-12.png",
-  ],
-  [
-    "kortti-13.png",
-    "kortti-14.png",
-    "kortti-15.png",
-    "kortti-16.png",
-    "kortti-17.png",
-    "kortti-18.png",
-  ],
+  "kortti-1.png",
+  "kortti-2.png",
+  "kortti-3.png",
+  "kortti-4.png",
+  "kortti-5.png",
+  "kortti-6.png",
+  "kortti-7.png",
+  "kortti-8.png",
+  "kortti-9.png",
+  "kortti-10.png",
+  "kortti-11.png",
+  "kortti-12.png",
+  "kortti-13.png",
+  "kortti-14.png",
+  "kortti-15.png",
+  "kortti-16.png",
+  "kortti-17.png",
+  "kortti-18.png",
+  "kortti-1.png",
+  "kortti-2.png",
+  "kortti-3.png",
+  "kortti-4.png",
+  "kortti-5.png",
+  "kortti-6.png",
+  "kortti-7.png",
+  "kortti-8.png",
+  "kortti-9.png",
+  "kortti-10.png",
+  "kortti-11.png",
+  "kortti-12.png",
+  "kortti-13.png",
+  "kortti-14.png",
+  "kortti-15.png",
+  "kortti-16.png",
+  "kortti-17.png",
+  "kortti-18.png",
 ];
 gameCards4x6 = [
-  [
-    "kortti-1.png",
-    "kortti-2.png",
-    "kortti-3.png",
-    "kortti-4.png",
-    "kortti-5.png",
-    "kortti-6.png",
-  ],
-  [
-    "kortti-7.png",
-    "kortti-8.png",
-    "kortti-9.png",
-    "kortti-10.png",
-    "kortti-11.png",
-    "kortti-12.png",
-  ],
-  [
-    "kortti-1.png",
-    "kortti-2.png",
-    "kortti-3.png",
-    "kortti-4.png",
-    "kortti-5.png",
-    "kortti-6.png",
-  ],
-  [
-    "kortti-7.png",
-    "kortti-8.png",
-    "kortti-9.png",
-    "kortti-10.png",
-    "kortti-11.png",
-    "kortti-12.png",
-  ],
+  "kortti-1.png",
+  "kortti-2.png",
+  "kortti-3.png",
+  "kortti-4.png",
+  "kortti-5.png",
+  "kortti-6.png",
+  "kortti-7.png",
+  "kortti-8.png",
+  "kortti-9.png",
+  "kortti-10.png",
+  "kortti-11.png",
+  "kortti-12.png",
+  "kortti-1.png",
+  "kortti-2.png",
+  "kortti-3.png",
+  "kortti-4.png",
+  "kortti-5.png",
+  "kortti-6.png",
+  "kortti-7.png",
+  "kortti-8.png",
+  "kortti-9.png",
+  "kortti-10.png",
+  "kortti-11.png",
+  "kortti-12.png",
 ];
 gameCards4x4 = [
-  ["kortti-1.png", "kortti-2.png", "kortti-3.png", "kortti-4.png"],
-  ["kortti-5.png", "kortti-6.png", "kortti-7.png", "kortti-8.png"],
-  ["kortti-1.png", "kortti-2.png", "kortti-3.png", "kortti-4.png"],
-  ["kortti-5.png", "kortti-6.png", "kortti-7.png", "kortti-8.png"],
+  "kortti-1.png",
+  "kortti-2.png",
+  "kortti-3.png",
+  "kortti-4.png",
+  "kortti-5.png",
+  "kortti-6.png",
+  "kortti-7.png",
+  "kortti-8.png",
+  "kortti-1.png",
+  "kortti-2.png",
+  "kortti-3.png",
+  "kortti-4.png",
+  "kortti-5.png",
+  "kortti-6.png",
+  "kortti-7.png",
+  "kortti-8.png",
 ];
 
 // Das spielen!
@@ -170,15 +162,13 @@ function cardDeckSelected() {
 function createGame() {
   /* luodaan valitun koon mukainen taulukko? lista? juttu? johon kortit sekoitettuna laitettu
     kahdella for loopilla tehrää taulukko korteille.. */
-  var output = '<table align="center">';
+  var output = "<ol>";
   for (var x = 0; x < selectedCardDeck.length; x++) {
-    output += "<tr>";
-    for (var y = 0; y < selectedCardDeck[x].length; y++) {
-      output += "<td><img src=" + selectedCardDeck[x][y] + "></td>";
-    }
-    output += "</tr>";
+    output += "<li>";
+    output += "<img src=" + selectedCardDeck[x] + "></img>";
+    output += "</li>";
   }
-  output += "</table>";
+  output += "</ol>";
   //kirjoitettaan se htmlään
   document.getElementById("pelikentta").innerHTML = output;
 }

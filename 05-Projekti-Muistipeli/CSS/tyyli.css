@@ -93,12 +93,11 @@ nav li a:hover:not(.active) {
   border: thin solid black;
 }
 
-table {
-  margin-top: 10px;
-}
-
-td > * {
-  margin-left: 0.5em;
+#pelikentta li {
+  padding: 0;
+  float: left;
+  margin: 10px;
+  list-style: none;
 }
 
 img {
