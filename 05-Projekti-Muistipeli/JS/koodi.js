@@ -107,7 +107,6 @@ function main() {
   cardDeckSelected();
   console.log("kortit:");
   console.log(selectedCardDeck);
-  /* console.log(shuffledCardDeck); */
   createGame();
   console.log("peli luotu.");
 }
@@ -131,37 +130,41 @@ function cardDeckSelected() {
   if (selectedGameSize() == "pieni") {
     selectedGameMode = "pieni";
     selectedCardDeck = gameCards4x4;
-    //shuffleCards();
+    shuffleCards();
     return /* alert("pieni peli valittu!") */;
   }
   if (selectedGameSize() == "keski") {
     selectedGameMode = "keski";
     selectedCardDeck = gameCards4x6;
-    //shuffleCards();
+    shuffleCards();
     return /* alert("keski peli valittu!") */;
   }
   if (selectedGameSize() == "suuri") {
     selectedGameMode = "suuri";
     selectedCardDeck = gameCards6x6;
-    //shuffleCards();
+    shuffleCards();
     return /* alert("suuri peli valittu!") */;
   }
 }
 
-//Funktio joka sekoittaa valitun korttipakan.
-/* function shuffleCards() {
-  korttien sekoitusta tähän...
-  var shuffledCardDeck = selectedCardDeck;
-  sekoitus taikaa tähän
-  selectedCardDeck = shuffledCardDeck;
-  return selectedCardDeck;
-  return selectedCardDeck sekoitettuna
-} */
+/* Funktio joka sekoittaa valitun korttipakan.
+https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript */
+function shuffleCards() {
+  var i = selectedCardDeck.length,
+    k,
+    temp; // k is to generate random index and temp is to swap the values
+  while (--i > 0) {
+    k = Math.floor(Math.random() * (i + 1));
+    temp = selectedCardDeck[k];
+    selectedCardDeck[k] = selectedCardDeck[i];
+    selectedCardDeck[i] = temp;
+  }
+  console.log(selectedCardDeck);
+}
 
 //Funktio joka luo pelitaulukon.
 function createGame() {
-  /* luodaan valitun koon mukainen taulukko? lista? juttu? johon kortit sekoitettuna laitettu
-    kahdella for loopilla tehrää taulukko korteille.. */
+  /* luodaan valitun koon mukainen lista johon kortit sekoitettuna laitettu */
   var output = "<ol>";
   for (var x = 0; x < selectedCardDeck.length; x++) {
     output += "<li>";
