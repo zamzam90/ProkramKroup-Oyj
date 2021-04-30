@@ -93,6 +93,13 @@ nav li a:hover:not(.active) {
   border: thin solid black;
 }
 
+#button {
+  font-family: "New Tegomin", serif;
+  font-size: 16px;
+  background-color: white;
+  border: thin solid black;
+}
+
 #pelikentta li {
   padding: 0;
   float: left;
