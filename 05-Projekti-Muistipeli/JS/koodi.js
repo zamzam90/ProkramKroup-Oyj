@@ -165,7 +165,12 @@ function createGame() {
   var output = "";
   for (var x = 0; x < selectedCardDeck.length; x++) {
     output += "<div class='card'>";
+    output += "<div class='card-front hidden'>";
     output += "<img src=" + selectedCardDeck[x] + "></img>";
+    output += "</div>";
+    output += "<div class='card-back visible'>";
+    output += "<img src='kortti.png'></img>";
+    output += "</div>";
     output += "</div>";
   }
   //kirjoitettaan se htmlään

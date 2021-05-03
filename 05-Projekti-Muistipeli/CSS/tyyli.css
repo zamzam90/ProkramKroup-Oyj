@@ -107,8 +107,13 @@ nav li a:hover:not(.active) {
   list-style: none;
 }
 
+.card {
+  position: relative;
+}
+
 .hidden {
-  background-color: black;
+  display: none;
+  visibility: hidden;
 }
 
 img {
