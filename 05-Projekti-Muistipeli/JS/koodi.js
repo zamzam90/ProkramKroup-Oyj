@@ -179,6 +179,11 @@ function createGame() {
   }
 
   function showCard() {
-    alert("testing");
+    var etupuoli = this.firstChild;
+    var takapuoli = this.lastChild;
+    console.log(etupuoli); //for testing..
+    console.log(takapuoli); //for testing..
+    etupuoli.className = "visible";
+    takapuoli.className = "hidden";
   }
 }
