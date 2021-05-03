@@ -116,9 +116,14 @@ nav li a:hover:not(.active) {
   visibility: hidden;
 }
 
+.visible {
+  display: block;
+  visibility: visible;
+}
+
 img {
-  max-width: 60px;
-  max-height: 100px;
+  max-width: 90px;
+  max-height: 180px;
 }
 
 footer {

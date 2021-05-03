@@ -165,24 +165,20 @@ function createGame() {
   var output = "";
   for (var x = 0; x < selectedCardDeck.length; x++) {
     output += "<div class='card'>";
-    output += "<div class='card-front hidden'>";
-    output += "<img src=" + selectedCardDeck[x] + "></img>";
-    output += "</div>";
-    output += "<div class='card-back visible'>";
-    output += "<img src='kortti.png'></img>";
-    output += "</div>";
+    output += "<img src=" + selectedCardDeck[x] + " class='hidden'></img>";
+    output += "<img src='kortti.png' class='visible'></img>";
     output += "</div>";
   }
   //kirjoitettaan se htmlään
   document.getElementById("pelikentta").innerHTML = output;
 
-  let card = document.getElementsByClassName("card");
+  var card = document.getElementsByClassName("card");
   // loop to add event listeners to each card
   for (var i = 0; i < card.length; i++) {
-    card[i].addEventListener("click", test);
+    card[i].addEventListener("click", showCard);
   }
-}
 
-function test() {
-  alert("testing");
+  function showCard() {
+    alert("testing");
+  }
 }
