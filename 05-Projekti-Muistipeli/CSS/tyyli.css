@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* html muotoilu */
 html,
 body {
@@ -109,24 +115,32 @@ nav li a:hover:not(.active) {
 
 .card {
   position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
 }
 
 .hidden {
+  cursor: pointer;
   display: none;
   visibility: hidden;
 }
 
 .visible {
+  cursor: pointer;
   display: block;
   visibility: visible;
 }
 
 .selected {
-  /* asdasd */
+  border: yellow solid 5px;
+  border-radius: 15px;
 }
 
 .match {
-  display: none;
+  display: block;
+  visibility: visible;
+  border: green solid 5px;
+  border-radius: 15px;
 }
 
 img {
