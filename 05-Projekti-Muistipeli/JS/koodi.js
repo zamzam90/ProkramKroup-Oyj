@@ -1,22 +1,26 @@
 //Muistipeli
 
 /* TODO:
-    -lisätä eventlistenerit korteille..
     -tehdä napsautuksien seuraaminen..
     -tehdä ajanotto..
 */
 
-/* Alustetaan muuttujia.. */
+/* Alustetaan muuttujia..
+..ja haetaan niihin tietoja */
+
 var gameArea,
-  gameCards6x6 = [],
-  gameCards4x6 = [],
-  gameCards4x4 = [],
   dropDownMenu,
   selectedGameMode,
-  selectedCardDeck = [];
-/* ..ja haetaan niihin tietoja */
+  selectedCardDeck = [],
+  timer = 0,
+  guessCount = 0,
+  firstGuess = "",
+  secondGuess = "",
+  count = 0,
+  previousTarget = null,
+  delay = "1000";
 gameArea = document.getElementById("pelikentta");
-gameCards6x6 = [
+const gameCards6x6 = [
   "kortti-1.png",
   "kortti-2.png",
   "kortti-3.png",
@@ -54,7 +58,7 @@ gameCards6x6 = [
   "kortti-17.png",
   "kortti-18.png",
 ];
-gameCards4x6 = [
+const gameCards4x6 = [
   "kortti-1.png",
   "kortti-2.png",
   "kortti-3.png",
@@ -80,7 +84,7 @@ gameCards4x6 = [
   "kortti-11.png",
   "kortti-12.png",
 ];
-gameCards4x4 = [
+const gameCards4x4 = [
   "kortti-1.png",
   "kortti-2.png",
   "kortti-3.png",
@@ -159,6 +163,30 @@ function shuffleCards() {
   console.log(selectedCardDeck);
 }
 
+//funktio joka resetoiarvaukset
+function resetGuesses() {
+  (firstGuess = ""), (secondGuess = ""), (count = 0), (previousTarget = null);
+  var visibleCard = document.querySelectorAll(".selected");
+  console.log(visibleCard);
+  visibleCard.forEach((card) => {
+    if (card.className == "selected visible") {
+      card.className = "hidden";
+    }
+    if (card.className == "selected hidden") {
+      card.className = "visible";
+    }
+  });
+}
+
+//funktio joka tarkastaa mätsääkö 2 käännettyä korttia
+function match() {
+  console.log("howdy mätsi!");
+  const selected = document.querySelectorAll(".selected");
+  selected.forEach((card) => {
+    card.className = "match";
+  });
+}
+
 //Funktio joka luo pelitaulukon.
 function createGame() {
   /* luodaan valitun koon mukainen lista johon kortit sekoitettuna laitettu */
@@ -178,12 +206,49 @@ function createGame() {
     card[i].addEventListener("click", showCard);
   }
 
+  // valittu kortti "käännetään"..
   function showCard() {
-    var etupuoli = this.firstChild;
-    var takapuoli = this.lastChild;
-    console.log(etupuoli); //for testing..
-    console.log(takapuoli); //for testing..
-    etupuoli.className = "visible";
-    takapuoli.className = "hidden";
+    var clicked = this.firstChild;
+    console.log("klikattu:");
+    console.log(clicked);
+
+    if (
+      this === previousTarget ||
+      this.firstChild.classList.contains("selected") ||
+      this.firstChild.classList.contains("match")
+    ) {
+      return;
+    }
+
+    if (count < 2) {
+      count++;
+      if (count === 1) {
+        firstGuess = this.firstChild.src;
+        console.log("eka arvaus:");
+        console.log(firstGuess);
+        console.log("count:");
+        console.log(count);
+        this.firstChild.className = "selected visible";
+        this.lastChild.className = "selected hidden";
+      } else {
+        secondGuess = this.firstChild.src;
+        console.log("toka arvaus:");
+        console.log(secondGuess);
+        console.log("count:");
+        console.log(count);
+        this.firstChild.className = "selected visible";
+        this.lastChild.className = "selected hidden";
+      }
+    }
+
+    if (firstGuess && secondGuess) {
+      if (firstGuess === secondGuess) {
+        console.log("mätsi");
+        setTimeout(match, delay);
+      }
+      console.log("arvauksien nollaus");
+      setTimeout(resetGuesses, delay);
+    }
+    previousTarget = clicked;
   }
 }

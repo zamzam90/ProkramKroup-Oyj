@@ -121,6 +121,14 @@ nav li a:hover:not(.active) {
   visibility: visible;
 }
 
+.selected {
+  /* asdasd */
+}
+
+.match {
+  display: none;
+}
+
 img {
   max-width: 90px;
   max-height: 180px;
