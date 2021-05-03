@@ -1,7 +1,6 @@
 //Muistipeli
 
 /* TODO:
-    -tehdä napsautuksien seuraaminen..
     -tehdä ajanotto..
 */
 
@@ -114,7 +113,7 @@ function main() {
   guessCountReset();
 }
 
-//Funktio joka hakee pelin valinnan pudotusvalikosta.
+//Funktio joka hakee pelin koon valinnan pudotusvalikosta.
 function selectedGameSize() {
   dropDownMenu = document.getElementById("putous");
   //   console.log(dropDownMenu); //for testing..
@@ -123,7 +122,7 @@ function selectedGameSize() {
   return selectedGameMode;
 }
 
-//Funktio joka syöttää valitun määrän kortteja pelipakkaan.
+//Funktio joka syöttää valitun pelin koon mukaan oikean määrän kortteja pelipakkaan.
 function cardDeckSelected() {
   /* tunnista mikä peli on valittu (4x4/4x6/6x6) ja valitse oikea määrä kortteja pakkaan */
   if (selectedGameMode == "tyhja") {
@@ -150,7 +149,7 @@ function cardDeckSelected() {
   }
 }
 
-/* Funktio joka sekoittaa valitun korttipakan.
+/* Funktio joka sekoittaa pelipakan.
 https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript */
 function shuffleCards() {
   var i = selectedCardDeck.length,
@@ -239,7 +238,7 @@ function onClick() {
   previousTarget = clicked;
 }
 
-//funktio joka resetoiarvaukset
+//funktio joka resetoiarvaukset.
 function resetGuesses() {
   (firstGuess = ""), (secondGuess = ""), (count = 0), (previousTarget = null);
   var visibleCard = document.querySelectorAll(".selected");
@@ -254,7 +253,7 @@ function resetGuesses() {
   });
 }
 
-//funktio joka tarkastaa mätsääkö 2 klikattua korttia
+//funktio joka tarkastaa mätsääkö 2 klikattua korttia.
 function match() {
   console.log("--------------------");
   console.log("howdy mätsi!");
@@ -275,7 +274,7 @@ function match() {
   pairsLeft();
 }
 
-//funktio joka näyttää jäljellä olevien parien määrän
+//funktio joka näyttää jäljellä olevien parien määrän.
 function pairsLeft() {
   var pairs = document.getElementsByClassName("visible");
   var pairsLeft = pairs.length / 2;
@@ -285,11 +284,12 @@ function pairsLeft() {
   }
 }
 
-//funktio joka resetoi käytetyarvaukset laskurin
+//funktio joka resetoi käytetyarvaukset laskurin.
 function guessCountReset() {
   document.getElementById("guessess").innerHTML = guessCount = 0;
 }
-//käytetytarvaukset laskuri
+
+//käytetytarvaukset laskuri.
 function guessCountUpdate() {
   document.getElementById("guessess").innerHTML = guessCount + 1;
 }

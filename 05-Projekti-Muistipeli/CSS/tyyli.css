@@ -7,7 +7,7 @@
 /* html muotoilu */
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -72,18 +72,18 @@ nav li a:hover:not(.active) {
 
 .content {
   background-color: #483d8b;
+  margin-inline: auto;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 65%;
-  height: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 1em;
+  width: min(90%, 65%);
   border: solid black;
   text-align: center;
   font-family: "New Tegomin", serif;
   font-size: 20px;
   color: white;
+  flex: 1 0 auto;
 }
 
 #putous {
@@ -120,8 +120,6 @@ nav li a:hover:not(.active) {
 
 .card {
   position: relative;
-  transition: all 0.4s linear;
-  transform-style: preserve-3d;
 }
 
 .hidden {
@@ -157,4 +155,5 @@ footer {
   font-size: 20px;
   text-align: center;
   color: white;
+  flex: 0 1 auto;
 }
