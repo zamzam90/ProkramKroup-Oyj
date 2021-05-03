@@ -4,43 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap"
+      rel="stylesheet"
+    />
     <title>Pelisivu</title>
-    <link rel="stylesheet" href="CSS/tyyli.css">
+    <link rel="stylesheet" href="CSS/tyyli.css" />
     <script src="JS/koodi.js"></script>
   </head>
   <body>
-    <header class="header">
-      Tervetuloa pelisivulle.
-    </header>
+    <header class="header">Tervetuloa pelisivulle.</header>
     <nav>
       <ul>
         <li><a href="index.html">Kotisivu</a></li>
         <li><a class="active" href="game.html">Pelisivu</a></li>
       </ul>
     </nav>
-  <div class="content">
+    <div class="content">
       <p>Tervetuloa pelaamaan.</p>
-        <span class="timer">0:00</span>
-        <br>
+      <span class="timer">0:00</span>
+      <br />
+      Pareja jäljellä:<span id="pairsleft"></span>
+      <br />
+      Arvausyrityksiä:<span id="guessess"></span>
+      <br />
       <tr>
         <th id="dropdown">Valitse peli:</th>
-          <select class="" id="putous" name="">
-            <option name="opt" value="tyhja">--valitse peli--</option>
-            <option name="opt" value="pieni">4x4 peli</option>
-            <option name="opt" value="keski">4x6 peli</option>
-            <option name="opt" value="suuri">6x6 peli</option>
-          </select>
+        <select class="" id="putous" name="">
+          <option name="opt" value="tyhja">--valitse peli--</option>
+          <option name="opt" value="pieni">4x4 peli</option>
+          <option name="opt" value="keski">4x6 peli</option>
+          <option name="opt" value="suuri">6x6 peli</option>
+        </select>
       </tr>
-      <button type="button" id="aloita" name="button" onclick="return main();">Käynnistä peli</button>
-      <div id="pelikentta">
-      </div>
+      <button type="button" id="aloita" name="button" onclick="return main();">
+        Käynnistä peli
+      </button>
+      <div id="pelikentta"></div>
 
-      <button type="button" id="button" onclick="location.href='index.html'">Poistu kotisivulle</button>
-  </div>
-  <footer>
+      <button type="button" id="button" onclick="location.href='index.html'">
+        Poistu kotisivulle
+      </button>
+    </div>
+    <footer>
       <p>ProkramKroup Oyj &copy; - 2021</p>
-  </footer>
+    </footer>
   </body>
 </html>

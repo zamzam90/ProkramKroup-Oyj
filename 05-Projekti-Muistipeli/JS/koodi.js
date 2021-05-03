@@ -18,7 +18,7 @@ var gameArea,
   secondGuess = "",
   count = 0,
   previousTarget = null,
-  delay = "1000";
+  delay = "800";
 gameArea = document.getElementById("pelikentta");
 const gameCards6x6 = [
   "kortti-1.png",
@@ -110,6 +110,8 @@ function main() {
   cardDeckSelected();
   createGame();
   console.log("peli luotu.");
+  pairsLeft();
+  guessCountReset();
 }
 
 //Funktio joka hakee pelin valinnan pudotusvalikosta.
@@ -163,39 +165,6 @@ function shuffleCards() {
   console.log(selectedCardDeck);
 }
 
-//funktio joka resetoiarvaukset
-function resetGuesses() {
-  (firstGuess = ""), (secondGuess = ""), (count = 0), (previousTarget = null);
-  var visibleCard = document.querySelectorAll(".selected");
-  console.log(visibleCard);
-  visibleCard.forEach((card) => {
-    if (card.className == "selected visible") {
-      card.className = "hidden";
-    }
-    if (card.className == "selected hidden") {
-      card.className = "visible";
-    }
-  });
-}
-
-//funktio joka tarkastaa mätsääkö 2 käännettyä korttia
-function match() {
-  console.log("howdy mätsi!");
-  var matchedCards = document.querySelectorAll(".selected");
-  console.log("esillä olevat kortit:");
-  console.log(matchedCards);
-  matchedCards.forEach((card) => {
-    if (card.className == "selected visible") {
-      console.log(card);
-      card.className = "match";
-    }
-    if (card.className == "selected hidden") {
-      console.log(card);
-      card.className = "hidden";
-    }
-  });
-}
-
 //Funktio joka luo pelitaulukon.
 function createGame() {
   /* luodaan valitun koon mukainen lista johon kortit sekoitettuna laitettu */
@@ -212,54 +181,117 @@ function createGame() {
   var card = document.getElementsByClassName("card");
   // loop to add event listeners to each card
   for (var i = 0; i < card.length; i++) {
-    card[i].addEventListener("click", showCard);
+    card[i].addEventListener("click", onClick);
+  }
+}
+
+// kun korttia klikataan..
+function onClick() {
+  var clicked = this.firstChild;
+  console.log("--------------------");
+  console.log("klikattu:");
+  console.log(clicked);
+
+  if (
+    this === previousTarget ||
+    this.firstChild.classList.contains("selected") ||
+    this.firstChild.classList.contains("match")
+  ) {
+    return;
   }
 
-  // valittu kortti "käännetään"..
-  function showCard() {
-    var clicked = this.firstChild;
-    console.log("klikattu:");
-    console.log(clicked);
-
-    if (
-      this === previousTarget ||
-      this.firstChild.classList.contains("selected") ||
-      this.firstChild.classList.contains("match")
-    ) {
-      return;
+  if (count < 2) {
+    count++;
+    if (count === 1) {
+      firstGuess = this.firstChild.src;
+      console.log("eka arvaus:");
+      console.log(firstGuess);
+      console.log("count: " + count);
+      console.log("--------------------");
+      this.firstChild.className = "selected visible";
+      this.lastChild.className = "selected hidden";
+    } else {
+      secondGuess = this.firstChild.src;
+      console.log("toka arvaus:");
+      console.log(secondGuess);
+      console.log("count: " + count);
+      console.log("--------------------");
+      this.firstChild.className = "selected visible";
+      this.lastChild.className = "selected hidden";
     }
-
-    if (count < 2) {
-      count++;
-      if (count === 1) {
-        firstGuess = this.firstChild.src;
-        console.log("eka arvaus:");
-        console.log(firstGuess);
-        console.log("count:");
-        console.log(count);
-        this.firstChild.className = "selected visible";
-        this.lastChild.className = "selected hidden";
-      } else {
-        secondGuess = this.firstChild.src;
-        console.log("toka arvaus:");
-        console.log(secondGuess);
-        console.log("count:");
-        console.log(count);
-        this.firstChild.className = "selected visible";
-        this.lastChild.className = "selected hidden";
-      }
-    }
-
-    if (firstGuess && secondGuess) {
-      if (firstGuess === secondGuess) {
-        console.log("mätsi");
-        setTimeout(match, delay);
-      }
-      console.log("arvauksien nollaus");
-      setTimeout(resetGuesses, delay);
-    }
-    previousTarget = clicked;
   }
+
+  if (count === 2) {
+    guessCountUpdate();
+  }
+
+  if (firstGuess && secondGuess) {
+    if (firstGuess === secondGuess) {
+      console.log("--------------------");
+      console.log("mätsi!!");
+      setTimeout(match, delay);
+    }
+    console.log("arvauksien nollaus..");
+    console.log("--------------------");
+    guessCount++; //kasvatetaan arvausyrityslaskuria
+    setTimeout(resetGuesses, delay);
+  }
+  previousTarget = clicked;
+}
+
+//funktio joka resetoiarvaukset
+function resetGuesses() {
+  (firstGuess = ""), (secondGuess = ""), (count = 0), (previousTarget = null);
+  var visibleCard = document.querySelectorAll(".selected");
+  // console.log(visibleCard);
+  visibleCard.forEach((card) => {
+    if (card.className == "selected visible") {
+      card.className = "hidden";
+    }
+    if (card.className == "selected hidden") {
+      card.className = "visible";
+    }
+  });
+}
+
+//funktio joka tarkastaa mätsääkö 2 klikattua korttia
+function match() {
+  console.log("--------------------");
+  console.log("howdy mätsi!");
+  var matchedCards = document.querySelectorAll(".selected");
+  console.log("esillä olevat kortit:");
+  console.log(matchedCards);
+  matchedCards.forEach((card) => {
+    if (card.className == "selected visible") {
+      console.log(card);
+      card.className = "match";
+    }
+    if (card.className == "selected hidden") {
+      console.log(card);
+      card.className = "hidden";
+    }
+  });
+  console.log("--------------------");
+  pairsLeft();
+}
+
+//funktio joka näyttää jäljellä olevien parien määrän
+function pairsLeft() {
+  var pairs = document.getElementsByClassName("visible");
+  var pairsLeft = pairs.length / 2;
+  document.getElementById("pairsleft").innerHTML = pairsLeft;
+  if (pairsLeft === 0) {
+    guessCount = 0;
+  }
+}
+
+//funktio joka resetoi käytetyarvaukset laskurin
+function guessCountReset() {
+  document.getElementById("guessess").innerHTML = guessCount = 0;
+}
+//käytetytarvaukset laskuri
+function guessCountUpdate() {
+  document.getElementById("guessess").innerHTML = guessCount + 1;
 }
 
 //taimeri päälle kun klikkaa ensimmäistä korttia
