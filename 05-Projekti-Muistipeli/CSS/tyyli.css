@@ -106,11 +106,16 @@ nav li a:hover:not(.active) {
   border: thin solid black;
 }
 
+#pelikentta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
 #pelikentta div {
   padding: 0;
-  float: left;
   margin: 10px;
-  list-style: none;
 }
 
 .card {

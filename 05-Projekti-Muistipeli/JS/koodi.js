@@ -181,9 +181,18 @@ function resetGuesses() {
 //funktio joka tarkastaa mätsääkö 2 käännettyä korttia
 function match() {
   console.log("howdy mätsi!");
-  const selected = document.querySelectorAll(".selected");
-  selected.forEach((card) => {
-    card.className = "match";
+  var matchedCards = document.querySelectorAll(".selected");
+  console.log("esillä olevat kortit:");
+  console.log(matchedCards);
+  matchedCards.forEach((card) => {
+    if (card.className == "selected visible") {
+      console.log(card);
+      card.className = "match";
+    }
+    if (card.className == "selected hidden") {
+      console.log(card);
+      card.className = "hidden";
+    }
   });
 }
 
@@ -253,4 +262,4 @@ function createGame() {
   }
 }
 
-  //taimeri päälle kun klikkaa ensimmäistä korttia
+//taimeri päälle kun klikkaa ensimmäistä korttia
