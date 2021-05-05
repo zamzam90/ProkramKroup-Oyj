@@ -294,8 +294,8 @@ function guessCountUpdate() {
   document.getElementById("guessess").innerHTML = guessCount + 1;
 }
 
-//taimeri päälle kun klikkaa ensimmäistä korttia
-var second = 0, minute = 0;
+//taimeri päälle kun klikkaa ensimmäistä korttia (alustus, laitettava oikeaan paikkaan + startTimer)
+/*var second = 0, minute = 0;
 var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
@@ -311,4 +311,4 @@ function startTimer(){
             minute = 0;
         }
     },1000);
-}
+}*/
