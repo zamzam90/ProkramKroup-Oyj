@@ -165,7 +165,7 @@ function shuffleCards() {
     selectedCardDeck[k] = selectedCardDeck[i];
     selectedCardDeck[i] = temp;
   }
-  console.log(selectedCardDeck);
+  // console.log(selectedCardDeck);
 }
 
 //Funktio joka luo pelitaulukon.
@@ -197,9 +197,9 @@ function createGame() {
 // kun korttia klikataan..
 function onClick() {
   var clicked = this.firstChild;
-  console.log("--------------------");
+  /* console.log("--------------------");
   console.log("klikattu:");
-  console.log(clicked);
+  console.log(clicked); */
   moves++;
 
   if (moves == 1) {
@@ -223,18 +223,18 @@ function onClick() {
 
     if (count === 1) {
       firstGuess = this.firstChild.src;
-      console.log("eka arvaus:");
+      /* console.log("eka arvaus:");
       console.log(firstGuess);
       console.log("count: " + count);
-      console.log("--------------------");
+      console.log("--------------------"); */
       this.firstChild.className = "selected visible";
       this.lastChild.className = "selected hidden";
     } else {
       secondGuess = this.firstChild.src;
-      console.log("toka arvaus:");
+      /* console.log("toka arvaus:");
       console.log(secondGuess);
       console.log("count: " + count);
-      console.log("--------------------");
+      console.log("--------------------"); */
       this.firstChild.className = "selected visible";
       this.lastChild.className = "selected hidden";
     }
@@ -246,12 +246,12 @@ function onClick() {
 
   if (firstGuess && secondGuess) {
     if (firstGuess === secondGuess) {
-      console.log("--------------------");
-      console.log("mätsi!!");
+      /* console.log("--------------------");
+      console.log("mätsi!!"); */
       setTimeout(match, delay);
     }
-    console.log("arvauksien nollaus..");
-    console.log("--------------------");
+    /* console.log("arvauksien nollaus..");
+    console.log("--------------------"); */
     guessCount++; //kasvatetaan arvausyrityslaskuria
     setTimeout(resetGuesses, delay);
   }
@@ -275,22 +275,22 @@ function resetGuesses() {
 
 //funktio joka tarkastaa mätsääkö 2 klikattua korttia.
 function match() {
-  console.log("--------------------");
-  console.log("howdy mätsi!");
+  /* console.log("--------------------");
+  console.log("howdy mätsi!"); */
   var matchedCards = document.querySelectorAll(".selected");
-  console.log("esillä olevat kortit:");
-  console.log(matchedCards);
+  /* console.log("esillä olevat kortit:");
+  console.log(matchedCards); */
   matchedCards.forEach((card) => {
     if (card.className == "selected visible") {
-      console.log(card);
+      // console.log(card);
       card.className = "match";
     }
     if (card.className == "selected hidden") {
-      console.log(card);
+      // console.log(card);
       card.className = "hidden";
     }
   });
-  console.log("--------------------");
+  // console.log("--------------------");
   pairsLeft();
 }
 
@@ -337,10 +337,10 @@ function startTimer() {
 function changeBtn() {
   var x = document.getElementById("aloita");
   if (moves == 0) {
-    console.log("moves 0");
+    // console.log("moves 0");
     x.innerHTML = "Käynnistä peli";
   } else {
-    console.log("moves enemmänkuin 0");
+    // console.log("moves enemmänkuin 0");
     x.innerHTML = "Aloita alusta";
   }
 }
