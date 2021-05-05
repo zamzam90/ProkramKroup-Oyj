@@ -1,1 +1,58 @@
-tyylit
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* html muotoilu */
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  background: url("../kuva1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Amatic SC', cursive;
+}
+
+.content {
+  margin-inline: auto;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 1em;
+  width: min(90%, 65%);
+  border: solid black;
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  color: black;
+  flex: 1 0 auto;
+  margin-left: 30%;
+  opacity: 0.8;
+}
+
+footer {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  flex: 0 1 auto;
+  font-family: 'Amatic SC', cursive;
+}
