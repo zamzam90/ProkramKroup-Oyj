@@ -321,7 +321,7 @@ https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript ko
 function startTimer() {
   timer = document.querySelector(".timer");
   interval = setInterval(function () {
-    timer.innerHTML = minute + "mins " + second + "secs";
+    timer.innerHTML = minute + " mins " + second + " secs";
     second++;
     if (second == 60) {
       minute++;
