@@ -294,9 +294,9 @@ function guessCountUpdate() {
   document.getElementById("guessess").innerHTML = guessCount + 1;
 }
 
-//taimeri päälle kun klikkaa ensimmäistä korttia (alustus, laitettava oikeaan paikkaan + startTimer
+/*taimeri päälle kun klikkaa ensimmäistä korttia (alustus, laitettava oikeaan paikkaan + startTimer
 https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript kohta #5)
-/*var second = 0, minute = 0;
+var second = 0, minute = 0;
 var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
