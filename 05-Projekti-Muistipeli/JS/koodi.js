@@ -1,9 +1,5 @@
 //Muistipeli
 
-/* TODO:
-    -tehdä ajanotto..
-*/
-
 /* Alustetaan muuttujia..
 ..ja haetaan niihin tietoja */
 
@@ -11,14 +7,21 @@ var gameArea,
   dropDownMenu,
   selectedGameMode,
   selectedCardDeck = [],
-  timer = 0,
+  timer,
+  second,
+  minute,
+  hour,
+  interval,
   guessCount = 0,
   firstGuess = "",
   secondGuess = "",
   count = 0,
+  moves = 0,
   previousTarget = null,
   delay = "800";
 gameArea = document.getElementById("pelikentta");
+second = 0;
+minute = 0;
 const gameCards6x6 = [
   "kortti-1.png",
   "kortti-2.png",
@@ -104,13 +107,13 @@ const gameCards4x4 = [
 
 // Das spielen!
 function main() {
-  selectedGameSize();
+  selectedGameSize(); //mikä pelikoko valittu
   console.log(selectedGameMode + "peli valittu.");
-  cardDeckSelected();
-  createGame();
+  cardDeckSelected(); //pelin koon mukaan sekoitettu korttipakka
+  createGame(); //luodaan peli htmlään
   console.log("peli luotu.");
-  pairsLeft();
-  guessCountReset();
+  pairsLeft(); //käynnistetään parejajäljellä laskuri
+  guessCountReset(); //resetoidaan arvausyrityksiä laskuri
 }
 
 //Funktio joka hakee pelin koon valinnan pudotusvalikosta.
@@ -168,6 +171,8 @@ function shuffleCards() {
 function createGame() {
   /* luodaan valitun koon mukainen lista johon kortit sekoitettuna laitettu */
   var output = "";
+  timer = document.querySelector(".timer");
+
   for (var x = 0; x < selectedCardDeck.length; x++) {
     output += "<div class='card'>";
     output += "<img src=" + selectedCardDeck[x] + " class='hidden'></img>";
@@ -182,6 +187,9 @@ function createGame() {
   for (var i = 0; i < card.length; i++) {
     card[i].addEventListener("click", onClick);
   }
+
+  timer.innerHTML = "0 mins 0 secs";
+  clearInterval(interval);
 }
 
 // kun korttia klikataan..
@@ -190,6 +198,14 @@ function onClick() {
   console.log("--------------------");
   console.log("klikattu:");
   console.log(clicked);
+  moves++;
+
+  if (moves == 1) {
+    second = 0;
+    minute = 0;
+    hour = 0;
+    startTimer();
+  }
 
   if (
     this === previousTarget ||
@@ -201,6 +217,7 @@ function onClick() {
 
   if (count < 2) {
     count++;
+
     if (count === 1) {
       firstGuess = this.firstChild.src;
       console.log("eka arvaus:");
@@ -281,12 +298,14 @@ function pairsLeft() {
   document.getElementById("pairsleft").innerHTML = pairsLeft;
   if (pairsLeft === 0) {
     guessCount = 0;
+    clearInterval(interval);
   }
 }
 
 //funktio joka resetoi käytetyarvaukset laskurin.
 function guessCountReset() {
   document.getElementById("guessess").innerHTML = guessCount = 0;
+  moves = 0; //resetoidaan movesit
 }
 
 //käytetytarvaukset laskuri.
@@ -294,22 +313,20 @@ function guessCountUpdate() {
   document.getElementById("guessess").innerHTML = guessCount + 1;
 }
 
-/*taimeri päälle kun klikkaa ensimmäistä korttia (alustus, laitettava oikeaan paikkaan + startTimer
-https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript kohta #5)
-var second = 0, minute = 0;
-var timer = document.querySelector(".timer");
-var interval;
-function startTimer(){
-    interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
-        second++;
-        if(second == 60){
-            minute++;
-            second = 0;
-        }
-        if(minute == 60){
-            hour++;
-            minute = 0;
-        }
-    },1000);
-}*/
+/*Ajanotto funktio..
+https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript kohta #5) */
+function startTimer() {
+  timer = document.querySelector(".timer");
+  interval = setInterval(function () {
+    timer.innerHTML = minute + "mins " + second + "secs";
+    second++;
+    if (second == 60) {
+      minute++;
+      second = 0;
+    }
+    if (minute == 60) {
+      hour++;
+      minute = 0;
+    }
+  }, 1000);
+}
