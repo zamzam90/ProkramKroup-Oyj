@@ -114,6 +114,7 @@ function main() {
   console.log("peli luotu.");
   pairsLeft(); //käynnistetään parejajäljellä laskuri
   guessCountReset(); //resetoidaan arvausyrityksiä laskuri
+  changeBtn(); //vaihdetaan aloitus napin tekstiä..
 }
 
 //Funktio joka hakee pelin koon valinnan pudotusvalikosta.
@@ -190,6 +191,7 @@ function createGame() {
 
   timer.innerHTML = "0 mins 0 secs";
   clearInterval(interval);
+  moves = 0;
 }
 
 // kun korttia klikataan..
@@ -205,6 +207,7 @@ function onClick() {
     minute = 0;
     hour = 0;
     startTimer();
+    changeBtn();
   }
 
   if (
@@ -329,4 +332,15 @@ function startTimer() {
       minute = 0;
     }
   }, 1000);
+}
+
+function changeBtn() {
+  var x = document.getElementById("aloita");
+  if (moves == 0) {
+    console.log("moves 0");
+    x.innerHTML = "Käynnistä peli";
+  } else {
+    console.log("moves enemmänkuin 0");
+    x.innerHTML = "Aloita alusta";
+  }
 }
