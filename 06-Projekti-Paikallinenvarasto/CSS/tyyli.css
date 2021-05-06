@@ -50,6 +50,11 @@ body {
   opacity: 0.8;
 }
 
+#form {
+  text-align: left;
+  margin-left: 50px;
+}
+
 footer {
   font-size: 30px;
   text-align: center;
