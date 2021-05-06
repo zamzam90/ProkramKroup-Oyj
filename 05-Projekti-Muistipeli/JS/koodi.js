@@ -131,24 +131,29 @@ function cardDeckSelected() {
   /* tunnista mikä peli on valittu (4x4/4x6/6x6) ja valitse oikea määrä kortteja pakkaan */
   if (selectedGameMode == "tyhja") {
     selectedCardDeck = [];
+    document.getElementById("pelikentta").className = "";
     return alert("valitse pelin koko!");
   }
   if (selectedGameSize() == "pieni") {
     selectedGameMode = "pieni";
     selectedCardDeck = gameCards4x4;
     shuffleCards();
+    document.getElementById("pelikentta").className = "fourByFour";
     return /* alert("pieni peli valittu!") */;
   }
   if (selectedGameSize() == "keski") {
     selectedGameMode = "keski";
     selectedCardDeck = gameCards4x6;
     shuffleCards();
+    document.getElementById("pelikentta").className = "fourBySix";
+
     return /* alert("keski peli valittu!") */;
   }
   if (selectedGameSize() == "suuri") {
     selectedGameMode = "suuri";
     selectedCardDeck = gameCards6x6;
     shuffleCards();
+    document.getElementById("pelikentta").className = "sixBySix";
     return /* alert("suuri peli valittu!") */;
   }
 }

@@ -107,19 +107,31 @@ nav li a:hover:not(.active) {
 }
 
 #pelikentta {
-  display: flex;
-  align-items: center;
+  display: grid;
+  gap: 1rem;
+  /* align-items: center;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: row wrap; */
 }
 
-#pelikentta div {
+.fourByFour {
+  grid-template-columns: repeat(4, 1fr);
+}
+.fourBySix {
+  grid-template-columns: repeat(4, 1fr);
+}
+.sixBySix {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* #pelikentta div {
   padding: 0;
   margin: 10px;
-}
+} */
 
 .card {
   position: relative;
+  margin-inline: auto;
 }
 
 .hidden {
