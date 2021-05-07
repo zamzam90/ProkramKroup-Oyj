@@ -12,7 +12,7 @@ function tietoLomake() {
   var sahkoPosti = document.getElementById("arvoSposti").value;
   var varasto = document.getElementById("varastoAlue").value;
 
-  //tarkastetaan etunimen pituus
+  //tarkastetaan etunimen kenttä ja pituus
   if (etuNimi === "") {
     alert("Syötä etunimi!");
     return false;
@@ -20,4 +20,39 @@ function tietoLomake() {
     alert("Antamasi etunimi on liian lyhyt!");
     return false;
   }
+
+  //tarkastetaan kaikki kentät että jotain on syötetty
+  if (sukuNimi === "") {
+    alert("Syötä sukunimi!");
+    return false;
+  }
+
+  if (osoite === "") {
+    alert("Syötä lähiosoite!");
+    return false;
+  }
+
+  if(postiNumero === "") {
+    alert("Syötä postinumero!");
+    return false;
+  }
+
+ if(postiPaikka === "") {
+   alert("Syötä postitoimipaikka!");
+   return false;
+ }
+
+ if(puhelin === "") {
+   alert("Syötä puhelinnumero!");
+   return false;
+ }
+
+ if(sahkoPosti === "") {
+   alert("Syötä sähköpostiosoite!");
+   return false;
+ }
+
+function tallenna() {
+  
+}
 }
