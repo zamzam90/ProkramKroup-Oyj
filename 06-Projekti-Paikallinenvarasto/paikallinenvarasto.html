@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/tyyli.css">
-    <script src="JS/javascript.js"></script>
+    <script src="JS/koodi.js"></script>
   </head>
   <body>
     <h1 id="header">Henkilötietolomake</h1>
     <div class="content">
       <p>Syötä alle henkilötietosi ja paina tallenna</p>
-      <form id="form">
+      <form action="" method="post" id="formi" onsubmit="return tietoLomake(this);">
         <label for="arvoEtun">Etunimi:</label><br>
         <input type="text" id="arvoEtun" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
@@ -35,11 +35,15 @@
         <label for="arvoSposti">Sähköposti:</label><br>
         <input type="text" id="arvoSposti" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
-        <button type="button" id="tallenna" onclick="tallenna()">tallenna</button>
+        <button type="button" id="tallenna" onclick="tallenna()">Tallenna</button>
+        <fieldset> <legend>ProkramKroupin paikallinen varasto</legend>
+          <div id="varastoAlue">
+          </div>
+        </fieldset>
       </form>
     </div>
-  </body
     <footer>
       <p>ProkramKroup Oyj &copy; - 2021</p>
     </footer>
+</body
 </html>
