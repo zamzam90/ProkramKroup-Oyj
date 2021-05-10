@@ -107,23 +107,36 @@ function tietoLomake() {
 
 /* Funktio joka tulostaa tiedot htmlään */
 function listaa() {
+  // alustelut
   var tulosteAvain,
     tulosteArvo,
-    htmlTuloste = "";
+    arrayFromObject = [],
+    htmlTuloste = "<table align='center'>";
 
+  // magic
   console.log("tulostetaan...");
   for (x = 0; x < localStorage.length; x++) {
     // hae avaimet ls:stä
     tulosteAvain = localStorage.key(x);
     console.log(tulosteAvain);
+    htmlTuloste += "<tr><th colspan='2'>";
+    htmlTuloste += tulosteAvain;
+    htmlTuloste += "</th></tr>";
     // hae avaimella arvo(olio) ls:stä
     tulosteArvo = JSON.parse(localStorage.getItem(tulosteAvain));
     console.log(tulosteArvo);
-    /* todo:
-      -tulosta olio nätisti htmlään, table?  
-    */
-    // lisätään avain ja arvo tulosteeseen
-    htmlTuloste += tulosteAvain + " " + tulosteArvo + "<br>";
+    // muutetaan objekti listaksi https://www.javascripttutorial.net/object/convert-an-object-to-an-array-in-javascript/
+    arrayFromObject = Object.entries(tulosteArvo);
+    // tehdään table avaimesta ja arvosta(objektin listasta)
+    for (a = 0; a < arrayFromObject.length; a++) {
+      htmlTuloste += "<tr>";
+      for (b = 0; b < arrayFromObject[a].length; b++) {
+        htmlTuloste += "<td>" + arrayFromObject[a][b] + "</td>";
+      }
+      htmlTuloste += "</tr>";
+    }
   }
+  htmlTuloste += "</table>";
+  // kirjoita htmlTuloste htmlään..
   document.getElementById("varastoAlue").innerHTML = htmlTuloste;
 }
