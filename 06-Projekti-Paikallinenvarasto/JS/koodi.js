@@ -1,6 +1,7 @@
 //Paikallinen varasto js
 
 /* alustetaan muuttujia ja haetaan niihin tietoa */
+var varasto = document.getElementById("varastoAlue");
 var lsForm = document.getElementById("formi");
 var henkilöTiedot = {};
 var id, avain, avaimenArvo;
@@ -60,7 +61,6 @@ function tietoLomake() {
   var postiPaikka = document.getElementById("arvoPostit").value;
   var puhelin = document.getElementById("arvoPuh").value;
   var sahkoPosti = document.getElementById("arvoSposti").value;
-  var varasto = document.getElementById("varastoAlue").value;
 
   //tarkastetaan etunimen kenttä ja pituus
   if (etuNimi === "") {
@@ -103,4 +103,27 @@ function tietoLomake() {
   }
 
   tallennaTiedot(); // tallennettaa tietoi localstoragee
+}
+
+/* Funktio joka tulostaa tiedot htmlään */
+function listaa() {
+  var tulosteAvain,
+    tulosteArvo,
+    htmlTuloste = "";
+
+  console.log("tulostetaan...");
+  for (x = 0; x < localStorage.length; x++) {
+    // hae avaimet ls:stä
+    tulosteAvain = localStorage.key(x);
+    console.log(tulosteAvain);
+    // hae avaimella arvo(olio) ls:stä
+    tulosteArvo = JSON.parse(localStorage.getItem(tulosteAvain));
+    console.log(tulosteArvo);
+    /* todo:
+      -tulosta olio nätisti htmlään, table?  
+    */
+    // lisätään avain ja arvo tulosteeseen
+    htmlTuloste += tulosteAvain + " " + tulosteArvo + "<br>";
+  }
+  document.getElementById("varastoAlue").innerHTML = htmlTuloste;
 }
