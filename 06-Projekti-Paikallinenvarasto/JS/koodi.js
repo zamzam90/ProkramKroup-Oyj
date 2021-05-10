@@ -1,7 +1,57 @@
 //Paikallinen varasto js
-//alert("pööööö"); - toimii!
+
+/* alustetaan muuttujia ja haetaan niihin tietoa */
+var lsForm = document.getElementById("formi");
+var henkilöTiedot = {};
+var id, avain, avaimenArvo;
+id = localStorage.length;
+avain = "henkilötiedot " + id;
+avaimenArvo = "";
+
+/* Funktio joka hakee tiedot lomakkeesta ja lisää ne olioon */
+function formTiedotOlioon() {
+  //for loopilla lisätään formin nimi ja arvo olioon.. -1 koska ei haluta nappia olioon
+  for (x = 0; x < lsForm.length - 1; x++) {
+    console.log(lsForm[x].name + " " + lsForm[x].value); //tulostetaan "nimi" ja sen arvo
+    /* lisää tiedot taulukosta olioon */
+    henkilöTiedot[lsForm[x].name] = lsForm[x].value;
+  }
+}
+/* ---------------------------------------------------------------- */
+
+/* Funktio joka muuttaa olion string muotoon */
+function olioStringiksi() {
+  avaimenArvo = JSON.stringify(henkilöTiedot); //muutetaan olio stringiksi
+  console.log("olio stringiföity..");
+}
+
+/* Funktio joka lisää avaimen("henkilötiedot: ") ja arvon(=olion) localstorageen */
+function lisääLocalStorageen() {
+  päivitäAvain(); //päivitetään avain ennenkuin tallennetaan
+  /* tässä lisätään avain ja arvo(=olio) localstorageen */
+  localStorage.setItem(avain, avaimenArvo);
+}
+
+/* Funktio joka päivittää avaimen tallentamisen jälkeen */
+function päivitäAvain() {
+  id = localStorage.length; //päivittää id:n localstoragen lengthin perusteella
+  avain = "henkilötiedot " + id; //päivitetään avain uudella id:llä
+}
+
+/* Funktio joka kutsuu muita funktioita.... */
+function tallennaTiedot() {
+  console.log("Olio:");
+  formTiedotOlioon(); //lisätään lomakkeen tiedot olioon
+  olioStringiksi(); //muutetaan olio stringiksi
+  console.log("avain: " + avain); //for testing..
+  console.log("arvo: " + avaimenArvo); //for testing..
+  lisääLocalStorageen(); //lisätään avain ja arvo(=olio) localstorageen
+  päivitäAvain(); //päivitetään avain consolelogia varten
+  console.log("seuraava avain: " + avain); //for testing
+  document.getElementById("formi").reset(); //tyhjätään lomake tallentamisen jälkeen
+}
+
 function tietoLomake() {
-  alert("test");
   //alustetaan muuttujia, tiedot haetaan lomakkeesta
   var etuNimi = document.getElementById("arvoEtun").value;
   var sukuNimi = document.getElementById("arvoSukun").value;
@@ -32,27 +82,25 @@ function tietoLomake() {
     return false;
   }
 
-  if(postiNumero === "") {
+  if (postiNumero === "") {
     alert("Syötä postinumero!");
     return false;
   }
 
- if(postiPaikka === "") {
-   alert("Syötä postitoimipaikka!");
-   return false;
- }
+  if (postiPaikka === "") {
+    alert("Syötä postitoimipaikka!");
+    return false;
+  }
 
- if(puhelin === "") {
-   alert("Syötä puhelinnumero!");
-   return false;
- }
+  if (puhelin === "") {
+    alert("Syötä puhelinnumero!");
+    return false;
+  }
 
- if(sahkoPosti === "") {
-   alert("Syötä sähköpostiosoite!");
-   return false;
- }
+  if (sahkoPosti === "") {
+    alert("Syötä sähköpostiosoite!");
+    return false;
+  }
 
-function tallenna() {
-  
-}
+  tallennaTiedot(); // tallennettaa tietoi localstoragee
 }
