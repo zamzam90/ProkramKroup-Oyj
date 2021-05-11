@@ -24,16 +24,16 @@
         <input type="text" name="Lähiosoite" id="arvoLahios" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
         <label for="arvoPostin">Postinumero:</label><br>
-        <input type="number" name="Postinumero" id="arvoPostin" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
+        <input type="number" name="Postinumero" id="arvoPostin" maxlength="5" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
         <label for="arvoPostit">Postitoimipaikka:</label><br>
         <input type="text" name="Postitoimipaikka" id="arvoPostit" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
         <label for="arvoPuh">Puhelinnumero:</label><br>
-        <input type="number" name="Puhelinnumero" id="arvoPuh" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
+        <input type="tel" name="Puhelinnumero" id="arvoPuh" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
         <label for="arvoSposti">Sähköposti:</label><br>
-        <input type="text" name="Sähköposti" id="arvoSposti" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
+        <input type="email" name="Sähköposti" id="arvoSposti" size="30" placeholder="Sy&ouml;t&auml; tieto..."><br>
         <br>
         <button type="button" id="tallenna" onclick="return tietoLomake();">Tallenna</button>
       </form>

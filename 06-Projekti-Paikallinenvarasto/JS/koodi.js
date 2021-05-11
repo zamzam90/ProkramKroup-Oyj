@@ -54,52 +54,72 @@ function tallennaTiedot() {
 
 function tietoLomake() {
   //alustetaan muuttujia, tiedot haetaan lomakkeesta
-  var etuNimi = document.getElementById("arvoEtun").value;
-  var sukuNimi = document.getElementById("arvoSukun").value;
-  var osoite = document.getElementById("arvoLahios").value;
-  var postiNumero = document.getElementById("arvoPostin").value;
-  var postiPaikka = document.getElementById("arvoPostit").value;
-  var puhelin = document.getElementById("arvoPuh").value;
-  var sahkoPosti = document.getElementById("arvoSposti").value;
+  var etuNimi = document.getElementById("arvoEtun");
+  var sukuNimi = document.getElementById("arvoSukun");
+  var osoite = document.getElementById("arvoLahios");
+  var postiNumero = document.getElementById("arvoPostin");
+  var postiPaikka = document.getElementById("arvoPostit");
+  var puhelin = document.getElementById("arvoPuh");
+  var sahkoPosti = document.getElementById("arvoSposti");
 
   //tarkastetaan etunimen kenttä ja pituus
-  if (etuNimi === "") {
+  if (etuNimi.value === "") {
     alert("Syötä etunimi!");
+    etuNimi.focus();
     return false;
-  } else if (etuNimi.length < 2) {
+  } else if (etuNimi.value.length < 2) {
     alert("Antamasi etunimi on liian lyhyt!");
+    etuNimi.focus();
     return false;
   }
 
   //tarkastetaan kaikki kentät että jotain on syötetty
-  if (sukuNimi === "") {
+  if (sukuNimi.value === "") {
     alert("Syötä sukunimi!");
+    sukuNimi.focus();
     return false;
   }
 
-  if (osoite === "") {
+  if (osoite.value === "") {
     alert("Syötä lähiosoite!");
+    osoite.focus();
     return false;
   }
 
-  if (postiNumero === "") {
+  if (postiNumero.value === "") {
     alert("Syötä postinumero!");
+    postiNumero.focus();
+    return false;
+  } else if (isNaN(postiNumero.value)) {
+    alert("Postinumeron on oltava numeroita!");
+    postiNumero.focus();
     return false;
   }
 
-  if (postiPaikka === "") {
+  if (postiPaikka.value === "") {
     alert("Syötä postitoimipaikka!");
+    postiPaikka.focus();
     return false;
   }
 
-  if (puhelin === "") {
+  if (puhelin.value === "") {
     alert("Syötä puhelinnumero!");
+    puhelin.focus();
+    return false;
+  } else if (isNaN(puhelin.value)) {
+    alert("Puhelinnumeron on oltava numeroita!");
+    puhelin.focus();
     return false;
   }
 
-  if (sahkoPosti === "") {
-    alert("Syötä sähköpostiosoite!");
+  if (emailIsValid(sahkoPosti.value)) {
+  } else {
+    alert("Anna oikea sähköpostiosoite!");
+    sahkoPosti.focus();
     return false;
+  }
+  function emailIsValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
   tallennaTiedot(); // tallennettaa tietoi localstoragee
