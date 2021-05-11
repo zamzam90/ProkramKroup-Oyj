@@ -119,9 +119,11 @@ function listaa() {
     // hae avaimet ls:stä
     tulosteAvain = localStorage.key(x);
     console.log(tulosteAvain);
-    htmlTuloste += "<tr><th colspan='2'>";
-    htmlTuloste += tulosteAvain;
-    htmlTuloste += "</th></tr>";
+    htmlTuloste += "<tr><th>" + tulosteAvain + "</th>";
+    htmlTuloste +=
+      "<th><button type='button' id='" +
+      tulosteAvain +
+      "' onclick='poistaAvain(this)'>Poista tieto</button></th></tr>";
     // hae avaimella arvo(olio) ls:stä
     tulosteArvo = JSON.parse(localStorage.getItem(tulosteAvain));
     console.log(tulosteArvo);
@@ -139,4 +141,11 @@ function listaa() {
   htmlTuloste += "</table>";
   // kirjoita htmlTuloste htmlään..
   document.getElementById("varastoAlue").innerHTML = htmlTuloste;
+}
+
+function poistaAvain(key) {
+  const avain = key.id;
+  console.log("poistetaan: " + avain);
+  localStorage.removeItem(avain);
+  listaa(); // "päivitetään" näkymä
 }
