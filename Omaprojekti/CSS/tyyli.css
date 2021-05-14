@@ -1,1 +1,75 @@
-css
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+}
+
+
+#header {
+  background-image: url(../resources/images/meri.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Waiting for the Sunrise', cursive;
+  text-shadow: 1px 2px white;
+  font-size: 40px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container {
+  background-color: black;
+  margin-inline: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  width: min(90%, 65%);
+  border: solid black;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Atma', cursive;
+  color: white;
+}
+
+.prev, .next {
+  /*cursor: pointer;
+  position: absolute;
+  color: white;*/
+
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  /*position: absolute;
+  text-align: center;*/
+}
+
+footer {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 25px;
+  font-weight: 1000;
+  text-shadow: 1px 2px white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-image: url(../resources/images/meri.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 70%;
+}
