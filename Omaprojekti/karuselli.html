@@ -1,49 +1,158 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/tyyli.css">
-    <script type="text/javascript" src="JS/koodi.js"></script>
-
-    <title>Kuvagalleria</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/tyyli.css" />
+    <script type="text/javascript" src="./JS/koodi.js" defer></script>
+    <title>Sandaalimatkat Oy</title>
   </head>
   <body>
- <div class="header">
-
-
-    <h1 id="header">Sandaalimatkat Oy</h1>
-     </div>
-    <div class="container">
-      <p>Tervetuloa tutustumaan Sandaalimatkat Oy:n kuvagalleriaan.</p>
-      <p>Nauttikaa näkemästänne ja tilatkaa meiltä matkoja!</p>
-      <div class="slide fade">
-        <img src="resources/images/kuva1.jpg" alt="kuva" style="width:50%">
-        <div class="text">Mäntsälän jylhänne.</div>
+    <div class="tausta-1">
+      <video autoplay muted loop>
+        <source src="./resources/images/coverr.mp4" type="video/mp4" />
+      </video>
+      <div class="caption">
+        <span class="border">Tervetuloa Sandaalimatkoihin&copy;</span>
       </div>
-      <div class="slide fade">
-        <img src="resources/images/kuva2.jpg" alt="kuva" style="width:50%">
-        <div class="text">Vantaan joen näkymää.</div>
-      </div>
-      <div class="slide fade">
-        <img src="resources/images/kuva3.jpg" alt="kuva" style="width:50%">
-        <div class="text">Iltanäkymä pääkaupungista Helsingistä.</div>
-      </div>
-      <div class="slide fade">
-        <img src="resources/images/kuva4.jpg" alt="kuva" style="width:50%">
-        <div class="text">Kerava beach ja meri.</div>
-      </div>
-      <div class="slide fade">
-        <img src="resources/images/kuva5.jpg" alt="kuva" style="width:50%">
-        <div class="text">Vesiputouksen ihmettä ympäri Suomea.</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
     </div>
-    <footer>ProkramKroup Oyj &copy; - 2021</footer>
+    <section class="text-center">
+      <h2 class="otsikko">
+        Tervetuloa tutustumaan Sandaalimatkat Oy:n kuvagalleriaan.
+      </h2>
+      <p>Nauttikaa näkemästänne ja tilatkaa meiltä matkoja!</p>
+      <h3 class="otsikko">Keksikää tänne jotain täytettä, jotain? Saa muokata ihan vapaasti xD</h3>
+      <p>
+        Laitetaanko me joku "varaus"sydeemi localstoragella, vai mitä me keksitään tähän lisäks? btw ite en ainakaa saanu sitä klikkailtavaa karuselli kikkaretta toimimaan..
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, neque! Cupiditate, in, quia facilis recusandae dolorem, molestias minus sint provident reiciendis odit explicabo iste veritatis nam? Non nihil accusantium consectetur!
+      </p>
+      <h3 class="otsikko">Ja gitistä saa takas edellisen version jos halutaan :D</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi vel laudantium saepe pariatur, repellat aspernatur nesciunt error neque aliquid. Repellendus incidunt fugit voluptatem dicta nulla voluptatibus praesentium possimus ducimus doloremque.</p>
+    </section>
+    <div class="tausta-2">
+      <div class="caption">
+        <span class="border">Mahtavia kohteita halpaan hintaan!</span>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <fieldset>
+          <legend>
+            <h2 class="otsikko">Tässä joitakin kohteistamme:</h2>
+          </legend>
+          <div class="slideShow-container">
+              <div class="slide fade">
+                <img
+                  src="resources/images/kuva1.jpg"
+                  alt="kuva"
+                />
+                <div class="text text-center">Mäntsälän jylhänne.</div>
+              </div>
+              <div class="slide fade">
+                <img
+                  src="resources/images/kuva2.jpg"
+                  alt="kuva"
+                />
+                <div class="text text-center">Vantaan joen näkymää.</div>
+              </div>
+              <div class="slide fade">
+                <img
+                  src="resources/images/kuva3.jpg"
+                  alt="kuva"
+                />
+                <div class="text text-center">
+                  Iltanäkymä pääkaupungista Helsingistä.
+                </div>
+              </div>
+              <div class="slide fade">
+                <img
+                  src="resources/images/kuva4.jpg"
+                  alt="kuva"
+                />
+                <div class="text text-center">Kerava beach ja meri.</div>
+              </div>
+              <div class="slide fade">
+                <img
+                  src="resources/images/kuva5.jpg"
+                  alt="kuva"
+                />
+                <div class="text text-center">
+                  Vesiputouksen ihmettä ympäri Suomea.
+                </div>
+        </fieldset>
+      </div>
+    </section>
+    <div class="tausta-3">
+      <div class="caption">
+        <span class="border">Varaa matkasi äkkiä!</span>
+      </div>
+    </div>
+    <section class="text-center">
+        <h2 class="otsikko">
+          Varaa tästä oma viikonloppu matkasi!
+        </h2>
+        <form id="localStorageForm" action="./varauksesi.html">
+              <div>
+                <div>
+                  <label for="lsFirstName">Etunimi: </label>
+                  <input type="text" name="Etunimi" id="lsFirstName" value=""/>
+                </div>
+                <div>
+                  <label for="lsLastName">Sukunimi: </label>
+                  <input type="text" name="Sukunimi" id="lsLastName" value=""/>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <label for="lsAddress">Lähiosoite: </label>
+                  <input type="text" name="Lähiosoite" id="lsAddress" value=""/>
+                </div>
+                <div>
+                  <label for="lsPostNumber">Postinumero: </label>
+                  <input type="number" name="Postinumero" id="lsPostNumber" value=""/>
+                </div>
+                <div>
+                  <label for="lsPostiToimiPaikka">Postitoimipaikka: </label>
+                  <input type="text" name="Postitoimipaikka" id="lsPostiToimiPaikka" value=""/>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <label for="lsPuhelinNro"></label>Puhelinnumero: </label
+                  ><input type="number" name="Puhelinnumero" id="lsPuhelinNro" value=""/>
+                </div>
+                <div>
+                  <label for="lsSahkoPosti">Sähköpostiosoite: </label>
+                  <input type="email" name="Sähköpostiosoite" id="lsSahkoPosti" value=""/>
+                </div>
+              </div>
+              <div>
+                <input type="checkbox"><label for="">Mäntsälän jylhänne</label>
+                <input type="checkbox"><label for="">Vantaan joen näkymä</label>
+                <input type="checkbox"><label for="">Helsinki ilta</label>
+                <input type="checkbox"><label for="">Kerava beach</label>
+                <input type="checkbox"><label for="">Vesiputous mesta</label>
+              </div>
+            <div>
+              <button type="submit" onclick="return tallennaTiedot();">Tallenna</button> <button onclick="return reDirect();">Tarkastele varaustasi</button>
+            </div>
+          </form>
+      </section>
+      <div class="tausta-4">
+        <!-- <div class="caption">
+          <span class="border">Varaa matkasi äkkiä!</span>
+        </div> -->
+      </div>
+    <footer><p class="text-center">ProkramKroup Oyj &copy; - 2021</p></footer>
   </body>
 </html>
