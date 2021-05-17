@@ -26,7 +26,8 @@ function lomake(form) {
 //Haetaan tiedot muuttujiin lomakkeesta
 var nimi = document.getElementById('nimi').value;
 var sahkoposti = document.getElementById('email').value;
-var x = document.getElementById('numero').value;
+var n = document.getElementById('numero').value;
+var yhteys = document.getElementById('palaute').value;
 
 if (nimi.length < 2) {
   alert("Antamasi nimi on liian lyhyt!");
@@ -44,18 +45,18 @@ function emailIsValid (email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 //Puhelinnumeron tarkastus
-//Puhelinnumeron on oltava numero, määritetään se isNaN:Lla, muutoin perus else if:t
-if (x === "") {
+//Puhelinnumeron on oltava numeroita, määritetään se isNaN:Lla
+if (n === "") {
   alert("Anna puhelinnumerosi!");
   return false;
 }
-else if (isNaN(x)) {
+else if (isNaN(n)) {
   alert("Puhelinnumeron on oltava numeroita!");
   return false;
 }
 
 //tekstiä syötetty kenttään, tsekkaus
-if (kommentti.length < 3) {
+if (yhteys.length < 3) {
   alert("Kirjoita kommentteihin vähintään 3 merkkiä!");
   return false;
 }
