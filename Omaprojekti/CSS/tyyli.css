@@ -31,7 +31,6 @@ img {
 
 .tausta-1 {
   min-height: 100%;
-  overflow: hidden;
 }
 
 .tausta-2 {
@@ -82,7 +81,19 @@ img {
     background-attachment: scroll;
   }
 }
+
+@media screen and (min-width: 1981px) {
+  video {
+    width: 100%;
+  }
+}
 /* End of parallax stuff */
+
+video {
+  min-height: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
 .text-center {
   text-align: center;
