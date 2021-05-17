@@ -46,7 +46,7 @@ img {
 
 .tausta-4 {
   background-image: url("../resources/images/biitsi.jpg");
-  min-height: 12rem;
+  min-height: 15rem;
 }
 
 .caption {
@@ -90,6 +90,14 @@ img {
 
 .varaus-linkki {
   cursor: pointer;
+}
+
+.takas-kotiin {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  color: #000;
 }
 
 .container {
