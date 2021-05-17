@@ -88,6 +88,10 @@ img {
   text-align: center;
 }
 
+.varaus-linkki {
+  cursor: pointer;
+}
+
 .container {
   margin-inline: auto;
   width: min(90%, 70.5rem);
