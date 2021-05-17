@@ -88,6 +88,16 @@ img {
   text-align: center;
 }
 
+.varaukseen {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #000;
+  z-index: 1;
+}
+
 .varaus-linkki {
   cursor: pointer;
 }
