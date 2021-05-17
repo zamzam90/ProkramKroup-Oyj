@@ -162,6 +162,25 @@ fieldset {
   text-align: center;
 }
 
+#nimi {
+  width: 150px;
+  font-family: var(--ff-primary);
+}
+#email {
+  width: 150px;
+  font-family: var(--ff-primary);
+}
+#numero {
+  width: 150px;
+  font-family: var(--ff-primary);
+}
+
+#laheta {
+  font-family: var(--ff-primary);
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
 footer > p {
   font-family: var(--ff-accent);
   font-size: 2rem;
