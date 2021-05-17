@@ -1,3 +1,9 @@
+:root {
+  --ff-primary: "Atma", cursive;
+  --ff-accent: "Waiting for the Sunrise", cursive;
+  --font-otsikko: 20px "Lato", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +13,7 @@
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: "Atma", cursive;
+  font-family: var(--ff-primary);
 }
 
 img {
@@ -25,7 +31,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Waiting for the Sunrise", cursive;
+  font-family: var(--ff-accent);
   font-size: 4em;
 }
 
@@ -68,7 +74,7 @@ img {
 .otsikko {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  font: var(--font-otsikko);
   color: #111;
 }
 
@@ -152,7 +158,7 @@ fieldset {
 }
 
 footer > p {
-  font-family: "Waiting for the Sunrise", cursive;
+  font-family: var(--ff-accent);
   font-size: 2rem;
 }
 
