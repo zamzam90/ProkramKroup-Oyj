@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/tyyli.css" />
+    <script type="text/javascript" src="./JS/koodi.js" defer></script>
+    <title>Sandaalimatkat Oy</title>
+</head>
+<body>
+    <div class="tausta-2">
+        <div class="caption">
+          <span class="border">Varaa matkasi äkkiä!</span>
+        </div>
+      </div>
+      <section class="text-center">
+          <h2 class="otsikko">
+            Varaa tästä oma viikonloppu matkasi!
+          </h2>
+          <form id="localStorageForm" action="./varauksesi.html">
+                <div>
+                  <div>
+                    <label for="lsFirstName">Etunimi: </label>
+                    <input type="text" name="Etunimi" id="lsFirstName" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsLastName">Sukunimi: </label>
+                    <input type="text" name="Sukunimi" id="lsLastName" value=""/>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <label for="lsAddress">Lähiosoite: </label>
+                    <input type="text" name="Lähiosoite" id="lsAddress" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsPostNumber">Postinumero: </label>
+                    <input type="number" name="Postinumero" id="lsPostNumber" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsPostiToimiPaikka">Postitoimipaikka: </label>
+                    <input type="text" name="Postitoimipaikka" id="lsPostiToimiPaikka" value=""/>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <label for="lsPuhelinNro"></label>Puhelinnumero: </label
+                    ><input type="number" name="Puhelinnumero" id="lsPuhelinNro" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsSahkoPosti">Sähköpostiosoite: </label>
+                    <input type="email" name="Sähköpostiosoite" id="lsSahkoPosti" value=""/>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox"><label for="">Mäntsälän jylhänne</label>
+                  <input type="checkbox"><label for="">Vantaan joen näkymä</label>
+                  <input type="checkbox"><label for="">Helsinki ilta</label>
+                  <input type="checkbox"><label for="">Kerava beach</label>
+                  <input type="checkbox"><label for="">Vesiputous mesta</label>
+                </div>
+              <div>
+                <button type="submit" onclick="return tallennaTiedot();">Tallenna</button> <button onclick="return reDirect();">Tarkastele varaustasi</button>
+              </div>
+            </form>
+        </section>
+        <div class="tausta-4">
+            <!-- <div class="caption">
+              <span class="border">Varaa matkasi äkkiä!</span>
+            </div> -->
+          </div>
+        <footer><p class="text-center">ProkramKroup Oyj &copy; - 2021</p></footer>
+</body>
+</html>
