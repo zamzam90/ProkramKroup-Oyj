@@ -105,6 +105,11 @@ video {
   text-align: center;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .varaukseen {
   cursor: pointer;
   text-decoration: none;
