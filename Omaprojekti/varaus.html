@@ -84,11 +84,31 @@
               </div>
             <section>
                 <div class="container">
+                <form class="" action="" method="post" id="lomake" onsubmit="return lomake(this);">
                 <fieldset>
                   <legend>
                     <h2 class="otsikko">Ota meihin yhteyttä!</h2>
                   </legend>
                   <p>Halutessasi voit ottaa meihin yhteyttä, niin kerromme sinulle lisää kohteistamme!</p>
+                  <table>
+                    <tr id class="contact">
+                      <th id="nimisyotto">Nimi: </th>
+                      <th id="emailsyotto">Sähköpostiosoite: </th>
+                      <th id="puhelinnumero">Puhelinnumero: </th>
+                    </tr>
+                    <tr>
+                      <td><input id="nimi" type="text" name="" value="" placeholder="Syötä nimesi"></td>
+                      <td><input id="email" type="text" name="" value="" placeholder="Syötä sähköpostiosoitteesi"></td>
+                      <td><input id="numero" type="text" name="" value="" placeholder="Syötä puhelinnumerosi"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"> <textarea id="kommenttikentta" name="name" rows="8" cols="60" placeholder="">Kirjoita viestisi tähän...</textarea> </td>
+                    </tr>
+                    <tr>
+                    <td><button type="submit" id="laheta" name="button">Lähetä</button></td>
+                    </tr>
+                  </table>
+                </form>
                     </div>
             </section>
         <div class="tausta-4">

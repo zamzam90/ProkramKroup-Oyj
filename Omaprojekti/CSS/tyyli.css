@@ -126,6 +126,10 @@ fieldset {
   margin-bottom: 1em;
 }
 
+.contact {
+  text-align: center;
+}
+
 footer > p {
   font-family: "Waiting for the Sunrise", cursive;
   font-size: 2rem;
