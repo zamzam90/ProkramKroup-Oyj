@@ -30,7 +30,7 @@
     </div>
     <section class="text-center">
       <h2 class="otsikko">Varaa tästä oma viikonloppu matkasi!</h2>
-      <form id="localStorageForm" action="./varauksesi.html">
+      <form id="localStorageForm" >
         <div>
           <div>
             <label for="lsFirstName">Etunimi: </label>
@@ -99,6 +99,11 @@
           <button onclick="return reDirect();">Tarkastele varaustasi</button>
         </div>
       </form>
+      <fieldset> <legend>Varauksesi</legend>
+        <button onclick="listaa();">Listaa tiedot</button>
+        <div id="varausCheck">
+        </div>
+      </fieldset>
     </section>
     <div class="tausta-4">
       <!-- <div class="caption">
