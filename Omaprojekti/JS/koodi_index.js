@@ -39,7 +39,10 @@ function openModal() {
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML =
-    this.alt + "<br><a href='./esittely.html'>Varaa matka!</a>";
+    this.alt +
+    "<br><a href='./esittely.html#" +
+    this.alt +
+    "'>Varaa matka!</a>";
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("modal-close")[0];
