@@ -1,8 +1,8 @@
 //Paikallinen varasto js
 
 /* alustetaan muuttujia ja haetaan niihin tietoa */
-var varasto = document.getElementById("varastoAlue");
-var lsForm = document.getElementById("formi");
+var varasto = document.getElementById("varausCheck");
+var lsForm = document.getElementById("localStorageForm");
 var henkilöTiedot = {};
 var id, avain, avaimenArvo;
 id = localStorage.length;
@@ -54,13 +54,13 @@ function tallennaTiedot() {
 
 function tietoLomake() {
   //alustetaan muuttujia, tiedot haetaan lomakkeesta
-  var etuNimi = document.getElementById("arvoEtun");
-  var sukuNimi = document.getElementById("arvoSukun");
-  var osoite = document.getElementById("arvoLahios");
-  var postiNumero = document.getElementById("arvoPostin");
-  var postiPaikka = document.getElementById("arvoPostit");
-  var puhelin = document.getElementById("arvoPuh");
-  var sahkoPosti = document.getElementById("arvoSposti");
+  var etuNimi = document.getElementById("lsFirstName");
+  var sukuNimi = document.getElementById("lsLastName");
+  var osoite = document.getElementById("lsAddress");
+  var postiNumero = document.getElementById("lsPostNumber");
+  var postiPaikka = document.getElementById("lsPostiToimiPaikka");
+  var puhelin = document.getElementById("lsPuhelinNro");
+  var sahkoPosti = document.getElementById("lsSahkoPosti");
 
   //tarkastetaan etunimen kenttä ja pituus
   if (etuNimi.value === "") {
@@ -160,7 +160,7 @@ function listaa() {
   }
   htmlTuloste += "</table>";
   // kirjoita htmlTuloste htmlään..
-  document.getElementById("varastoAlue").innerHTML = htmlTuloste;
+  document.getElementById("varausCheck").innerHTML = htmlTuloste;
 }
 
 function poistaAvain(key) {
