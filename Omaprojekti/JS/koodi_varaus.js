@@ -6,7 +6,7 @@ var lsForm = document.getElementById("localStorageForm");
 var henkilöTiedot = {};
 var id, avain, avaimenArvo;
 id = localStorage.length;
-avain = "varaustiedot varausnumerolle " + id;
+avain = "varaustiedot varausnumerolle 9981" + id;
 avaimenArvo = "";
 
 /* Funktio joka hakee tiedot lomakkeesta ja lisää ne olioon */
@@ -36,7 +36,7 @@ function lisääLocalStorageen() {
 /* Funktio joka päivittää avaimen tallentamisen jälkeen */
 function päivitäAvain() {
   id = localStorage.length; //päivittää id:n localstoragen lengthin perusteella
-  avain = "varaustiedot varausnumerolle " + id; //päivitetään avain uudella id:llä
+  avain = "varaustiedot varausnumerolle 9981" + id; //päivitetään avain uudella id:llä
 }
 
 /* Funktio joka kutsuu muita funktioita.... */
