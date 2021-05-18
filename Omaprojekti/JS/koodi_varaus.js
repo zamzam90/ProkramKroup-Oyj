@@ -3,7 +3,7 @@
 /* alustetaan muuttujia ja haetaan niihin tietoa */
 var varasto = document.getElementById("varausCheck");
 var lsForm = document.getElementById("localStorageForm");
-var henkilöTiedot = {};
+var varausTiedot = {};
 var id, avain, avaimenArvo;
 id = localStorage.length;
 avain = "varaustiedot varausnumerolle 9981" + id;
@@ -15,14 +15,14 @@ function formTiedotOlioon() {
   for (x = 0; x < lsForm.length - 1; x++) {
     console.log(lsForm[x].name + " " + lsForm[x].value); //tulostetaan "nimi" ja sen arvo
     /* lisää tiedot taulukosta olioon */
-    henkilöTiedot[lsForm[x].name] = lsForm[x].value;
+    varausTiedot[lsForm[x].name] = lsForm[x].value;
   }
 }
 /* ---------------------------------------------------------------- */
 
 /* Funktio joka muuttaa olion string muotoon */
 function olioStringiksi() {
-  avaimenArvo = JSON.stringify(henkilöTiedot); //muutetaan olio stringiksi
+  avaimenArvo = JSON.stringify(varausTiedot); //muutetaan olio stringiksi
   console.log("olio stringiföity..");
 }
 
