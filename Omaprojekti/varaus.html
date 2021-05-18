@@ -28,9 +28,9 @@
         <span class="border">Varaa matkasi äkkiä!</span>
       </div>
     </div>
-    <section class="text-center">
+    <section id="varaa" class="text-center">
       <h2 class="otsikko">Varaa tästä oma viikonloppu matkasi!</h2>
-      <form id="localStorageForm" >
+      <form id="localStorageForm">
         <div>
           <div>
             <label for="lsFirstName">Etunimi: </label>
@@ -98,10 +98,10 @@
           </button>
         </div>
       </form>
-      <fieldset> <legend>Varauksesi</legend>
+      <fieldset>
+        <legend>Varauksesi</legend>
         <button onclick="listaa();">Tarkista varauksesi</button>
-        <div id="varausCheck">
-        </div>
+        <div id="varausCheck"></div>
       </fieldset>
     </section>
     <div class="tausta-4">
@@ -113,7 +113,9 @@
       <div class="container">
         <form
           class=""
-          action="mailto:palaute@sandaalimatkat.fi?subject=Feedback" method="post" enctype="text/plain"
+          action="mailto:palaute@sandaalimatkat.fi?subject=Feedback"
+          method="post"
+          enctype="text/plain"
           method="post"
           id="lomake"
           onsubmit="return lomake(this);"

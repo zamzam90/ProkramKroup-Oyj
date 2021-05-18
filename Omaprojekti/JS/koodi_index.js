@@ -33,7 +33,6 @@ function openModal() {
   // Get the modal
   var modal = document.getElementById("modal");
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  // var img = document.getElementById("myImg");
   var modalImg = document.getElementById("modal-image");
   var captionText = document.getElementById("caption");
   modal.style.display = "block";
