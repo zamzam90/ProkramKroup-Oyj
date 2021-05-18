@@ -6,7 +6,7 @@ var lsForm = document.getElementById("localStorageForm");
 var henkilöTiedot = {};
 var id, avain, avaimenArvo;
 id = localStorage.length;
-avain = "henkilötiedot " + id;
+avain = "varaustiedot varausnumerolle " + id;
 avaimenArvo = "";
 
 /* Funktio joka hakee tiedot lomakkeesta ja lisää ne olioon */
@@ -36,7 +36,7 @@ function lisääLocalStorageen() {
 /* Funktio joka päivittää avaimen tallentamisen jälkeen */
 function päivitäAvain() {
   id = localStorage.length; //päivittää id:n localstoragen lengthin perusteella
-  avain = "henkilötiedot " + id; //päivitetään avain uudella id:llä
+  avain = "varaustiedot varausnumerolle " + id; //päivitetään avain uudella id:llä
 }
 
 /* Funktio joka kutsuu muita funktioita.... */
@@ -49,7 +49,7 @@ function tallennaTiedot() {
   lisääLocalStorageen(); //lisätään avain ja arvo(=olio) localstorageen
   päivitäAvain(); //päivitetään avain consolelogia varten
   console.log("seuraava avain: " + avain); //for testing
-  document.getElementById("formi").reset(); //tyhjätään lomake tallentamisen jälkeen
+  document.getElementById("localStorageForm").reset(); //tyhjätään lomake tallentamisen jälkeen
 }
 
 function tietoLomake() {
@@ -143,7 +143,7 @@ function listaa() {
     htmlTuloste +=
       "<th><button type='button' id='" +
       tulosteAvain +
-      "' onclick='poistaAvain(this)'>Poista tieto</button></th></tr>";
+      "' onclick='poistaAvain(this)'>Peru varauksesi</button></th></tr>";
     // hae avaimella arvo(olio) ls:stä
     tulosteArvo = JSON.parse(localStorage.getItem(tulosteAvain));
     console.log(tulosteArvo);
