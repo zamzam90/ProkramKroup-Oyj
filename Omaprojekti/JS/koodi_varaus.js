@@ -61,6 +61,7 @@ function tietoLomake() {
   var postiPaikka = document.getElementById("lsPostiToimiPaikka");
   var puhelin = document.getElementById("lsPuhelinNro");
   var sahkoPosti = document.getElementById("lsSahkoPosti");
+  var kohde = document.getElementsByName("lsKohde");
 
   //tarkastetaan etunimen kenttä ja pituus
   if (etuNimi.value === "") {
