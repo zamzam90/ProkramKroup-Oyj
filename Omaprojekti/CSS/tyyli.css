@@ -114,6 +114,19 @@ video {
   height: 560px;
 }
 
+.split {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.split > img {
+  width: 640px;
+  height: auto;
+}
+
 section {
   padding: 6rem 0;
 }
@@ -207,6 +220,7 @@ footer > p {
 .slide {
   display: none;
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* Caption text */
