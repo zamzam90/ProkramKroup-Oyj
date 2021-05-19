@@ -20,87 +20,6 @@ img {
   max-width: 100%;
 }
 
-/* Parallax scrolling stuff */
-.tausta-1,
-.tausta-2,
-.tausta-3,
-.tausta-4 {
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: var(--ff-accent);
-  font-size: 4em;
-}
-
-.tausta-1 {
-  min-height: 100%;
-}
-
-.tausta-2 {
-  background-image: url("../resources/images/biitsi.jpg");
-  min-height: 42rem;
-}
-
-.tausta-3 {
-  background-image: url("../resources/images/biitsi.jpg");
-  min-height: 30rem;
-}
-
-.tausta-4 {
-  background-image: url("../resources/images/biitsi.jpg");
-  min-height: 18rem;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 0.5em;
-  letter-spacing: 10px;
-}
-
-.otsikko {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: var(--font-otsikko);
-  color: #111;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .tausta-1,
-  .tausta-2,
-  .tausta-3,
-  .tausta-4 {
-    background-attachment: scroll;
-  }
-}
-
-video {
-  min-height: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-@media screen and (min-width: 1981px) {
-  video {
-    width: 100%;
-  }
-}
-/* End of parallax stuff */
-
 .container {
   margin-inline: auto;
   width: min(90%, 70.5rem);
@@ -201,7 +120,88 @@ footer > p {
   border-radius: 3px;
 }
 
-/* Slideshow stuff */
+/* Parallax scrolling stuff */
+.tausta-1,
+.tausta-2,
+.tausta-3,
+.tausta-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--ff-accent);
+  font-size: 4em;
+}
+
+.tausta-1 {
+  min-height: 100%;
+}
+
+.tausta-2 {
+  background-image: url("../resources/images/biitsi.jpg");
+  min-height: 42rem;
+}
+
+.tausta-3 {
+  background-image: url("../resources/images/biitsi.jpg");
+  min-height: 30rem;
+}
+
+.tausta-4 {
+  background-image: url("../resources/images/biitsi.jpg");
+  min-height: 18rem;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 0.5em;
+  letter-spacing: 10px;
+}
+
+.otsikko {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: var(--font-otsikko);
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .tausta-1,
+  .tausta-2,
+  .tausta-3,
+  .tausta-4 {
+    background-attachment: scroll;
+  }
+}
+
+video {
+  min-height: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1981px) {
+  video {
+    width: 100%;
+  }
+}
+/* End of parallax stuff */
+
+/* automatic Slideshow stuff */
 .slideshow-container {
   position: relative;
   max-width: 100%;
@@ -245,7 +245,7 @@ footer > p {
     opacity: 1;
   }
 }
-/* Slideshowstuff ends */
+/* automatic Slideshowstuff ends */
 
 /* Modal stuff */
 /* The Modal (background) */
@@ -325,7 +325,7 @@ footer > p {
 }
 /* modal stuff end */
 
-/* slideshow */
+/* manual slideshow */
 /* Position the image container (needed to position the left and right arrows) */
 .imageGalleryContainer {
   position: relative;
@@ -407,4 +407,4 @@ footer > p {
 .demo:hover {
   opacity: 1;
 }
-/* slideshow end */
+/* manual slideshow end */
