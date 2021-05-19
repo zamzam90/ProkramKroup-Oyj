@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/tyyli.css" />
-    <script type="text/javascript" src="" defer></script>
+    <script type="text/javascript" src="./JS/koodi_esittely.js" defer></script>
     <title>Sandaalimatkat Oy</title>
   </head>
   <body>
@@ -31,12 +31,123 @@
         <span class="border">Tässä joitakin kohteistamme</span>
       </div>
     </div>
+    <!-- manual slideshow -->
+    <div class="imageGalleryContainer">
+      <!-- Full-width images with number text -->
+      <div class="manualSlides">
+        <div class="numbertext">1 / 5</div>
+        <img
+          src="resources/images/kuva1.jpg"
+          style="width: 100%"
+          alt="Mäntsälän jylhänne."
+        />
+      </div>
+
+      <div class="manualSlides">
+        <div class="numbertext">2 / 5</div>
+        <img
+          src="resources/images/kuva2.jpg"
+          style="width: 100%"
+          alt="Vantaan joen näkymää."
+        />
+      </div>
+
+      <div class="manualSlides">
+        <div class="numbertext">3 / 5</div>
+        <img
+          src="resources/images/kuva3.jpg"
+          style="width: 100%"
+          alt="Iltanäkymä pääkaupungista Helsingistä."
+        />
+      </div>
+
+      <div class="manualSlides">
+        <div class="numbertext">4 / 5</div>
+        <img
+          src="resources/images/kuva4.jpg"
+          style="width: 100%"
+          alt="Kerava beach ja meri."
+        />
+      </div>
+
+      <div class="manualSlides">
+        <div class="numbertext">5 / 5</div>
+        <img
+          src="resources/images/kuva5.jpg"
+          style="width: 100%"
+          alt="Vesiputouksen ihmettä ympäri Suomea."
+        />
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="resources/images/kuva1.jpg"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="Mäntsälän jylhänne."
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="resources/images/kuva2.jpg"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Vantaan joen näkymää."
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="resources/images/kuva3.jpg"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="Iltanäkymä pääkaupungista Helsingistä."
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="resources/images/kuva4.jpg"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Kerava beach ja meri."
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="resources/images/kuva5.jpg"
+            style="width: 100%"
+            onclick="currentSlide(5)"
+            alt="Vesiputouksen ihmettä ympäri Suomea."
+          />
+        </div>
+      </div>
+    </div>
+    <!-- manual slideshow -->
     <section id="Mäntsälän jylhänne." class="split">
       <img src="resources/images/kuva1.jpg" alt="Mäntsälän jylhänne." />
       <div class="text text-center">
         <p>Mäntsälän jylhänne.</p>
         <p>
-          Koe nyt upeat Mäntsälän jylhänteen maisemat huokeaan hintaan! Retkellä tutustumme jylhänteen maastoon, yövymme luolassa, samoilemme sekä kiipeilemme jylhillä kallioilla. Hintaan kuuluu nokipannukahvit, täysmuonitus ja upea luolayöpyminen. Et tarvitse mukaasi kuin sään kestävät vaatteet ja seikkailumieltä. Retken kesto: viikonloppu.
+          Koe nyt upeat Mäntsälän jylhänteen maisemat huokeaan hintaan! Retkellä
+          tutustumme jylhänteen maastoon, yövymme luolassa, samoilemme sekä
+          kiipeilemme jylhillä kallioilla. Hintaan kuuluu nokipannukahvit,
+          täysmuonitus ja upea luolayöpyminen. Et tarvitse mukaasi kuin sään
+          kestävät vaatteet ja seikkailumieltä. Retken kesto: viikonloppu.
         </p>
         <p>hinta 1500€</p>
         <p>
@@ -49,7 +160,11 @@
       <div class="text text-center">
         <p>Vantaan joen näkymää.</p>
         <p>
-          Tervetuloa upealle Vantaan joen laaksolle. Reissu huipentuu kuvan kaltaiselle upealle jokinäkymälle. Matkaa tehdään kanooteilla sekä vesipatjoilla, joten uimavarustus on hyvä olla mukana! Kohteen hintaan sisältyy yöpyminen Vantaan joen rannalla olevalla sukellusveneellä, ruuat sekä juomat. Retken kesto: 3 päivää.
+          Tervetuloa upealle Vantaan joen laaksolle. Reissu huipentuu kuvan
+          kaltaiselle upealle jokinäkymälle. Matkaa tehdään kanooteilla sekä
+          vesipatjoilla, joten uimavarustus on hyvä olla mukana! Kohteen hintaan
+          sisältyy yöpyminen Vantaan joen rannalla olevalla sukellusveneellä,
+          ruuat sekä juomat. Retken kesto: 3 päivää.
         </p>
         <p>hinta 1500€</p>
         <p>
@@ -65,7 +180,13 @@
       <div class="text text-center">
         <p>Iltanäkymä pääkaupungista Helsingistä.</p>
         <p>
-          Tervetuloa seikkailemaan ilta- ja yöaikaan kanssamme Helsinkiin. Moni ei tiedäkään salatuista kohteistamme, joihin vain meillä on pääsy. Oletko siis koskaan päässyt ihailemaan Helsingin viemäriverkostoa taskulamppujen loisteessa? Nyt sinulla on siihenkin tilaisuus. Näe ja koe se kanssamme! Mukaan tarvitset kasan onnea. Retkeen kuuluu kumisaappaat, yöpala jännittävissä maisemissa ja vähintään 6 erilaista tutustumiskohdetta sekä kuljetukset näihin. Retken kesto: klo 21-05.
+          Tervetuloa seikkailemaan ilta- ja yöaikaan kanssamme Helsinkiin. Moni
+          ei tiedäkään salatuista kohteistamme, joihin vain meillä on pääsy.
+          Oletko siis koskaan päässyt ihailemaan Helsingin viemäriverkostoa
+          taskulamppujen loisteessa? Nyt sinulla on siihenkin tilaisuus. Näe ja
+          koe se kanssamme! Mukaan tarvitset kasan onnea. Retkeen kuuluu
+          kumisaappaat, yöpala jännittävissä maisemissa ja vähintään 6 erilaista
+          tutustumiskohdetta sekä kuljetukset näihin. Retken kesto: klo 21-05.
         </p>
         <p>hinta 300€</p>
         <p>
@@ -78,7 +199,15 @@
       <div class="text text-center">
         <p>Kerava beach ja meri.</p>
         <p>
-          Oletko aina unelmoinut turkoosista vedestä ja vaaleasta hiekasta? Nyt nekin voi kokea kaikkien tuntemalla Keravalla, jonne usein kaikki tiet vievät. Retkellä tutustumme Keravan kuuluisimpaan rantaan ja toki mereen. Matkaamme aluksi veneellä ympäri merta, jossa on mahdollista päästä samaan hintaan myös snorklaamaan sekä uimaan. Hintaan sisältyy siis edellä mainittu, yöpyminen rannalla ja eväät, jotka itse saalistamme ja ongimme Keravan perämetsistä ja merestä. Tarvitset mukaan aurinkorasvaa, sillä Keravalla paistaa aina aurinko sekä tietysti seikkailumieltä. Retken kesto: 5 päivää.
+          Oletko aina unelmoinut turkoosista vedestä ja vaaleasta hiekasta? Nyt
+          nekin voi kokea kaikkien tuntemalla Keravalla, jonne usein kaikki tiet
+          vievät. Retkellä tutustumme Keravan kuuluisimpaan rantaan ja toki
+          mereen. Matkaamme aluksi veneellä ympäri merta, jossa on mahdollista
+          päästä samaan hintaan myös snorklaamaan sekä uimaan. Hintaan sisältyy
+          siis edellä mainittu, yöpyminen rannalla ja eväät, jotka itse
+          saalistamme ja ongimme Keravan perämetsistä ja merestä. Tarvitset
+          mukaan aurinkorasvaa, sillä Keravalla paistaa aina aurinko sekä
+          tietysti seikkailumieltä. Retken kesto: 5 päivää.
         </p>
         <p>hinta 1500€</p>
         <p>
@@ -94,7 +223,12 @@
       <div class="text text-center">
         <p>Vesiputouksen ihmettä ympäri Suomea.</p>
         <p>
-          Vesiputouksia on ollut Suomessa kautta aikain. Tämä retki suuntaa siis täällä pohjolassa viidelle erilaiselle vesiputoukselle, jotka sijaitsevat ympäri maata. Retkelle tarvitset mukaan varusteet, joilla pärjäät ulkona 6 päivää. Retkeen kuuluu minibussi-kuljetukset, yöpymiset laavuilla keskellä metsiä sekä ruuat. Huom. Ei opastusta saksaksi tai ranskaksi. Retken kesto: 7 päivää.
+          Vesiputouksia on ollut Suomessa kautta aikain. Tämä retki suuntaa siis
+          täällä pohjolassa viidelle erilaiselle vesiputoukselle, jotka
+          sijaitsevat ympäri maata. Retkelle tarvitset mukaan varusteet, joilla
+          pärjäät ulkona 6 päivää. Retkeen kuuluu minibussi-kuljetukset,
+          yöpymiset laavuilla keskellä metsiä sekä ruuat. Huom. Ei opastusta
+          saksaksi tai ranskaksi. Retken kesto: 7 päivää.
         </p>
         <p>hinta 1500€</p>
         <p>
