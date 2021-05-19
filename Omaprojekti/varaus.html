@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <type="text/css" media="print" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap"
@@ -14,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/tyyli.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="./CSS/print.css" />
     <script type="text/javascript" src="./JS/koodi_varaus.js" defer></script>
     <title>Sandaalimatkat Oy</title>
   </head>
@@ -86,11 +88,11 @@
           </div>
         </div>
         <div>
-          <input type="checkbox" id="lsKohde" name="Mäntsälä"/><label for="">Mäntsälän jylhänne</label>
-          <input type="checkbox" id="lsKohde" name="Vantaanjoki"/><label for="">Vantaan joen näkymä</label>
-          <input type="checkbox" id="lsKohde"name="Helsinki"/><label for="">Helsinki ilta</label>
-          <input type="checkbox" id="lsKohde" name="Kerava"/><label for="">Kerava beach</label>
-          <input type="checkbox" id="lsKohde" name="Vesiputous"/><label for="">Vesiputous mesta</label>
+          <input type="checkbox" id="lsKohde" name="Mäntsälän jylhänne"/><label>Mäntsälän jylhänne</label>
+          <input type="checkbox" id="lsKohde" name="Vantaanjoki joen näkymä"/><label>Vantaan joen näkymä</label>
+          <input type="checkbox" id="lsKohde"name="Helsinki ilta"/><label>Helsinki ilta</label>
+          <input type="checkbox" id="lsKohde" name="Kerava beach"/><label>Kerava beach</label>
+          <input type="checkbox" id="lsKohde" name="Vesiputous mesta"/><label>Vesiputous mesta</label>
         </div>
         <div>
           <button type="submit" onclick="return tallennaTiedot();">
@@ -105,8 +107,9 @@
           <h2 class="otsikko">Varaus</h2>
         </legend>
         <button onclick="listaa();">Tarkista varauksesi</button>
-        <div id="varausCheck">
+        <div id="varausCheck" class="print">
         </div>
+        <button onclick="window.print(); return false;">Tulosta varauksesi</button>
       </fieldset>
         </div>
       </section>
