@@ -94,7 +94,7 @@
           <input type="checkbox" id="lsKohde" name="Vesiputous mesta"/><label>Vesiputous mesta</label>
         </div>
         <div>
-          <button type="submit" onclick="return tallennaTiedot();">
+          <button id="laheta" type="submit" onclick="return tallennaTiedot();">
             Varaa
           </button>
         </div>
@@ -105,10 +105,10 @@
         <legend>
           <h2 class="otsikko">Varaus</h2>
         </legend>
-        <button onclick="listaa();">Tarkista varauksesi</button>
+        <button id="laheta" onclick="listaa();">Tarkista varauksesi</button>
         <div id="varausCheck" class="print">
         </div>
-        <button onclick="window.print(); return false;">Tulosta varauksesi</button>
+        <button id="laheta" onclick="window.print(); return false;">Tulosta varauksesi</button>
       </fieldset>
         </div>
       </section>
