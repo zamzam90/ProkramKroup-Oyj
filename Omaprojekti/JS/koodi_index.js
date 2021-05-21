@@ -67,7 +67,7 @@ function openModal() {
     this.alt +
     "<br><a href='./esittely.html#" +
     this.alt +
-    "'>Varaa matka!</a>";
+    "'>Lue lisää!</a>";
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("modal-close")[0];
