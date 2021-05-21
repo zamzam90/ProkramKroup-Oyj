@@ -171,6 +171,16 @@ function poistaAvain(key) {
   listaa(); // "päivitetään" näkymä
 }
 
+//varauksen tulostus
+function printDiv() {
+var divToPrint=document.getElementById('varausCheck');
+var newWin=window.open('','Print-Window');
+newWin.document.open();
+newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+newWin.document.close();
+setTimeout(function(){newWin.close();},10);
+}
+
 //yhteydenottolomake
 function lomake(form) {
   //Haetaan tiedot muuttujiin lomakkeesta
