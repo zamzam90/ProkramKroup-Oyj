@@ -125,6 +125,97 @@ footer > p {
   margin-top: 1em;
 }
 
+/* nav stuff */
+nav {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 4vh;
+  color: rgb(212, 212, 212);
+  background-color: black;
+}
+
+.nav {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div > ul {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+/* navi jemmassa */
+.nav-links {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10px 10px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in;
+}
+
+.nav-links li {
+  list-style: none;
+  opacity: 0;
+}
+
+.nav-links a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.burger div {
+  width: 1.6em;
+  height: 0.2em;
+  margin: 0.25rem;
+  background-color: rgb(212, 212, 212);
+  transition: all 0.3s ease;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+/* navi esiin kun aktiivinen*/
+.nav-active {
+  top: 4vh;
+  transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* nav stuff end */
+
 /* Parallax scrolling stuff */
 .tausta-1,
 .tausta-2,

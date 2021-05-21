@@ -19,10 +19,25 @@
   </head>
   <body>
     <div class="tausta-2">
-      <div>
-        <a class="takas-kotiin" href="./karuselli.html"
-          >&#10094; Takaisin etusivulle</a
-        >
+      <nav>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div class="nav">
+        <ul class="nav-links">
+          <li>
+            <a href="./karuselli.html">Koti</a>
+          </li>
+          <li>
+            <a href="./esittely.html">Selaa matkoja</a>
+          </li>
+          <li>
+            <a href="#">Varaa matkasi!</a>
+          </li>
+        </ul>
       </div>
       <div class="caption">
         <span class="border">Varaa matkasi äkkiä!</span>
@@ -56,7 +71,9 @@
             />
           </div>
           <div>
-            <label for="lsPostiToimiPaikka"><strong>Postitoimipaikka: </strong></label>
+            <label for="lsPostiToimiPaikka"
+              ><strong>Postitoimipaikka: </strong></label
+            >
             <input
               type="text"
               name="Postitoimipaikka"
@@ -76,7 +93,9 @@
             />
           </div>
           <div>
-            <label for="lsSahkoPosti"><strong>Sähköpostiosoite: </strong></label>
+            <label for="lsSahkoPosti"
+              ><strong>Sähköpostiosoite: </strong></label
+            >
             <input
               type="email"
               name="Sähköpostiosoite"
@@ -86,11 +105,25 @@
           </div>
         </div>
         <div>
-          <input type="checkbox" id="lsKohde1" name="Mäntsälän jylhänne"/><label><strong>Mäntsälän jylhänne</strong></label>
-          <input type="checkbox" id="lsKohde2" name="Vantaanjoki joen näkymä"/><label><strong>Vantaan joen näkymä</strong></label>
-          <input type="checkbox" id="lsKohde3" name="Helsinki ilta"/><label><strong>Helsinki ilta</strong></label>
-          <input type="checkbox" id="lsKohde4" name="Kerava beach"/><label><strong>Kerava beach</strong></label>
-          <input type="checkbox" id="lsKohde5" name="Vesiputous mesta"/><label><strong>Vesiputous mesta</strong></label>
+          <input
+            type="checkbox"
+            id="lsKohde1"
+            name="Mäntsälän jylhänne"
+          /><label><strong>Mäntsälän jylhänne</strong></label>
+          <input
+            type="checkbox"
+            id="lsKohde2"
+            name="Vantaanjoki joen näkymä"
+          /><label><strong>Vantaan joen näkymä</strong></label>
+          <input type="checkbox" id="lsKohde3" name="Helsinki ilta" /><label
+            ><strong>Helsinki ilta</strong></label
+          >
+          <input type="checkbox" id="lsKohde4" name="Kerava beach" /><label
+            ><strong>Kerava beach</strong></label
+          >
+          <input type="checkbox" id="lsKohde5" name="Vesiputous mesta" /><label
+            ><strong>Vesiputous mesta</strong></label
+          >
         </div>
         <div>
           <button id="laheta" type="submit" onclick="return tietoLomake();">
@@ -100,15 +133,19 @@
       </form>
       <section>
         <div class="container">
-      <fieldset>
-        <legend>
-          <h2 class="otsikko">Varaus</h2>
-        </legend>
-        <button id="laheta" onclick="listaa();">Tarkista varauksesi</button>
-        <div id="varausCheck" class="print">
-        </div>
-      </fieldset>
-        <input type='button' id='laheta' value='Tulosta varauksesi' onclick='printDiv();'>
+          <fieldset>
+            <legend>
+              <h2 class="otsikko">Varaus</h2>
+            </legend>
+            <button id="laheta" onclick="listaa();">Tarkista varauksesi</button>
+            <div id="varausCheck" class="print"></div>
+          </fieldset>
+          <input
+            type="button"
+            id="laheta"
+            value="Tulosta varauksesi"
+            onclick="printDiv();"
+          />
         </div>
       </section>
     </section>

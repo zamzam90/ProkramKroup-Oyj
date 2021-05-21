@@ -1,3 +1,29 @@
+/* top navbar slideri
+https://www.youtube.com/watch?v=gXkqy0b4M5g */
+const navSlide = function () {
+  const burger = document.querySelector(".burger"); //haetaan hamppari htmlstä
+  const nav = document.querySelector(".nav-links"); //haetaan linkit htmlstä
+  const navLinks = document.querySelectorAll(".nav-links li");
+
+  burger.addEventListener("click", () => {
+    // toggle nav
+    nav.classList.toggle("nav-active");
+
+    //animate links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 5 + 0.3
+        }s`;
+      }
+    });
+    //hamppari animaatio
+    burger.classList.toggle("toggle");
+  });
+};
+
 //Paikallinen varasto js
 
 /* alustetaan muuttujia ja haetaan niihin tietoa */
@@ -173,12 +199,18 @@ function poistaAvain(key) {
 
 //varauksen tulostus
 function printDiv() {
-var divToPrint=document.getElementById('varausCheck');
-var newWin=window.open('','Print-Window');
-newWin.document.open();
-newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
-newWin.document.close();
-setTimeout(function(){newWin.close();},10);
+  var divToPrint = document.getElementById("varausCheck");
+  var newWin = window.open("", "Print-Window");
+  newWin.document.open();
+  newWin.document.write(
+    '<html><body onload="window.print()">' +
+      divToPrint.innerHTML +
+      "</body></html>"
+  );
+  newWin.document.close();
+  setTimeout(function () {
+    newWin.close();
+  }, 10);
 }
 
 //yhteydenottolomake
@@ -219,3 +251,5 @@ function lomake(form) {
     return false;
   }
 }
+
+navSlide();
