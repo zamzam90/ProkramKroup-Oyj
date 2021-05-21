@@ -1,3 +1,8 @@
-body {visibility:hidden;}
-.print {visibility:visible;}
-.print {position: absolute; top: 40px; left: 30px;}
+body {
+  visibility:hidden;
+}
+
+.print {
+  visibility:visible;
+  position: absolute; top: 40px; left: 30px;
+}
