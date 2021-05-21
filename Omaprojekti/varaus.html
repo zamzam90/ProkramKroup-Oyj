@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/tyyli.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="./CSS/print.css" />
     <script type="text/javascript" src="./JS/koodi_varaus.js" defer></script>
     <title>Sandaalimatkat Oy</title>
   </head>
@@ -108,7 +107,7 @@
         <button id="laheta" onclick="listaa();">Tarkista varauksesi</button>
         <div id="varausCheck" class="print">
         </div>
-        <button id="laheta" onclick="window.print(); return false;">Tulosta varauksesi</button>
+        <input type='button' id='laheta' value='Tulosta varauksesi' onclick='printDiv();'>
       </fieldset>
         </div>
       </section>
