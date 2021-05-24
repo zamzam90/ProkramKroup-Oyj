@@ -158,7 +158,7 @@ function listaa() {
   var tulosteAvain,
     tulosteArvo,
     arrayFromObject = [],
-    htmlTuloste = "<table align='center'>";
+    htmlTuloste = "<table class='varaus-poyta' align='center'>";
 
   // magic
   console.log("tulostetaan...");

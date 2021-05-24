@@ -74,32 +74,29 @@ footer > p {
   margin-right: auto;
 }
 
-.varaukseen {
-  cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #000;
-  z-index: 1;
-}
-
 .varaus-linkki {
   cursor: pointer;
 }
 
-.takas-kotiin {
-  cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  top: 0;
-  color: #000;
-  z-index: 1;
+/* Varauksen tulosteen muotoilu */
+.varaus-poyta {
+  border-collapse: collapse;
 }
 
-.contact {
-  text-align: center;
+.varaus-poyta td,
+.varaus-poyta th {
+  border: 1px solid #ddd;
 }
+
+.varaus-poyta tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.varaus-poyta th {
+  background-color: #4caf50;
+  color: white;
+}
+/* Varauksen tulosteen muotoilu end */
 
 #nimi {
   width: 150px;
