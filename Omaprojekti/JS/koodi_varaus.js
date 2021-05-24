@@ -1,3 +1,11 @@
+// Piilotetaan varaus fieldset jos localstorage tyhjä..
+var varausInfo = document.getElementById("varaa");
+if (localStorage.length < 1) {
+  varausInfo.classList.toggle("hidden");
+} else {
+  listaa();
+}
+
 /* top navbar slideri
 https://www.youtube.com/watch?v=gXkqy0b4M5g */
 const navSlide = function () {
@@ -213,6 +221,7 @@ function poistaAvain(key) {
   console.log("poistetaan: " + avain);
   localStorage.removeItem(avain);
   listaa(); // "päivitetään" näkymä
+  window.location.reload();
 }
 
 //varauksen tulostus

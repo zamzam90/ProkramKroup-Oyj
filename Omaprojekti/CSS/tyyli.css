@@ -74,6 +74,10 @@ footer > p {
   margin-right: auto;
 }
 
+.hidden {
+  display: none;
+}
+
 .varaus-linkki {
   cursor: pointer;
 }
