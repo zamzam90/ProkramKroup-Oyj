@@ -166,11 +166,8 @@ function listaa() {
     // hae avaimet ls:stä
     tulosteAvain = localStorage.key(x);
     console.log(tulosteAvain);
-    htmlTuloste += "<tr><th>" + tulosteAvain + "</th>";
     htmlTuloste +=
-      "<th><button class='nabbi' type='button' id='" +
-      tulosteAvain +
-      "' onclick='poistaAvain(this)'>Peru varauksesi</button></th></tr>";
+      "<tr colspan='2'><th  colspan='2'>" + tulosteAvain + "</th></tr>";
     // hae avaimella arvo(olio) ls:stä
     tulosteArvo = JSON.parse(localStorage.getItem(tulosteAvain));
     console.log(tulosteArvo);
@@ -184,6 +181,10 @@ function listaa() {
       }
       htmlTuloste += "</tr>";
     }
+    htmlTuloste +=
+      "<tr colspan='2'><th colspan='2'><button class='nabbi' type='button' id='" +
+      tulosteAvain +
+      "' onclick='poistaAvain(this)'>Peru varauksesi</button></th></tr>";
   }
   htmlTuloste += "</table>";
   // kirjoita htmlTuloste htmlään..
