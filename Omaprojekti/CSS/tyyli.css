@@ -48,7 +48,7 @@ img {
 }
 
 section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 section p {
@@ -118,7 +118,7 @@ footer > p {
   font-family: var(--ff-primary);
 }
 
-#laheta {
+.nabbi {
   font-family: var(--ff-primary);
   border: 2px solid black;
   border-radius: 3px;

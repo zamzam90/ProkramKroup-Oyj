@@ -46,7 +46,10 @@
     <section id="varaa" class="text-center">
       <h2 class="otsikko">Varaa tästä oma viikonloppumatkasi!</h2>
       <div>
-        <p>Syötä alle henkilötietosi ja valitse haluamasi matkakohde, jonka jälkeen paina varaa. Tarkista ja tulosta varauksesi varauskentästä.</p>
+        <p>
+          Syötä alle henkilötietosi ja valitse haluamasi matkakohde, jonka
+          jälkeen paina varaa. Tarkista ja tulosta varauksesi varauskentästä.
+        </p>
       </div>
       <form id="localStorageForm">
         <div>
@@ -118,18 +121,24 @@
             id="lsKohde2"
             name="Vantaanjoki joen näkymä"
           /><label><strong>Vantaan joen näkymä 1500€ </strong></label>
-          <input type="checkbox" id="lsKohde3" name="Helsinki ilta 300€" /><label
-            ><strong>Helsinki ilta 300€ </strong></label
-          >
-          <input type="checkbox" id="lsKohde4" name="Kerava beach 1500€" /><label
-            ><strong>Kerava beach 1500€ </strong></label
-          >
-          <input type="checkbox" id="lsKohde5" name="Vesiputous mesta 1500€" /><label
-            ><strong>Vesiputous mesta 1500€ </strong></label
-          >
+          <input
+            type="checkbox"
+            id="lsKohde3"
+            name="Helsinki ilta 300€"
+          /><label><strong>Helsinki ilta 300€ </strong></label>
+          <input
+            type="checkbox"
+            id="lsKohde4"
+            name="Kerava beach 1500€"
+          /><label><strong>Kerava beach 1500€ </strong></label>
+          <input
+            type="checkbox"
+            id="lsKohde5"
+            name="Vesiputous mesta 1500€"
+          /><label><strong>Vesiputous mesta 1500€ </strong></label>
         </div>
         <div>
-          <button id="laheta" type="submit" onclick="return tietoLomake();">
+          <button class="nabbi" type="submit" onclick="return tietoLomake();">
             Varaa
           </button>
         </div>
@@ -140,12 +149,14 @@
             <legend>
               <h2 class="otsikko">Varaus</h2>
             </legend>
-            <button id="laheta" onclick="listaa();">Tarkista varauksesi</button>
+            <button class="nabbi" onclick="listaa();">
+              Tarkista varauksesi
+            </button>
             <div id="varausCheck" class="print"></div>
           </fieldset>
           <input
             type="button"
-            id="laheta"
+            class="nabbi"
             value="Tulosta varauksesi"
             onclick="printDiv();"
           />
@@ -224,7 +235,7 @@
               </tr>
               <tr>
                 <td>
-                  <button type="submit" id="laheta" name="button">
+                  <button type="submit" class="nabbi" name="button">
                     Lähetä
                   </button>
                 </td>

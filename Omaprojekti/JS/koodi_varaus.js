@@ -168,7 +168,7 @@ function listaa() {
     console.log(tulosteAvain);
     htmlTuloste += "<tr><th>" + tulosteAvain + "</th>";
     htmlTuloste +=
-      "<th><button type='button' id='" +
+      "<th><button class='nabbi' type='button' id='" +
       tulosteAvain +
       "' onclick='poistaAvain(this)'>Peru varauksesi</button></th></tr>";
     // hae avaimella arvo(olio) ls:stä
