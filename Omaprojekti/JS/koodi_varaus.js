@@ -39,9 +39,15 @@ avaimenArvo = "";
 function formTiedotOlioon() {
   //for loopilla lisätään formin nimi ja arvo olioon.. -1 koska ei haluta nappia olioon
   for (x = 0; x < lsForm.length - 1; x++) {
-    console.log(lsForm[x].name + " " + lsForm[x].value); //tulostetaan "nimi" ja sen arvo
-    /* lisää tiedot taulukosta olioon */
-    varausTiedot[lsForm[x].name] = lsForm[x].value;
+    if (lsForm[x].name == "kohteet" && lsForm[x].checked == true) {
+      varausTiedot["Matkan kohde"] = lsForm[x].id;
+    } else if (lsForm[x].name == "kohteet" && lsForm[x].checked == false) {
+      continue;
+    } else {
+      console.log(lsForm[x].name + " " + lsForm[x].value); //tulostetaan "nimi" ja sen arvo
+      /* lisää tiedot taulukosta olioon */
+      varausTiedot[lsForm[x].name] = lsForm[x].value;
+    }
   }
 }
 /* ---------------------------------------------------------------- */
