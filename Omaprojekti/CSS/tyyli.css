@@ -80,6 +80,7 @@ footer > p {
 
 /* Varauksen tulosteen muotoilu */
 .varaus-poyta {
+  margin-top: 1em;
   border-collapse: collapse;
 }
 

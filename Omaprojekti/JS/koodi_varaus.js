@@ -87,7 +87,8 @@ function tietoLomake() {
   var postiPaikka = document.getElementById("lsPostiToimiPaikka");
   var puhelin = document.getElementById("lsPuhelinNro");
   var sahkoPosti = document.getElementById("lsSahkoPosti");
-  var kohde = document.getElementsByName("lsKohde");
+  var kohteet = document.getElementsByName("kohteet");
+  var kohdeValittu = false;
 
   //tarkastetaan etunimen kenttä ja pituus
   if (etuNimi.value === "") {
@@ -147,6 +148,16 @@ function tietoLomake() {
   }
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  for (c = 0; c < kohteet.length; c++) {
+    if (kohteet[c].checked == true) {
+      kohdeValittu = true;
+    }
+  }
+  if (kohdeValittu == false) {
+    alert("Valitse kohde!");
+    return false;
   }
 
   tallennaTiedot(); // tallennettaa tietoi localstoragee
